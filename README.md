@@ -1,2 +1,2 @@
 # jmf
-A modelling workbench.
+A Java modelling workbench.
