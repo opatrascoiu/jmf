@@ -2,9 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/OCL20" vcs="CVS" />
-    <mapping directory="$PROJECT_DIR$/OCL4EMF" vcs="CVS" />
-    <mapping directory="$PROJECT_DIR$/OCL4Java" vcs="CVS" />
-    <mapping directory="$PROJECT_DIR$/OCL4KMF" vcs="CVS" />
   </component>
 </project>
