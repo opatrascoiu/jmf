@@ -1,0 +1,62 @@
+context library::Library inv: 1.oclIsUndefined()
+context library::Library inv: 1.oclIsNew()
+context library::Library inv: 1.oclIsKindOf(OclAny)
+context library::Library inv: 1.oclIsKindOf(Boolean)
+context library::Library inv: 1.oclIsKindOf(Integer)
+context library::Library inv: 1.oclIsKindOf(Real)
+context library::Library inv: 1.oclIsKindOf(library::Library)
+context library::Library inv: 1.oclIsTypeOf(OclAny)
+context library::Library inv: 1.oclIsTypeOf(Boolean)
+context library::Library inv: 1.oclIsTypeOf(Integer)
+context library::Library inv: 1.oclIsTypeOf(Real)
+context library::Library inv: 1.oclIsTypeOf(library::Library)
+context library::Library inv: 1.oclAsType(OclAny)
+context library::Library inv: 1.oclAsType(Boolean)
+context library::Library inv: 1.oclAsType(Integer)
+context library::Library inv: 1.oclAsType(Real)
+context library::Library inv: 1.oclAsType(library::Library)
+context library::Library inv: 1.allInstances()
+context library::Library inv: 42
+context library::Library inv: 3.1
+context library::Library inv: 13.14
+context library::Library inv: 13.0e14
+context library::Library inv: -42
+context library::Library inv: -3.1
+context library::Library inv: -3.14
+context library::Library inv: - -42
+context library::Library inv: -(-42)
+context library::Library inv: 1+1
+context library::Library inv: 7-4
+context library::Library inv: 1+-2
+context library::Library inv: 10.0e15 + 12.34E+15
+context library::Library inv: 3-(8+4)*(4+5)
+context library::Library inv: -(3-(8+4)*(4+5))
+context library::Library inv: - - -(3-(8+4)*(4+5))
+context library::Library inv: -( -( -(3-(8+4)*(4+5))))
+context library::Library inv: 3 / 0
+context library::Library inv: 3 div 0
+context library::Library inv: 10 mod 3
+context library::Library inv: 3 / 1.5
+context library::Library inv: 3.0 / 2
+context library::Library inv: 3.min(4)
+context library::Library inv: 3.max(4)
+context library::Library inv: 3.abs()
+context library::Library inv: (-3).abs()
+context library::Library inv: -3.abs()
+context library::Library inv: 3.abs() + 4
+context library::Library inv: 3.9.floor()
+context library::Library inv: 3.floor()
+context library::Library inv: 3.9.round()
+context library::Library inv: 3.round()
+context library::Library inv: 3 < 4
+context library::Library inv: 3 > 4
+context library::Library inv: 4 >= 4
+context library::Library inv: 4 <= 4
+context library::Library inv: 3.0 < 4
+context library::Library inv: 3 < 4.0
+context library::Library inv: 3.0 = 3
+context library::Library inv: 3 = 3.0
+context library::Library inv: 3.oclIsUndefined()
+context library::Library inv: (3/0).oclIsUndefined()
+context library::Library inv: 3.oclIsUndefined()
+context library::Library inv: (3 div 0).oclIsUndefined()

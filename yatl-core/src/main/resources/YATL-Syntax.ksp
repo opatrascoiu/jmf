@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<project type ="">
+	<path>D:/Work/Java Projects/KTL</path>
+	<name>KTL-Syntax.ksp</name>
+	<xmi>D:\Work\Java Projects\KTL\src\KTL-Syntax.xmi</xmi>
+	<license></license>
+	<offset>uk.ac.kent.cs</offset>
+	<modelName></modelName>
+	<visitor>true</visitor>
+	<HUTNvisitor>false</HUTNvisitor>
+	<JTreevisitor>false</JTreevisitor>
+	<ViewEditvisitor>false</ViewEditvisitor>
+	<XMIvisitor>false</XMIvisitor>
+	<observer>false</observer>
+	<ToolGen>false</ToolGen>
+	<invariant>false</invariant>
+	<id>true</id>
+	<factory>false</factory>
+	<repository>false</repository>
+	<browser>false</browser>
+	<startup>false</startup>
+</project>

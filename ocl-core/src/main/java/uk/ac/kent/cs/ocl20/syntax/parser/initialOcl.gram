@@ -1,0 +1,138 @@
+//
+// Model level
+//
+packageDeclaration ::= PACKAGE pathName contextDeclaration* ENDPACKAGE 
+
+//
+// ModelElement level
+//
+contextDeclaration ::= propertyContextDecl | classifierContextDecl | operationContextDecl
+
+//
+// Classifier level
+//
+classifierContextDecl ::= CONTEXT pathName invOrDef+
+invOrDef ::= INV [simpleName] COLON oclExpression 
+invOrDef ::= DEF [simpleName] COLON defExpression 
+defExpression ::= variableDeclaration EQ oclExpression 
+defExpression ::= operation EQ oclExpression 
+
+//
+// Property level
+//
+propertyContextDecl ::= CONTEXT pathName simpleName COLON type initOrDerValue+ 
+initOrDerValue ::= INIT COLON oclExpression | DERIVE COLON oclExpression
+
+//
+// Operation level
+//
+operationContextDecl ::= CONTEXT operation prePostOrBodyDecl+
+prePostOrBodyDecl ::= PRE [simpleName] COLON oclExpression 
+prePostOrBodyDecl ::= POST [simpleName] COLON oclExpression 
+prePostOrBodyDecl ::= BODY [simpleName] COLON oclExpression 
+operation ::= pathName LEFT_PAR [variableDeclarationList] RIGHT_PAR [COLON type] |
+              simpleName LEFT_PAR [variableDeclarationList] RIGHT_PAR [COLON type]
+
+//
+// Variable declaration
+// 			  
+variableDeclarationList variableDeclaration (COMMA variableDeclaration)*
+variableDeclaration ::= simpleName [COLON type] [EQ oclExpression] 
+
+//
+// Type declaration
+// 
+type ::= pathName 
+type ::= collectionType 
+type ::= tupleType 
+collectionType ::= collectionKind LEFT_PAR type RIGHT_PAR 
+tupleType ::= TUPLE_TYPE LEFT_PAR [variableDeclaration] RIGHT_PAR 
+
+//
+// Primary expression
+//
+oclExpression ::= primaryExp
+primaryExp ::= literalExp 
+primaryExp ::= variableDeclaration
+primaryExp ::= LEFT_PAR oclExpression RIGHT_PAR
+
+//
+// Postfix expression
+// 
+postfixExp ::= primaryExp |
+               postfixExp AT PRE |
+               postfixExp DOT simpleName |
+               postfixExp MINUS_GT simpleName |
+               postfixExp LEFT_BRK argumentList RIGHT_BRK |
+               postfixExp LEFT_PAR [argumentList] RIGHT_PAR |
+               postfixExp LEFT_PAR variableDeclaration [COMMA variableDeclaration] BAR oclExpression RIGHT_PAR 
+               postfixExp MINUS_GT ITERATE LEFT_PAR variableDeclaration [SEMICOLON variableDeclaration] BAR oclExpression RIGHT_PAR 
+
+//
+// Unary expression
+//
+unaryExp ::= postfixExp |
+             NOT postfixExp |
+             MINUS postfixExp 
+
+//
+// Binary expressions
+//
+multiplicativeExp ::= unaryExp ((TIMES | DIVIDE) unaryExp)*
+additiveExp :: multiplicativeExp ((PLUS | MINUS) additiveExp)*
+ifExp ::= additiveExp | IF oclExpression THEN oclExpression ELSE oclExpression ENDIF 
+relationalExp ::= ifExp ((GT | GE | LT | LE) ifExp)*
+equalityExp ::= relationalExp ((EQ | NE))* relationalExp)*
+logicalExp :: equalityExp ((AND | OR | XOR) equalityExp)*       
+impliesExp :: logicalExp (IMPLIES logicalExp)*
+
+//
+// Special expressions
+//
+letExp ::= impliesExp | LET variableDeclaration+ IN oclExpression 
+oclMessageExp ::= oclExpression UP_UP simpleName LEFT_PAR [oclMessageArgumentList] RIGHT_PAR 
+oclMessageExp ::= oclExpression UP simpleName LEFT_PAR [oclMessageArgumentList] RIGHT_PAR 
+
+//
+// ocl expression
+//
+oclExpression ::= impliesExp | letExp | oclMessageExp
+
+//
+// Argments
+//
+argumentList ::= oclExpression (COMMA oclExpression)*
+oclMessageArgumentList ::= oclMessageArgument (COMMA oclMessageArgument)*
+oclMessageArgument ::= QUESTION [COLON types] | oclExpression 
+
+//
+// Literal expressions
+//
+literalExp ::= enumLiteralExp 
+literalExp ::= collectionLiteralExp 
+literalExp ::= tupleLiteralExp 
+literalExp ::= primitiveLiteralExp 
+enumLiteralExp ::= pathName 
+collectionLiteralExp ::= collectionKind LEFT_BRA collectionLiteralParts RIGHT_BRA 
+collectionLiteralExp ::= collectionKind LEFT_BRA RIGHT_BRA 
+collectionKind ::= SET 
+collectionKind ::= BAG 
+collectionKind ::= SEQUENCE 
+collectionKind ::= COLLECTION 
+collectionLiteralParts ::= collectionLiteralPart 
+collectionLiteralParts ::= collectionLiteralParts COMMA collectionLiteralPart 
+collectionLiteralPart ::= oclExpression 
+collectionLiteralPart ::= collectionRange 
+collectionRange ::= oclExpression DOT_DOT oclExpression 
+tupleLiteralExp ::= TUPLE LEFT_BRA variableDeclarationList RIGHT_BRA 
+primitiveLiteralExp ::= INTEGER 
+primitiveLiteralExp ::= REAL 
+primitiveLiteralExp ::= STRING 
+primitiveLiteralExp ::= TRUE 
+primitiveLiteralExp ::= FALSE 
+
+//
+// Names
+//
+pathName ::= simpleName (COLON_COLON simpleName)*
+simpleName ::= SIMPLE_NAME

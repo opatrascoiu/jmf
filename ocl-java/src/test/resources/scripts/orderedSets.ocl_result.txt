@@ -1,0 +1,134 @@
+result of 'context library::Library inv: OrderedSet{'a','b'}'
+[OrderedSet { 'a', 'b' }]
+result of 'context library::Library inv: OrderedSet{5..8}'
+[OrderedSet { 5, 6, 7, 8 }]
+result of 'context library::Library inv: let x=3 in OrderedSet{1..x}'
+[OrderedSet { 1, 2, 3 }]
+result of 'context library::Library inv: OrderedSet{3,5..8,4}'
+[OrderedSet { 3, 5, 6, 7, 8, 4 }]
+result of 'context library::Library inv: OrderedSet{'a','b','a'}'
+[OrderedSet { 'a', 'b' }]
+result of 'context library::Library inv: OrderedSet{Set{1},Set{2,3}}'
+[OrderedSet { Set { 1 }, Set { 2, 3 } }]
+result of 'context library::Library inv: OrderedSet{'a','b','c'}->iterate(v1; v2 : String = '' | v2.concat(v1))'
+['abc']
+result of 'context library::Library inv: OrderedSet{3,2,1}->iterate(e : Integer; acc : Integer = 6 | acc - e)'
+[0]
+result of 'context library::Library inv: OrderedSet{1,2,3}->iterate( e1: Integer;  res : Integer = 0 | res + e1)'
+[6]
+result of 'context library::Library inv: OrderedSet{1,1,2,3}->size()'
+[3]
+result of 'context library::Library inv: OrderedSet{1,2,2,3}->includes(2)'
+[true]
+result of 'context library::Library inv: OrderedSet{1,2,3}->includes(5)'
+[false]
+result of 'context library::Library inv: OrderedSet{1,2,2,3}->excludes(2)'
+[false]
+result of 'context library::Library inv: OrderedSet{1,2,3}->excludes(5)'
+[true]
+result of 'context library::Library inv: OrderedSet{1,1,2,3}->count(1)'
+[1]
+result of 'context library::Library inv: OrderedSet{1,1,2,3}->includesAll(OrderedSet{1,3})'
+[true]
+result of 'context library::Library inv: OrderedSet{1,2,3}->includesAll(OrderedSet{1,1,3})'
+[true]
+result of 'context library::Library inv: OrderedSet{1,2,3}->includesAll(OrderedSet{2,4})'
+[false]
+result of 'context library::Library inv: OrderedSet{1,2,3}->includesAll(Set{2,3})'
+[true]
+result of 'context library::Library inv: OrderedSet{1,2,3}->includesAll(OrderedSet{3,2})'
+[true]
+result of 'context library::Library inv: OrderedSet{1,2,2}->includesAll(Bag{2,2})'
+[true]
+result of 'context library::Library inv: OrderedSet{1,2,3}->excludesAll(OrderedSet{2,3})'
+[false]
+result of 'context library::Library inv: OrderedSet{1,2,3}->excludesAll(OrderedSet{2,4})'
+[false]
+result of 'context library::Library inv: OrderedSet{1,2,3}->excludesAll(OrderedSet{4,5})'
+[true]
+result of 'context library::Library inv: OrderedSet{1,2,3}->isEmpty()'
+[false]
+result of 'context library::Library inv: OrderedSet{}->isEmpty()'
+[true]
+result of 'context library::Library inv: OrderedSet{1,2,3}->notEmpty()'
+[true]
+result of 'context library::Library inv: OrderedSet{}->notEmpty()'
+[false]
+result of 'context library::Library inv: OrderedSet{1,1,2,3}->sum()'
+[6]
+result of 'context library::Library inv: OrderedSet{1,2} = OrderedSet{1,2}'
+[false]
+result of 'context library::Library inv: OrderedSet{1,2} <> OrderedSet{1,2}'
+[true]
+result of 'context library::Library inv: OrderedSet{1,2} = OrderedSet{2,1}'
+[false]
+result of 'context library::Library inv: OrderedSet{1,2} <> OrderedSet{2,1}'
+[true]
+result of 'context library::Library inv: OrderedSet{1.0,2.0} = OrderedSet{1,2}'
+[false]
+result of 'context library::Library inv: OrderedSet{1,2}->union(OrderedSet{2,1})'
+[OrderedSet { 1, 2 }]
+result of 'context library::Library inv: OrderedSet{1,2}->union(OrderedSet{3,4})'
+[OrderedSet { 1, 2, 3, 4 }]
+result of 'context library::Library inv: OrderedSet{1,2,3}->append(0)'
+[OrderedSet { 1, 2, 3, 0 }]
+result of 'context library::Library inv: OrderedSet{1,2,3}->prepend(4)'
+[OrderedSet { 4, 1, 2, 3 }]
+result of 'context library::Library inv: OrderedSet{3,2,1}->subOrderedSet(1,3)'
+[OrderedSet { 3, 2, 1 }]
+result of 'context library::Library inv: OrderedSet{3,2,1}->subOrderedSet(2,3)'
+[OrderedSet { 2, 1 }]
+result of 'context library::Library inv: OrderedSet{3,2,1}->subOrderedSet(0,3)'
+[undefined]
+result of 'context library::Library inv: OrderedSet{1,2,3}->at(1)'
+[1]
+result of 'context library::Library inv: OrderedSet{1,2,3}->at(2)'
+[2]
+result of 'context library::Library inv: OrderedSet{1,2,3}->at(3)'
+[3]
+result of 'context library::Library inv: OrderedSet{1,2,3}->first()'
+[1]
+result of 'context library::Library inv: OrderedSet{}->first()'
+[undefined]
+result of 'context library::Library inv: OrderedSet{1,2,3}->last()'
+[3]
+result of 'context library::Library inv: OrderedSet{}->last()'
+[undefined]
+result of 'context library::Library inv: OrderedSet{1,2,2,3}->select(e | e > 1)'
+[OrderedSet { 2, 3 }]
+result of 'context library::Library inv: OrderedSet{1,2,2,3}->reject(e | e > 1)'
+[OrderedSet { 1 }]
+result of 'context library::Library inv: OrderedSet{1,2,2,3}->collect(e | e * 2)'
+[Bag { 2, 4, 6 }]
+result of 'context library::Library inv: OrderedSet{1,2,2,3}->asBag()'
+[Bag { 1, 2, 3 }]
+result of 'context library::Library inv: OrderedSet{1,2,2,3}->asSet()'
+[Set { 1, 2, 3 }]
+result of 'context library::Library inv: OrderedSet{OrderedSet{1,2}, OrderedSet{2,1}, OrderedSet{2,3}}->flatten()'
+[OrderedSet { 1, 2, 3 }]
+result of 'context library::Library inv: OrderedSet{Set{1,2},Set{2,1}}->forAll(s : Set(Integer) | s = Set{1,2})'
+[false]
+result of 'context library::Library inv: OrderedSet{1,2,3,4,5,6}->exists(e | e > 0)'
+[true]
+result of 'context library::Library inv: OrderedSet{1,2,3,4,5,6}->exists(e | e = 7)'
+[false]
+result of 'context library::Library inv: OrderedSet{1,2,3,4,5,6}->forAll(e | e > 0)'
+[true]
+result of 'context library::Library inv: OrderedSet{1,2,3,4,5,6}->forAll(e | e > 1)'
+[false]
+result of 'context library::Library inv: OrderedSet{1,2}->isUnique(e | e)'
+[true]
+result of 'context library::Library inv: OrderedSet{1,2,1}->isUnique(e | e)'
+[true]
+result of 'context library::Library inv: OrderedSet{4,4,2,3,1,4,6,1,5}->sortedBy(e | e)'
+[OrderedSet { 1, 2, 3, 4, 5, 6 }]
+result of 'context library::Library inv: OrderedSet{4,4,2,3,1,4,6,1,5}->sortedBy(1)->includesAll(OrderedSet{4,4,2,3,1,4,6,1,5})'
+[true]
+result of 'context library::Library inv: OrderedSet{'c','aa','ca','cc','a','aa'}->sortedBy(e | e.size())'
+[OrderedSet { 'c', 'a', 'aa', 'ca', 'cc' }]
+result of 'context library::Library inv: OrderedSet{3,2,1,2,3}->any(e | e < 2)'
+[1]
+result of 'context library::Library inv: OrderedSet{3,2,1,2,3}->any(e | e < 1)'
+[undefined]
+result of 'context library::Library inv: OrderedSet{3,2,1,2,3}->any(e | e < 3)'
+[2]

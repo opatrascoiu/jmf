@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="kmf-studio" />
+        <module name="ocl-core" />
+        <module name="ocl-emf" />
+        <module name="ocl-java" />
+        <module name="ocl-kmf" />
+        <module name="yatl-core" />
+        <module name="yatl-kmf" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jmf" target="1.5" />
+      <module name="kmf-studio" target="1.8" />
+      <module name="ocl-core" target="1.8" />
+      <module name="ocl-emf" target="1.8" />
+      <module name="ocl-java" target="1.8" />
+      <module name="ocl-kmf" target="1.8" />
+      <module name="yatl-core" target="1.8" />
+      <module name="yatl-kmf" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

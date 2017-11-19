@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<project type ="">
+	<path>C:/D/Work/Java Projects/YATL4KMF</path>
+	<name>ocl.ksp</name>
+	<xmi>C:\D\Work\Java Projects\YATL4KMF\src\test\scripts\ocl.xmi</xmi>
+	<license></license>
+	<offset>ocl</offset>
+	<modelName></modelName>
+	<visitor>true</visitor>
+	<HUTNvisitor>true</HUTNvisitor>
+	<JTreevisitor>true</JTreevisitor>
+	<ViewEditvisitor>true</ViewEditvisitor>
+	<XMIvisitor>true</XMIvisitor>
+	<observer>false</observer>
+	<invariant>false</invariant>
+	<id>true</id>
+	<factory>true</factory>
+	<repository>true</repository>
+	<browser>true</browser>
+	<startup>true</startup>
+	<bidirectional>true</bidirectional>
+	<interfacePrefix></interfacePrefix>
+	<interfaceSuffix></interfaceSuffix>
+	<classPrefix></classPrefix>
+	<classSuffix>$Class</classSuffix>
+	<collectionInterface>java.util.List</collectionInterface>
+	<collectionClass>java.util.Vector</collectionClass>
+	<listInterface>java.util.List</listInterface>
+	<listClass>java.util.Vector</listClass>
+	<setInterface>java.util.Set</setInterface>
+	<setClass>java.util.LinkedHashSet</setClass>
+</project>

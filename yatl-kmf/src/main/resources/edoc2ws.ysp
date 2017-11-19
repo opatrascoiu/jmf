@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<project>
+	<pathname>C:\D\Work\Java Projects\YATL4KMF\edoc2ws.ysp</pathname>
+	<transformation>C:\D\Work\Java Projects\YATL4KMF\src\test\scripts\edoc2ws.tl</transformation>
+	<source>
+		<model>C:\D\Work\Java Projects\YATL4KMF\src\test\scripts\EDOC.xmi</model>
+		<repositoryClass>edoc.repository.EdocRepository$Class</repositoryClass>
+		<repositoryContext>C:\D\Work\Java Projects\YATL4KMF\src\test\scripts\edocRep.xml</repositoryContext>
+	</source>
+	<target>
+		<model>C:\D\Work\Java Projects\YATL4KMF\src\test\scripts\WS.xmi</model>
+		<repositoryClass>ws.repository.WsRepository$Class</repositoryClass>
+		<repositoryContext></repositoryContext>
+	</target>
+</project>

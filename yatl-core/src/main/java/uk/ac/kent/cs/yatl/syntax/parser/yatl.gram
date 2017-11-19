@@ -1,0 +1,43 @@
+// Unit
+unit -> import* namespace*
+
+// Import
+importDecl -> 'IMPORT' name '.' '*' ';'
+
+// Namespace
+namespace -> 'NAMESPACE' name '(' sourceModel [', ' targetModel] ')' '{' (transformation|query)* '}'
+
+// Transformation
+transformationDecl -> 'TRANSFORMATION' simpleName '{' rule* '}'
+
+// Rule
+rule -> 'RULE' simpleName filter '(' variableDeclaration* ')' [':' type] compoundStm
+
+// Statement
+statement 		-> 	declarationStm | expressionStm | compoundStm |
+					ifStm | loopStm | breakStm | continueStm | returnStm | nativeStm |
+					newStm | deleteStm
+declarationStm 	-> 	'VAR' variableDeclaration+
+expressionStm	-> 	expression ';'
+compoundStm 	-> 	'{' statement* '}'
+ifStm 			-> 	'IF' expression 'THEN' statement ['ELSE' statement]
+loopStm			-> 	'WHILE' expression 'DO' statement |
+		   			'DO' statement* 'WHILE' '(' expression ')' ';' |
+		   			'FOREACH' '(' type simpleName 'in' expression ')' statement
+breakStm	-> 'BREAK' ';'
+continueStm	-> 'CONTINUE' 'stm'
+returnStm 	-> 'RETURN' expression
+newStm		-> 'NEW' pathName
+deleteStm	-> 'DELETE' simpleName
+nativeStm	-> 'NATIVE'
+
+// Expression
+expression -> simpleName ':=' oclExpression | simpleName ':=' expression | simpleName ':=' trakExp | trackExp 
+trackExp -> 'track' '(' simpleName ',' (simpleName | 'null')',' (simpleName|'null') ')'
+
+// Filter
+filter -> 'MATCH' filterSteps
+filterSteps -> filterStep | filterPath '::' filterSteps
+filterStep -> simplName ['[' expression ']']
+
+ 

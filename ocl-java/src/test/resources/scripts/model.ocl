@@ -1,0 +1,74 @@
+-- Simple expressions
+context library::Library inv: self
+context library::Library inv: self.books
+context library::Library inv: self.books->size()
+context library::Library inv: self.books->size() > 100
+
+-- Oparations on sequences
+context library::Library inv: self.books->asSequence()->first()
+context library::Library inv: self.books->asSequence()->first().title
+context library::Library inv: self.books->asSequence()->first().author
+context library::Library inv: self.books->asSequence()->first().author.name
+context library::Library inv: self.books->asSequence()->first().category
+
+-- Enumerations
+context library::Library inv: BookCategory::ScienceFiction
+context library::Library inv: BookCategory::Biography
+context library::Library inv: BookCategory::ScienceFiction = BookCategory::ScienceFiction
+context library::Library inv: BookCategory::ScienceFiction = BookCategory::Biography
+context library::Library inv: BookCategory::ScienceFiction <> BookCategory::ScienceFiction
+context library::Library inv: BookCategory::ScienceFiction <> BookCategory::Biography
+		
+-- Let assignments
+context library::Library inv: 
+	let book:Book = self.books->asSequence()->first() 
+	in book
+context library::Library inv:
+	let book:Book = self.books->asSequence()->first(),
+		title:String = book.title
+	in title
+context library::Library inv:
+	let book:Book = self.books->asSequence()->first(),
+	    category:BookCategory = book.category
+	in category
+
+-- Test comparison between Enum Literal and model property
+context library::Library inv:
+let book:Book = self.books->asSequence()->first(),
+    category:BookCategory = book.category
+in Tuple{category:BookCategory = category, comparison:Boolean = (category = BookCategory::Biography)}
+
+-- Test comparison between model elements
+context library::Library inv:
+	self.books->asSequence()->first() = self.books->asSequence()->last()
+context library::Library inv:
+	let b1:Book = self.books->asSequence()->first(),
+	    b2:Book = self.books->asSequence()->last()
+	in b1 = b2						
+context library::Library inv:
+	let b1:Book = self.books->asSequence()->first(),
+	    b2:Book = self.books->asSequence()->first()
+	in b1 = b2
+
+-- Test multiple invariants.
+context library::Library
+	inv: self.books->size() > 100
+	inv: self.books->asSequence()->first().category = BookCategory::Biography
+		     
+-- Test nulls in model
+context library::Library inv:
+	let book = self.books->any(b|b.title='No Author')
+	in book->isEmpty()
+context library::Library inv:
+	let book = self.books->any(b|b.title='No Author')
+	in book
+context library::Library inv:
+	let book = self.books->any(b|b.title='No Author')
+	in book.author
+context library::Library inv:
+	let book = self.books->any(b|b.title='No Author')
+	in book.author.name
+context library::Library inv:
+	let b1 = self.books->any(b|b.title='No Author'),
+	    b2 = self.books->asSequence()->last()
+	in b1.author.name = b2.author.name

@@ -1,0 +1,1 @@
+result of 'context library::Library inv: self.books->asSequence()->first().pages > 0.0'

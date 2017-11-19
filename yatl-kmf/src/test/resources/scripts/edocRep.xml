@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMI version="1.0" verified="false">
+    <XMI.header>
+        <XMI.documentation>
+            <XMI.exporter>Kent Modeling Framework [XMI]</XMI.exporter>
+            <XMI.exporterVersion>1.0</XMI.exporterVersion>
+        </XMI.documentation>
+    </XMI.header>
+    <XMI.content>
+        <edoc.ECA.DocumentModel.CompositeData xmi.id="edoc.ECA.DocumentModel.CompositeData 'Location-12'">
+            <edoc.ECA.DocumentModel.CompositeData.features>
+                <edoc.ECA.DocumentModel.Attribute xmi.idref="edoc.ECA.DocumentModel.Attribute 'Location-6'"/>
+                <edoc.ECA.DocumentModel.Attribute xmi.idref="edoc.ECA.DocumentModel.Attribute 'Date-7'"/>
+            </edoc.ECA.DocumentModel.CompositeData.features>
+            <edoc.ECA.DocumentModel.CompositeData.superTypes>
+            </edoc.ECA.DocumentModel.CompositeData.superTypes>
+            <edoc.ECA.DocumentModel.CompositeData.subTypes>
+            </edoc.ECA.DocumentModel.CompositeData.subTypes>
+            <edoc.ECA.DocumentModel.CompositeData.managedBy>
+            </edoc.ECA.DocumentModel.CompositeData.managedBy>
+            <edoc.ECA.DocumentModel.DataElement.constraints>
+            </edoc.ECA.DocumentModel.DataElement.constraints>
+            <edoc.ECA.DocumentModel.DataElement.attrs>
+            </edoc.ECA.DocumentModel.DataElement.attrs>
+            <edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            <edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            <edoc.ECA.ModelManagement.PackageContent.name xmi.value="Location"/>
+            <edoc.ECA.ModelManagement.PackageContent.namespace_>
+            </edoc.ECA.ModelManagement.PackageContent.namespace_>
+            <edoc.ECA.ModelManagement.PackageContent.elementImport>
+            </edoc.ECA.ModelManagement.PackageContent.elementImport>
+        </edoc.ECA.DocumentModel.CompositeData>
+        <edoc.ECA.DocumentModel.CompositeData xmi.id="edoc.ECA.DocumentModel.CompositeData 'Flight-13'">
+            <edoc.ECA.DocumentModel.CompositeData.features>
+                <edoc.ECA.DocumentModel.Attribute xmi.idref="edoc.ECA.DocumentModel.Attribute 'AirlineName-4'"/>
+                <edoc.ECA.DocumentModel.Attribute xmi.idref="edoc.ECA.DocumentModel.Attribute 'FlightNo-5'"/>
+                <edoc.ECA.DocumentModel.Attribute xmi.idref="edoc.ECA.DocumentModel.Attribute 'Date-7'"/>
+            </edoc.ECA.DocumentModel.CompositeData.features>
+            <edoc.ECA.DocumentModel.CompositeData.superTypes>
+            </edoc.ECA.DocumentModel.CompositeData.superTypes>
+            <edoc.ECA.DocumentModel.CompositeData.subTypes>
+            </edoc.ECA.DocumentModel.CompositeData.subTypes>
+            <edoc.ECA.DocumentModel.CompositeData.managedBy>
+            </edoc.ECA.DocumentModel.CompositeData.managedBy>
+            <edoc.ECA.DocumentModel.DataElement.constraints>
+            </edoc.ECA.DocumentModel.DataElement.constraints>
+            <edoc.ECA.DocumentModel.DataElement.attrs>
+            </edoc.ECA.DocumentModel.DataElement.attrs>
+            <edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            <edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            <edoc.ECA.ModelManagement.PackageContent.name xmi.value="Flight"/>
+            <edoc.ECA.ModelManagement.PackageContent.namespace_>
+            </edoc.ECA.ModelManagement.PackageContent.namespace_>
+            <edoc.ECA.ModelManagement.PackageContent.elementImport>
+            </edoc.ECA.ModelManagement.PackageContent.elementImport>
+        </edoc.ECA.DocumentModel.CompositeData>
+        <edoc.ECA.DocumentModel.CompositeData xmi.id="edoc.ECA.DocumentModel.CompositeData 'Hotel-14'">
+            <edoc.ECA.DocumentModel.CompositeData.features>
+                <edoc.ECA.DocumentModel.Attribute xmi.idref="edoc.ECA.DocumentModel.Attribute 'HotelName-8'"/>
+                <edoc.ECA.DocumentModel.Attribute xmi.idref="edoc.ECA.DocumentModel.Attribute 'Address-9'"/>
+                <edoc.ECA.DocumentModel.Attribute xmi.idref="edoc.ECA.DocumentModel.Attribute 'Date-7'"/>
+                <edoc.ECA.DocumentModel.Attribute xmi.idref="edoc.ECA.DocumentModel.Attribute 'Period-11'"/>
+            </edoc.ECA.DocumentModel.CompositeData.features>
+            <edoc.ECA.DocumentModel.CompositeData.superTypes>
+            </edoc.ECA.DocumentModel.CompositeData.superTypes>
+            <edoc.ECA.DocumentModel.CompositeData.subTypes>
+            </edoc.ECA.DocumentModel.CompositeData.subTypes>
+            <edoc.ECA.DocumentModel.CompositeData.managedBy>
+            </edoc.ECA.DocumentModel.CompositeData.managedBy>
+            <edoc.ECA.DocumentModel.DataElement.constraints>
+            </edoc.ECA.DocumentModel.DataElement.constraints>
+            <edoc.ECA.DocumentModel.DataElement.attrs>
+            </edoc.ECA.DocumentModel.DataElement.attrs>
+            <edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            <edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            <edoc.ECA.ModelManagement.PackageContent.name xmi.value="Hotel"/>
+            <edoc.ECA.ModelManagement.PackageContent.namespace_>
+            </edoc.ECA.ModelManagement.PackageContent.namespace_>
+            <edoc.ECA.ModelManagement.PackageContent.elementImport>
+            </edoc.ECA.ModelManagement.PackageContent.elementImport>
+        </edoc.ECA.DocumentModel.CompositeData>
+        <edoc.ECA.DocumentModel.CompositeData xmi.id="edoc.ECA.DocumentModel.CompositeData 'Car-15'">
+            <edoc.ECA.DocumentModel.CompositeData.features>
+                <edoc.ECA.DocumentModel.Attribute xmi.idref="edoc.ECA.DocumentModel.Attribute 'CompanyName-10'"/>
+                <edoc.ECA.DocumentModel.Attribute xmi.idref="edoc.ECA.DocumentModel.Attribute 'Address-9'"/>
+                <edoc.ECA.DocumentModel.Attribute xmi.idref="edoc.ECA.DocumentModel.Attribute 'Date-7'"/>
+                <edoc.ECA.DocumentModel.Attribute xmi.idref="edoc.ECA.DocumentModel.Attribute 'Period-11'"/>
+            </edoc.ECA.DocumentModel.CompositeData.features>
+            <edoc.ECA.DocumentModel.CompositeData.superTypes>
+            </edoc.ECA.DocumentModel.CompositeData.superTypes>
+            <edoc.ECA.DocumentModel.CompositeData.subTypes>
+            </edoc.ECA.DocumentModel.CompositeData.subTypes>
+            <edoc.ECA.DocumentModel.CompositeData.managedBy>
+            </edoc.ECA.DocumentModel.CompositeData.managedBy>
+            <edoc.ECA.DocumentModel.DataElement.constraints>
+            </edoc.ECA.DocumentModel.DataElement.constraints>
+            <edoc.ECA.DocumentModel.DataElement.attrs>
+            </edoc.ECA.DocumentModel.DataElement.attrs>
+            <edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            <edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            <edoc.ECA.ModelManagement.PackageContent.name xmi.value="Car"/>
+            <edoc.ECA.ModelManagement.PackageContent.namespace_>
+            </edoc.ECA.ModelManagement.PackageContent.namespace_>
+            <edoc.ECA.ModelManagement.PackageContent.elementImport>
+            </edoc.ECA.ModelManagement.PackageContent.elementImport>
+        </edoc.ECA.DocumentModel.CompositeData>
+        <edoc.ECA.CCA.Protocol xmi.id="edoc.ECA.CCA.Protocol 'BuySell-16'">
+            <edoc.ECA.CCA.Protocol.initiator>
+            </edoc.ECA.CCA.Protocol.initiator>
+            <edoc.ECA.CCA.Protocol.responder>
+            </edoc.ECA.CCA.Protocol.responder>
+            <edoc.ECA.CCA.Protocol.usedBy>
+            </edoc.ECA.CCA.Protocol.usedBy>
+            <edoc.ECA.CCA.PortOwner.name xmi.value="BuySell"/>
+            <edoc.ECA.CCA.PortOwner.ports>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'Buy-17'"/>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'Sell-18'"/>
+            </edoc.ECA.CCA.PortOwner.ports>
+            <edoc.ECA.CCA.Choreography.nodes>
+            </edoc.ECA.CCA.Choreography.nodes>
+            <edoc.ECA.CCA.Choreography.connections>
+            </edoc.ECA.CCA.Choreography.connections>
+            <edoc.ECA.CCA.Choreography.supertype>
+            </edoc.ECA.CCA.Choreography.supertype>
+            <edoc.ECA.CCA.Choreography.subtypes>
+            </edoc.ECA.CCA.Choreography.subtypes>
+        </edoc.ECA.CCA.Protocol>
+        <edoc.ECA.CCA.Protocol xmi.id="edoc.ECA.CCA.Protocol 'BuyFlight-19'">
+            <edoc.ECA.CCA.Protocol.initiator>
+            </edoc.ECA.CCA.Protocol.initiator>
+            <edoc.ECA.CCA.Protocol.responder>
+            </edoc.ECA.CCA.Protocol.responder>
+            <edoc.ECA.CCA.Protocol.usedBy>
+            </edoc.ECA.CCA.Protocol.usedBy>
+            <edoc.ECA.CCA.PortOwner.name xmi.value="BuyFlight"/>
+            <edoc.ECA.CCA.PortOwner.ports>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'BuyFlight-20'"/>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'Flight-21'"/>
+                <edoc.ECA.CCA.OperationPort xmi.idref="edoc.ECA.CCA.OperationPort 'FindFlight-24'"/>
+            </edoc.ECA.CCA.PortOwner.ports>
+            <edoc.ECA.CCA.Choreography.nodes>
+            </edoc.ECA.CCA.Choreography.nodes>
+            <edoc.ECA.CCA.Choreography.connections>
+            </edoc.ECA.CCA.Choreography.connections>
+            <edoc.ECA.CCA.Choreography.supertype>
+            </edoc.ECA.CCA.Choreography.supertype>
+            <edoc.ECA.CCA.Choreography.subtypes>
+            </edoc.ECA.CCA.Choreography.subtypes>
+        </edoc.ECA.CCA.Protocol>
+        <edoc.ECA.CCA.Protocol xmi.id="edoc.ECA.CCA.Protocol 'ReserveRoom-25'">
+            <edoc.ECA.CCA.Protocol.initiator>
+            </edoc.ECA.CCA.Protocol.initiator>
+            <edoc.ECA.CCA.Protocol.responder>
+            </edoc.ECA.CCA.Protocol.responder>
+            <edoc.ECA.CCA.Protocol.usedBy>
+            </edoc.ECA.CCA.Protocol.usedBy>
+            <edoc.ECA.CCA.PortOwner.name xmi.value="ReserveRoom"/>
+            <edoc.ECA.CCA.PortOwner.ports>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'ReserveRoom-26'"/>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'Room-27'"/>
+            </edoc.ECA.CCA.PortOwner.ports>
+            <edoc.ECA.CCA.Choreography.nodes>
+            </edoc.ECA.CCA.Choreography.nodes>
+            <edoc.ECA.CCA.Choreography.connections>
+            </edoc.ECA.CCA.Choreography.connections>
+            <edoc.ECA.CCA.Choreography.supertype>
+            </edoc.ECA.CCA.Choreography.supertype>
+            <edoc.ECA.CCA.Choreography.subtypes>
+            </edoc.ECA.CCA.Choreography.subtypes>
+        </edoc.ECA.CCA.Protocol>
+        <edoc.ECA.CCA.Protocol xmi.id="edoc.ECA.CCA.Protocol 'RentCar-28'">
+            <edoc.ECA.CCA.Protocol.initiator>
+            </edoc.ECA.CCA.Protocol.initiator>
+            <edoc.ECA.CCA.Protocol.responder>
+            </edoc.ECA.CCA.Protocol.responder>
+            <edoc.ECA.CCA.Protocol.usedBy>
+            </edoc.ECA.CCA.Protocol.usedBy>
+            <edoc.ECA.CCA.PortOwner.name xmi.value="RentCar"/>
+            <edoc.ECA.CCA.PortOwner.ports>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'RentCar-29'"/>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'Car-30'"/>
+            </edoc.ECA.CCA.PortOwner.ports>
+            <edoc.ECA.CCA.Choreography.nodes>
+            </edoc.ECA.CCA.Choreography.nodes>
+            <edoc.ECA.CCA.Choreography.connections>
+            </edoc.ECA.CCA.Choreography.connections>
+            <edoc.ECA.CCA.Choreography.supertype>
+            </edoc.ECA.CCA.Choreography.supertype>
+            <edoc.ECA.CCA.Choreography.subtypes>
+            </edoc.ECA.CCA.Choreography.subtypes>
+        </edoc.ECA.CCA.Protocol>
+        <edoc.ECA.CCA.Protocol xmi.id="edoc.ECA.CCA.Protocol 'Payment-31'">
+            <edoc.ECA.CCA.Protocol.initiator>
+            </edoc.ECA.CCA.Protocol.initiator>
+            <edoc.ECA.CCA.Protocol.responder>
+            </edoc.ECA.CCA.Protocol.responder>
+            <edoc.ECA.CCA.Protocol.usedBy>
+            </edoc.ECA.CCA.Protocol.usedBy>
+            <edoc.ECA.CCA.PortOwner.name xmi.value="Payment"/>
+            <edoc.ECA.CCA.PortOwner.ports>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'TAPayment-32'"/>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'BPayment-33'"/>
+            </edoc.ECA.CCA.PortOwner.ports>
+            <edoc.ECA.CCA.Choreography.nodes>
+            </edoc.ECA.CCA.Choreography.nodes>
+            <edoc.ECA.CCA.Choreography.connections>
+            </edoc.ECA.CCA.Choreography.connections>
+            <edoc.ECA.CCA.Choreography.supertype>
+            </edoc.ECA.CCA.Choreography.supertype>
+            <edoc.ECA.CCA.Choreography.subtypes>
+            </edoc.ECA.CCA.Choreography.subtypes>
+        </edoc.ECA.CCA.Protocol>
+        <edoc.ECA.CCA.Protocol xmi.id="edoc.ECA.CCA.Protocol 'ShipDelivery-34'">
+            <edoc.ECA.CCA.Protocol.initiator>
+            </edoc.ECA.CCA.Protocol.initiator>
+            <edoc.ECA.CCA.Protocol.responder>
+            </edoc.ECA.CCA.Protocol.responder>
+            <edoc.ECA.CCA.Protocol.usedBy>
+            </edoc.ECA.CCA.Protocol.usedBy>
+            <edoc.ECA.CCA.PortOwner.name xmi.value="ShipDelivery"/>
+            <edoc.ECA.CCA.PortOwner.ports>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'Ship-35'"/>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'Delivery-36'"/>
+            </edoc.ECA.CCA.PortOwner.ports>
+            <edoc.ECA.CCA.Choreography.nodes>
+            </edoc.ECA.CCA.Choreography.nodes>
+            <edoc.ECA.CCA.Choreography.connections>
+            </edoc.ECA.CCA.Choreography.connections>
+            <edoc.ECA.CCA.Choreography.supertype>
+            </edoc.ECA.CCA.Choreography.supertype>
+            <edoc.ECA.CCA.Choreography.subtypes>
+            </edoc.ECA.CCA.Choreography.subtypes>
+        </edoc.ECA.CCA.Protocol>
+        <edoc.ECA.DocumentModel.DataType xmi.id="edoc.ECA.DocumentModel.DataType 'String-1'">
+            <edoc.ECA.DocumentModel.DataElement.constraints>
+            </edoc.ECA.DocumentModel.DataElement.constraints>
+            <edoc.ECA.DocumentModel.DataElement.attrs>
+            </edoc.ECA.DocumentModel.DataElement.attrs>
+            <edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            <edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            <edoc.ECA.ModelManagement.PackageContent.name xmi.value="String"/>
+            <edoc.ECA.ModelManagement.PackageContent.namespace_>
+            </edoc.ECA.ModelManagement.PackageContent.namespace_>
+            <edoc.ECA.ModelManagement.PackageContent.elementImport>
+            </edoc.ECA.ModelManagement.PackageContent.elementImport>
+        </edoc.ECA.DocumentModel.DataType>
+        <edoc.ECA.DocumentModel.DataType xmi.id="edoc.ECA.DocumentModel.DataType 'Integer-2'">
+            <edoc.ECA.DocumentModel.DataElement.constraints>
+            </edoc.ECA.DocumentModel.DataElement.constraints>
+            <edoc.ECA.DocumentModel.DataElement.attrs>
+            </edoc.ECA.DocumentModel.DataElement.attrs>
+            <edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            <edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            <edoc.ECA.ModelManagement.PackageContent.name xmi.value="Integer"/>
+            <edoc.ECA.ModelManagement.PackageContent.namespace_>
+            </edoc.ECA.ModelManagement.PackageContent.namespace_>
+            <edoc.ECA.ModelManagement.PackageContent.elementImport>
+            </edoc.ECA.ModelManagement.PackageContent.elementImport>
+        </edoc.ECA.DocumentModel.DataType>
+        <edoc.ECA.DocumentModel.DataType xmi.id="edoc.ECA.DocumentModel.DataType 'Real-3'">
+            <edoc.ECA.DocumentModel.DataElement.constraints>
+            </edoc.ECA.DocumentModel.DataElement.constraints>
+            <edoc.ECA.DocumentModel.DataElement.attrs>
+            </edoc.ECA.DocumentModel.DataElement.attrs>
+            <edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.flowTypeOf>
+            <edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            </edoc.ECA.DocumentModel.DataElement.propertyTypeOf>
+            <edoc.ECA.ModelManagement.PackageContent.name xmi.value="Real"/>
+            <edoc.ECA.ModelManagement.PackageContent.namespace_>
+            </edoc.ECA.ModelManagement.PackageContent.namespace_>
+            <edoc.ECA.ModelManagement.PackageContent.elementImport>
+            </edoc.ECA.ModelManagement.PackageContent.elementImport>
+        </edoc.ECA.DocumentModel.DataType>
+        <edoc.ECA.DocumentModel.Attribute xmi.id="edoc.ECA.DocumentModel.Attribute 'AirlineName-4'">
+            <edoc.ECA.DocumentModel.Attribute.byValue>
+            </edoc.ECA.DocumentModel.Attribute.byValue>
+            <edoc.ECA.DocumentModel.Attribute.required>
+            </edoc.ECA.DocumentModel.Attribute.required>
+            <edoc.ECA.DocumentModel.Attribute.many>
+            </edoc.ECA.DocumentModel.Attribute.many>
+            <edoc.ECA.DocumentModel.Attribute.initialValue>
+            </edoc.ECA.DocumentModel.Attribute.initialValue>
+            <edoc.ECA.DocumentModel.Attribute.name xmi.value="AirlineName"/>
+            <edoc.ECA.DocumentModel.Attribute.owner>
+            </edoc.ECA.DocumentModel.Attribute.owner>
+            <edoc.ECA.DocumentModel.Attribute.type>
+                <edoc.ECA.DocumentModel.DataType xmi.idref="edoc.ECA.DocumentModel.DataType 'String-1'"/>
+            </edoc.ECA.DocumentModel.Attribute.type>
+            <edoc.ECA.DocumentModel.Attribute.keyAttribute>
+            </edoc.ECA.DocumentModel.Attribute.keyAttribute>
+        </edoc.ECA.DocumentModel.Attribute>
+        <edoc.ECA.DocumentModel.Attribute xmi.id="edoc.ECA.DocumentModel.Attribute 'FlightNo-5'">
+            <edoc.ECA.DocumentModel.Attribute.byValue>
+            </edoc.ECA.DocumentModel.Attribute.byValue>
+            <edoc.ECA.DocumentModel.Attribute.required>
+            </edoc.ECA.DocumentModel.Attribute.required>
+            <edoc.ECA.DocumentModel.Attribute.many>
+            </edoc.ECA.DocumentModel.Attribute.many>
+            <edoc.ECA.DocumentModel.Attribute.initialValue>
+            </edoc.ECA.DocumentModel.Attribute.initialValue>
+            <edoc.ECA.DocumentModel.Attribute.name xmi.value="FlightNo"/>
+            <edoc.ECA.DocumentModel.Attribute.owner>
+            </edoc.ECA.DocumentModel.Attribute.owner>
+            <edoc.ECA.DocumentModel.Attribute.type>
+                <edoc.ECA.DocumentModel.DataType xmi.idref="edoc.ECA.DocumentModel.DataType 'Integer-2'"/>
+            </edoc.ECA.DocumentModel.Attribute.type>
+            <edoc.ECA.DocumentModel.Attribute.keyAttribute>
+            </edoc.ECA.DocumentModel.Attribute.keyAttribute>
+        </edoc.ECA.DocumentModel.Attribute>
+        <edoc.ECA.DocumentModel.Attribute xmi.id="edoc.ECA.DocumentModel.Attribute 'Location-6'">
+            <edoc.ECA.DocumentModel.Attribute.byValue>
+            </edoc.ECA.DocumentModel.Attribute.byValue>
+            <edoc.ECA.DocumentModel.Attribute.required>
+            </edoc.ECA.DocumentModel.Attribute.required>
+            <edoc.ECA.DocumentModel.Attribute.many>
+            </edoc.ECA.DocumentModel.Attribute.many>
+            <edoc.ECA.DocumentModel.Attribute.initialValue>
+            </edoc.ECA.DocumentModel.Attribute.initialValue>
+            <edoc.ECA.DocumentModel.Attribute.name xmi.value="Location"/>
+            <edoc.ECA.DocumentModel.Attribute.owner>
+            </edoc.ECA.DocumentModel.Attribute.owner>
+            <edoc.ECA.DocumentModel.Attribute.type>
+                <edoc.ECA.DocumentModel.DataType xmi.idref="edoc.ECA.DocumentModel.DataType 'String-1'"/>
+            </edoc.ECA.DocumentModel.Attribute.type>
+            <edoc.ECA.DocumentModel.Attribute.keyAttribute>
+            </edoc.ECA.DocumentModel.Attribute.keyAttribute>
+        </edoc.ECA.DocumentModel.Attribute>
+        <edoc.ECA.DocumentModel.Attribute xmi.id="edoc.ECA.DocumentModel.Attribute 'Date-7'">
+            <edoc.ECA.DocumentModel.Attribute.byValue>
+            </edoc.ECA.DocumentModel.Attribute.byValue>
+            <edoc.ECA.DocumentModel.Attribute.required>
+            </edoc.ECA.DocumentModel.Attribute.required>
+            <edoc.ECA.DocumentModel.Attribute.many>
+            </edoc.ECA.DocumentModel.Attribute.many>
+            <edoc.ECA.DocumentModel.Attribute.initialValue>
+            </edoc.ECA.DocumentModel.Attribute.initialValue>
+            <edoc.ECA.DocumentModel.Attribute.name xmi.value="Date"/>
+            <edoc.ECA.DocumentModel.Attribute.owner>
+            </edoc.ECA.DocumentModel.Attribute.owner>
+            <edoc.ECA.DocumentModel.Attribute.type>
+                <edoc.ECA.DocumentModel.DataType xmi.idref="edoc.ECA.DocumentModel.DataType 'String-1'"/>
+            </edoc.ECA.DocumentModel.Attribute.type>
+            <edoc.ECA.DocumentModel.Attribute.keyAttribute>
+            </edoc.ECA.DocumentModel.Attribute.keyAttribute>
+        </edoc.ECA.DocumentModel.Attribute>
+        <edoc.ECA.DocumentModel.Attribute xmi.id="edoc.ECA.DocumentModel.Attribute 'HotelName-8'">
+            <edoc.ECA.DocumentModel.Attribute.byValue>
+            </edoc.ECA.DocumentModel.Attribute.byValue>
+            <edoc.ECA.DocumentModel.Attribute.required>
+            </edoc.ECA.DocumentModel.Attribute.required>
+            <edoc.ECA.DocumentModel.Attribute.many>
+            </edoc.ECA.DocumentModel.Attribute.many>
+            <edoc.ECA.DocumentModel.Attribute.initialValue>
+            </edoc.ECA.DocumentModel.Attribute.initialValue>
+            <edoc.ECA.DocumentModel.Attribute.name xmi.value="HotelName"/>
+            <edoc.ECA.DocumentModel.Attribute.owner>
+            </edoc.ECA.DocumentModel.Attribute.owner>
+            <edoc.ECA.DocumentModel.Attribute.type>
+                <edoc.ECA.DocumentModel.DataType xmi.idref="edoc.ECA.DocumentModel.DataType 'String-1'"/>
+            </edoc.ECA.DocumentModel.Attribute.type>
+            <edoc.ECA.DocumentModel.Attribute.keyAttribute>
+            </edoc.ECA.DocumentModel.Attribute.keyAttribute>
+        </edoc.ECA.DocumentModel.Attribute>
+        <edoc.ECA.DocumentModel.Attribute xmi.id="edoc.ECA.DocumentModel.Attribute 'Address-9'">
+            <edoc.ECA.DocumentModel.Attribute.byValue>
+            </edoc.ECA.DocumentModel.Attribute.byValue>
+            <edoc.ECA.DocumentModel.Attribute.required>
+            </edoc.ECA.DocumentModel.Attribute.required>
+            <edoc.ECA.DocumentModel.Attribute.many>
+            </edoc.ECA.DocumentModel.Attribute.many>
+            <edoc.ECA.DocumentModel.Attribute.initialValue>
+            </edoc.ECA.DocumentModel.Attribute.initialValue>
+            <edoc.ECA.DocumentModel.Attribute.name xmi.value="Address"/>
+            <edoc.ECA.DocumentModel.Attribute.owner>
+            </edoc.ECA.DocumentModel.Attribute.owner>
+            <edoc.ECA.DocumentModel.Attribute.type>
+                <edoc.ECA.DocumentModel.DataType xmi.idref="edoc.ECA.DocumentModel.DataType 'String-1'"/>
+            </edoc.ECA.DocumentModel.Attribute.type>
+            <edoc.ECA.DocumentModel.Attribute.keyAttribute>
+            </edoc.ECA.DocumentModel.Attribute.keyAttribute>
+        </edoc.ECA.DocumentModel.Attribute>
+        <edoc.ECA.DocumentModel.Attribute xmi.id="edoc.ECA.DocumentModel.Attribute 'CompanyName-10'">
+            <edoc.ECA.DocumentModel.Attribute.byValue>
+            </edoc.ECA.DocumentModel.Attribute.byValue>
+            <edoc.ECA.DocumentModel.Attribute.required>
+            </edoc.ECA.DocumentModel.Attribute.required>
+            <edoc.ECA.DocumentModel.Attribute.many>
+            </edoc.ECA.DocumentModel.Attribute.many>
+            <edoc.ECA.DocumentModel.Attribute.initialValue>
+            </edoc.ECA.DocumentModel.Attribute.initialValue>
+            <edoc.ECA.DocumentModel.Attribute.name xmi.value="CompanyName"/>
+            <edoc.ECA.DocumentModel.Attribute.owner>
+            </edoc.ECA.DocumentModel.Attribute.owner>
+            <edoc.ECA.DocumentModel.Attribute.type>
+                <edoc.ECA.DocumentModel.DataType xmi.idref="edoc.ECA.DocumentModel.DataType 'String-1'"/>
+            </edoc.ECA.DocumentModel.Attribute.type>
+            <edoc.ECA.DocumentModel.Attribute.keyAttribute>
+            </edoc.ECA.DocumentModel.Attribute.keyAttribute>
+        </edoc.ECA.DocumentModel.Attribute>
+        <edoc.ECA.DocumentModel.Attribute xmi.id="edoc.ECA.DocumentModel.Attribute 'Period-11'">
+            <edoc.ECA.DocumentModel.Attribute.byValue>
+            </edoc.ECA.DocumentModel.Attribute.byValue>
+            <edoc.ECA.DocumentModel.Attribute.required>
+            </edoc.ECA.DocumentModel.Attribute.required>
+            <edoc.ECA.DocumentModel.Attribute.many>
+            </edoc.ECA.DocumentModel.Attribute.many>
+            <edoc.ECA.DocumentModel.Attribute.initialValue>
+            </edoc.ECA.DocumentModel.Attribute.initialValue>
+            <edoc.ECA.DocumentModel.Attribute.name xmi.value="Period"/>
+            <edoc.ECA.DocumentModel.Attribute.owner>
+            </edoc.ECA.DocumentModel.Attribute.owner>
+            <edoc.ECA.DocumentModel.Attribute.type>
+                <edoc.ECA.DocumentModel.DataType xmi.idref="edoc.ECA.DocumentModel.DataType 'Integer-2'"/>
+            </edoc.ECA.DocumentModel.Attribute.type>
+            <edoc.ECA.DocumentModel.Attribute.keyAttribute>
+            </edoc.ECA.DocumentModel.Attribute.keyAttribute>
+        </edoc.ECA.DocumentModel.Attribute>
+        <edoc.ECA.CCA.FlowPort xmi.id="edoc.ECA.CCA.FlowPort 'Location-22'">
+            <edoc.ECA.CCA.FlowPort.type>
+                <edoc.ECA.DocumentModel.CompositeData xmi.idref="edoc.ECA.DocumentModel.CompositeData 'Location-12'"/>
+            </edoc.ECA.CCA.FlowPort.type>
+            <edoc.ECA.CCA.FlowPort.typeProperty>
+            </edoc.ECA.CCA.FlowPort.typeProperty>
+            <edoc.ECA.CCA.Port.name xmi.value="Location"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Initiates"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.FlowPort>
+        <edoc.ECA.CCA.FlowPort xmi.id="edoc.ECA.CCA.FlowPort 'FlightInfo-23'">
+            <edoc.ECA.CCA.FlowPort.type>
+                <edoc.ECA.DocumentModel.CompositeData xmi.idref="edoc.ECA.DocumentModel.CompositeData 'Flight-13'"/>
+            </edoc.ECA.CCA.FlowPort.type>
+            <edoc.ECA.CCA.FlowPort.typeProperty>
+            </edoc.ECA.CCA.FlowPort.typeProperty>
+            <edoc.ECA.CCA.Port.name xmi.value="FlightInfo"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Responds"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.FlowPort>
+        <edoc.ECA.CCA.OperationPort xmi.id="edoc.ECA.CCA.OperationPort 'FindFlight-24'">
+            <edoc.ECA.CCA.PortOwner.name xmi.value="FindFlight"/>
+            <edoc.ECA.CCA.PortOwner.ports>
+                <edoc.ECA.CCA.FlowPort xmi.idref="edoc.ECA.CCA.FlowPort 'Location-22'"/>
+                <edoc.ECA.CCA.FlowPort xmi.idref="edoc.ECA.CCA.FlowPort 'FlightInfo-23'"/>
+            </edoc.ECA.CCA.PortOwner.ports>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.OperationPort>
+        <edoc.ECA.CCA.ProcessComponent xmi.id="edoc.ECA.CCA.ProcessComponent 'Client-37'">
+            <edoc.ECA.CCA.ProcessComponent.granularity>
+            </edoc.ECA.CCA.ProcessComponent.granularity>
+            <edoc.ECA.CCA.ProcessComponent.isPersistent>
+            </edoc.ECA.CCA.ProcessComponent.isPersistent>
+            <edoc.ECA.CCA.ProcessComponent.primitiveKind>
+            </edoc.ECA.CCA.ProcessComponent.primitiveKind>
+            <edoc.ECA.CCA.ProcessComponent.primitiveSpec>
+            </edoc.ECA.CCA.ProcessComponent.primitiveSpec>
+            <edoc.ECA.CCA.ProcessComponent.contextualBindings>
+            </edoc.ECA.CCA.ProcessComponent.contextualBindings>
+            <edoc.ECA.CCA.ProcessComponent.usedBy>
+            </edoc.ECA.CCA.ProcessComponent.usedBy>
+            <edoc.ECA.CCA.ProcessComponent.properties>
+            </edoc.ECA.CCA.ProcessComponent.properties>
+            <edoc.ECA.CCA.PortOwner.name xmi.value="Client"/>
+            <edoc.ECA.CCA.PortOwner.ports>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'Buy-17'"/>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'Delivery-36'"/>
+            </edoc.ECA.CCA.PortOwner.ports>
+            <edoc.ECA.CCA.Composition.bindings>
+            </edoc.ECA.CCA.Composition.bindings>
+            <edoc.ECA.CCA.Composition.uses>
+            </edoc.ECA.CCA.Composition.uses>
+            <edoc.ECA.CCA.UsageContext.portsUsed>
+            </edoc.ECA.CCA.UsageContext.portsUsed>
+            <edoc.ECA.CCA.Choreography.nodes>
+            </edoc.ECA.CCA.Choreography.nodes>
+            <edoc.ECA.CCA.Choreography.connections>
+            </edoc.ECA.CCA.Choreography.connections>
+            <edoc.ECA.CCA.Choreography.supertype>
+            </edoc.ECA.CCA.Choreography.supertype>
+            <edoc.ECA.CCA.Choreography.subtypes>
+            </edoc.ECA.CCA.Choreography.subtypes>
+        </edoc.ECA.CCA.ProcessComponent>
+        <edoc.ECA.CCA.ProcessComponent xmi.id="edoc.ECA.CCA.ProcessComponent 'Expedia-38'">
+            <edoc.ECA.CCA.ProcessComponent.granularity>
+            </edoc.ECA.CCA.ProcessComponent.granularity>
+            <edoc.ECA.CCA.ProcessComponent.isPersistent>
+            </edoc.ECA.CCA.ProcessComponent.isPersistent>
+            <edoc.ECA.CCA.ProcessComponent.primitiveKind>
+            </edoc.ECA.CCA.ProcessComponent.primitiveKind>
+            <edoc.ECA.CCA.ProcessComponent.primitiveSpec>
+            </edoc.ECA.CCA.ProcessComponent.primitiveSpec>
+            <edoc.ECA.CCA.ProcessComponent.contextualBindings>
+            </edoc.ECA.CCA.ProcessComponent.contextualBindings>
+            <edoc.ECA.CCA.ProcessComponent.usedBy>
+            </edoc.ECA.CCA.ProcessComponent.usedBy>
+            <edoc.ECA.CCA.ProcessComponent.properties>
+            </edoc.ECA.CCA.ProcessComponent.properties>
+            <edoc.ECA.CCA.PortOwner.name xmi.value="Expedia"/>
+            <edoc.ECA.CCA.PortOwner.ports>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'Sell-18'"/>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'BuyFlight-20'"/>
+                <edoc.ECA.CCA.OperationPort xmi.idref="edoc.ECA.CCA.OperationPort 'FindFlight-24'"/>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'ReserveRoom-26'"/>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'RentCar-29'"/>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'TAPayment-32'"/>
+            </edoc.ECA.CCA.PortOwner.ports>
+            <edoc.ECA.CCA.Composition.bindings>
+            </edoc.ECA.CCA.Composition.bindings>
+            <edoc.ECA.CCA.Composition.uses>
+            </edoc.ECA.CCA.Composition.uses>
+            <edoc.ECA.CCA.UsageContext.portsUsed>
+            </edoc.ECA.CCA.UsageContext.portsUsed>
+            <edoc.ECA.CCA.Choreography.nodes>
+            </edoc.ECA.CCA.Choreography.nodes>
+            <edoc.ECA.CCA.Choreography.connections>
+            </edoc.ECA.CCA.Choreography.connections>
+            <edoc.ECA.CCA.Choreography.supertype>
+            </edoc.ECA.CCA.Choreography.supertype>
+            <edoc.ECA.CCA.Choreography.subtypes>
+            </edoc.ECA.CCA.Choreography.subtypes>
+        </edoc.ECA.CCA.ProcessComponent>
+        <edoc.ECA.CCA.ProcessComponent xmi.id="edoc.ECA.CCA.ProcessComponent 'BA-39'">
+            <edoc.ECA.CCA.ProcessComponent.granularity>
+            </edoc.ECA.CCA.ProcessComponent.granularity>
+            <edoc.ECA.CCA.ProcessComponent.isPersistent>
+            </edoc.ECA.CCA.ProcessComponent.isPersistent>
+            <edoc.ECA.CCA.ProcessComponent.primitiveKind>
+            </edoc.ECA.CCA.ProcessComponent.primitiveKind>
+            <edoc.ECA.CCA.ProcessComponent.primitiveSpec>
+            </edoc.ECA.CCA.ProcessComponent.primitiveSpec>
+            <edoc.ECA.CCA.ProcessComponent.contextualBindings>
+            </edoc.ECA.CCA.ProcessComponent.contextualBindings>
+            <edoc.ECA.CCA.ProcessComponent.usedBy>
+            </edoc.ECA.CCA.ProcessComponent.usedBy>
+            <edoc.ECA.CCA.ProcessComponent.properties>
+            </edoc.ECA.CCA.ProcessComponent.properties>
+            <edoc.ECA.CCA.PortOwner.name xmi.value="BA"/>
+            <edoc.ECA.CCA.PortOwner.ports>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'Flight-21'"/>
+            </edoc.ECA.CCA.PortOwner.ports>
+            <edoc.ECA.CCA.Composition.bindings>
+            </edoc.ECA.CCA.Composition.bindings>
+            <edoc.ECA.CCA.Composition.uses>
+            </edoc.ECA.CCA.Composition.uses>
+            <edoc.ECA.CCA.UsageContext.portsUsed>
+            </edoc.ECA.CCA.UsageContext.portsUsed>
+            <edoc.ECA.CCA.Choreography.nodes>
+            </edoc.ECA.CCA.Choreography.nodes>
+            <edoc.ECA.CCA.Choreography.connections>
+            </edoc.ECA.CCA.Choreography.connections>
+            <edoc.ECA.CCA.Choreography.supertype>
+            </edoc.ECA.CCA.Choreography.supertype>
+            <edoc.ECA.CCA.Choreography.subtypes>
+            </edoc.ECA.CCA.Choreography.subtypes>
+        </edoc.ECA.CCA.ProcessComponent>
+        <edoc.ECA.CCA.ProcessComponent xmi.id="edoc.ECA.CCA.ProcessComponent 'Marriot-40'">
+            <edoc.ECA.CCA.ProcessComponent.granularity>
+            </edoc.ECA.CCA.ProcessComponent.granularity>
+            <edoc.ECA.CCA.ProcessComponent.isPersistent>
+            </edoc.ECA.CCA.ProcessComponent.isPersistent>
+            <edoc.ECA.CCA.ProcessComponent.primitiveKind>
+            </edoc.ECA.CCA.ProcessComponent.primitiveKind>
+            <edoc.ECA.CCA.ProcessComponent.primitiveSpec>
+            </edoc.ECA.CCA.ProcessComponent.primitiveSpec>
+            <edoc.ECA.CCA.ProcessComponent.contextualBindings>
+            </edoc.ECA.CCA.ProcessComponent.contextualBindings>
+            <edoc.ECA.CCA.ProcessComponent.usedBy>
+            </edoc.ECA.CCA.ProcessComponent.usedBy>
+            <edoc.ECA.CCA.ProcessComponent.properties>
+            </edoc.ECA.CCA.ProcessComponent.properties>
+            <edoc.ECA.CCA.PortOwner.name xmi.value="Marriot"/>
+            <edoc.ECA.CCA.PortOwner.ports>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'Room-27'"/>
+            </edoc.ECA.CCA.PortOwner.ports>
+            <edoc.ECA.CCA.Composition.bindings>
+            </edoc.ECA.CCA.Composition.bindings>
+            <edoc.ECA.CCA.Composition.uses>
+            </edoc.ECA.CCA.Composition.uses>
+            <edoc.ECA.CCA.UsageContext.portsUsed>
+            </edoc.ECA.CCA.UsageContext.portsUsed>
+            <edoc.ECA.CCA.Choreography.nodes>
+            </edoc.ECA.CCA.Choreography.nodes>
+            <edoc.ECA.CCA.Choreography.connections>
+            </edoc.ECA.CCA.Choreography.connections>
+            <edoc.ECA.CCA.Choreography.supertype>
+            </edoc.ECA.CCA.Choreography.supertype>
+            <edoc.ECA.CCA.Choreography.subtypes>
+            </edoc.ECA.CCA.Choreography.subtypes>
+        </edoc.ECA.CCA.ProcessComponent>
+        <edoc.ECA.CCA.ProcessComponent xmi.id="edoc.ECA.CCA.ProcessComponent 'CarCompany-41'">
+            <edoc.ECA.CCA.ProcessComponent.granularity>
+            </edoc.ECA.CCA.ProcessComponent.granularity>
+            <edoc.ECA.CCA.ProcessComponent.isPersistent>
+            </edoc.ECA.CCA.ProcessComponent.isPersistent>
+            <edoc.ECA.CCA.ProcessComponent.primitiveKind>
+            </edoc.ECA.CCA.ProcessComponent.primitiveKind>
+            <edoc.ECA.CCA.ProcessComponent.primitiveSpec>
+            </edoc.ECA.CCA.ProcessComponent.primitiveSpec>
+            <edoc.ECA.CCA.ProcessComponent.contextualBindings>
+            </edoc.ECA.CCA.ProcessComponent.contextualBindings>
+            <edoc.ECA.CCA.ProcessComponent.usedBy>
+            </edoc.ECA.CCA.ProcessComponent.usedBy>
+            <edoc.ECA.CCA.ProcessComponent.properties>
+            </edoc.ECA.CCA.ProcessComponent.properties>
+            <edoc.ECA.CCA.PortOwner.name xmi.value="CarCompany"/>
+            <edoc.ECA.CCA.PortOwner.ports>
+                <edoc.ECA.CCA.ProtocolPort xmi.idref="edoc.ECA.CCA.ProtocolPort 'Car-30'"/>
+            </edoc.ECA.CCA.PortOwner.ports>
+            <edoc.ECA.CCA.Composition.bindings>
+            </edoc.ECA.CCA.Composition.bindings>
+            <edoc.ECA.CCA.Composition.uses>
+            </edoc.ECA.CCA.Composition.uses>
+            <edoc.ECA.CCA.UsageContext.portsUsed>
+            </edoc.ECA.CCA.UsageContext.portsUsed>
+            <edoc.ECA.CCA.Choreography.nodes>
+            </edoc.ECA.CCA.Choreography.nodes>
+            <edoc.ECA.CCA.Choreography.connections>
+            </edoc.ECA.CCA.Choreography.connections>
+            <edoc.ECA.CCA.Choreography.supertype>
+            </edoc.ECA.CCA.Choreography.supertype>
+            <edoc.ECA.CCA.Choreography.subtypes>
+            </edoc.ECA.CCA.Choreography.subtypes>
+        </edoc.ECA.CCA.ProcessComponent>
+        <edoc.ECA.CCA.ProtocolPort xmi.id="edoc.ECA.CCA.ProtocolPort 'Buy-17'">
+            <edoc.ECA.CCA.ProtocolPort.uses>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'BuySell-16'"/>
+            </edoc.ECA.CCA.ProtocolPort.uses>
+            <edoc.ECA.CCA.Port.name xmi.value="Buy"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Initiates"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+                <edoc.ECA.CCA.ProcessComponent xmi.idref="edoc.ECA.CCA.ProcessComponent 'Client-37'"/>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.ProtocolPort>
+        <edoc.ECA.CCA.ProtocolPort xmi.id="edoc.ECA.CCA.ProtocolPort 'Sell-18'">
+            <edoc.ECA.CCA.ProtocolPort.uses>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'BuySell-16'"/>
+            </edoc.ECA.CCA.ProtocolPort.uses>
+            <edoc.ECA.CCA.Port.name xmi.value="Sell"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Responds"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+                <edoc.ECA.CCA.ProcessComponent xmi.idref="edoc.ECA.CCA.ProcessComponent 'Expedia-38'"/>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.ProtocolPort>
+        <edoc.ECA.CCA.ProtocolPort xmi.id="edoc.ECA.CCA.ProtocolPort 'BuyFlight-20'">
+            <edoc.ECA.CCA.ProtocolPort.uses>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'BuyFlight-19'"/>
+            </edoc.ECA.CCA.ProtocolPort.uses>
+            <edoc.ECA.CCA.Port.name xmi.value="BuyFlight"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Initiates"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+                <edoc.ECA.CCA.ProcessComponent xmi.idref="edoc.ECA.CCA.ProcessComponent 'Expedia-38'"/>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.ProtocolPort>
+        <edoc.ECA.CCA.ProtocolPort xmi.id="edoc.ECA.CCA.ProtocolPort 'Flight-21'">
+            <edoc.ECA.CCA.ProtocolPort.uses>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'BuyFlight-19'"/>
+            </edoc.ECA.CCA.ProtocolPort.uses>
+            <edoc.ECA.CCA.Port.name xmi.value="Flight"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Responds"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'BuyFlight-19'"/>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.ProtocolPort>
+        <edoc.ECA.CCA.ProtocolPort xmi.id="edoc.ECA.CCA.ProtocolPort 'ReserveRoom-26'">
+            <edoc.ECA.CCA.ProtocolPort.uses>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'ReserveRoom-25'"/>
+            </edoc.ECA.CCA.ProtocolPort.uses>
+            <edoc.ECA.CCA.Port.name xmi.value="ReserveRoom"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Initiates"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+                <edoc.ECA.CCA.ProcessComponent xmi.idref="edoc.ECA.CCA.ProcessComponent 'Expedia-38'"/>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.ProtocolPort>
+        <edoc.ECA.CCA.ProtocolPort xmi.id="edoc.ECA.CCA.ProtocolPort 'Room-27'">
+            <edoc.ECA.CCA.ProtocolPort.uses>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'ReserveRoom-25'"/>
+            </edoc.ECA.CCA.ProtocolPort.uses>
+            <edoc.ECA.CCA.Port.name xmi.value="Room"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Responds"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'ReserveRoom-25'"/>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.ProtocolPort>
+        <edoc.ECA.CCA.ProtocolPort xmi.id="edoc.ECA.CCA.ProtocolPort 'RentCar-29'">
+            <edoc.ECA.CCA.ProtocolPort.uses>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'RentCar-28'"/>
+            </edoc.ECA.CCA.ProtocolPort.uses>
+            <edoc.ECA.CCA.Port.name xmi.value="RentCar"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Initiates"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+                <edoc.ECA.CCA.ProcessComponent xmi.idref="edoc.ECA.CCA.ProcessComponent 'Expedia-38'"/>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.ProtocolPort>
+        <edoc.ECA.CCA.ProtocolPort xmi.id="edoc.ECA.CCA.ProtocolPort 'Car-30'">
+            <edoc.ECA.CCA.ProtocolPort.uses>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'RentCar-28'"/>
+            </edoc.ECA.CCA.ProtocolPort.uses>
+            <edoc.ECA.CCA.Port.name xmi.value="Car"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Responds"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'RentCar-28'"/>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.ProtocolPort>
+        <edoc.ECA.CCA.ProtocolPort xmi.id="edoc.ECA.CCA.ProtocolPort 'TAPayment-32'">
+            <edoc.ECA.CCA.ProtocolPort.uses>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'Payment-31'"/>
+            </edoc.ECA.CCA.ProtocolPort.uses>
+            <edoc.ECA.CCA.Port.name xmi.value="TAPayment"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Initiates"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+                <edoc.ECA.CCA.ProcessComponent xmi.idref="edoc.ECA.CCA.ProcessComponent 'Expedia-38'"/>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.ProtocolPort>
+        <edoc.ECA.CCA.ProtocolPort xmi.id="edoc.ECA.CCA.ProtocolPort 'BPayment-33'">
+            <edoc.ECA.CCA.ProtocolPort.uses>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'Payment-31'"/>
+            </edoc.ECA.CCA.ProtocolPort.uses>
+            <edoc.ECA.CCA.Port.name xmi.value="BPayment"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Responds"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'Payment-31'"/>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.ProtocolPort>
+        <edoc.ECA.CCA.ProtocolPort xmi.id="edoc.ECA.CCA.ProtocolPort 'Ship-35'">
+            <edoc.ECA.CCA.ProtocolPort.uses>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'ShipDelivery-34'"/>
+            </edoc.ECA.CCA.ProtocolPort.uses>
+            <edoc.ECA.CCA.Port.name xmi.value="Ship"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Initiates"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'ShipDelivery-34'"/>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.ProtocolPort>
+        <edoc.ECA.CCA.ProtocolPort xmi.id="edoc.ECA.CCA.ProtocolPort 'Delivery-36'">
+            <edoc.ECA.CCA.ProtocolPort.uses>
+                <edoc.ECA.CCA.Protocol xmi.idref="edoc.ECA.CCA.Protocol 'ShipDelivery-34'"/>
+            </edoc.ECA.CCA.ProtocolPort.uses>
+            <edoc.ECA.CCA.Port.name xmi.value="Delivery"/>
+            <edoc.ECA.CCA.Port.isSynchronous>
+            </edoc.ECA.CCA.Port.isSynchronous>
+            <edoc.ECA.CCA.Port.isTransactional>
+            </edoc.ECA.CCA.Port.isTransactional>
+            <edoc.ECA.CCA.Port.direction>
+                <edoc.ECA.CCA.DirectionType xmi.idref="DirectionType::Responds"/>
+            </edoc.ECA.CCA.Port.direction>
+            <edoc.ECA.CCA.Port.postCondition>
+            </edoc.ECA.CCA.Port.postCondition>
+            <edoc.ECA.CCA.Port.representedBy>
+            </edoc.ECA.CCA.Port.representedBy>
+            <edoc.ECA.CCA.Port.owner>
+                <edoc.ECA.CCA.ProcessComponent xmi.idref="edoc.ECA.CCA.ProcessComponent 'Client-37'"/>
+            </edoc.ECA.CCA.Port.owner>
+        </edoc.ECA.CCA.ProtocolPort>
+    </XMI.content>
+</XMI>

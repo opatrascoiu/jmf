@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+    <jar path="C:/D/Work/Java Projects/lib/Quality.jar"/>
+    <options overwrite="false" compress="true" exportErrors="false"
+        exportWarnings="true" saveDescription="true"
+        descriptionLocation="/KMFStudio/Quality.jardesc"
+        useSourceFolders="false" buildIfNeeded="true"/>
+    <manifest manifestVersion="1.0" usesManifest="true"
+        reuseManifest="false" saveManifest="true"
+        generateManifest="true" manifestLocation="/KMFStudio/Quality.man">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false">
+        <javaElement handleIdentifier="=KMFStudio/src&lt;uk.ac.kent.cs.kmf.graphics.common"/>
+        <javaElement handleIdentifier="=KMFStudio/src&lt;uk.ac.kent.cs.kmf.graphics.applets.kiviat"/>
+        <javaElement handleIdentifier="=KMFStudio/src&lt;uk.ac.kent.cs.kmf.quality.graphics.kiviat"/>
+        <javaElement handleIdentifier="=KMFStudio/src&lt;uk.ac.kent.cs.kmf.quality.graphics.kiviat.applet"/>
+        <javaElement handleIdentifier="=KMFStudio/src&lt;uk.ac.kent.cs.kmf.graphics.chart"/>
+        <javaElement handleIdentifier="=KMFStudio/src&lt;uk.ac.kent.cs.kmf.quality.graphics.kiviat.chart"/>
+        <javaElement handleIdentifier="=KMFStudio/src&lt;uk.ac.kent.cs.kmf.graphics.applets.pie"/>
+        <javaElement handleIdentifier="=KMFStudio/src&lt;uk.ac.kent.cs.kmf.graphics.kiviat"/>
+        <javaElement handleIdentifier="=KMFStudio/src&lt;uk.ac.kent.cs.kmf.graphics.kiviat.applet"/>
+        <javaElement handleIdentifier="=KMFStudio/src&lt;uk.ac.kent.cs.kmf.graphics.kiviat.chart"/>
+    </selectedElements>
+</jardesc>

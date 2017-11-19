@@ -1,0 +1,73 @@
+result of 'context library::Library inv A: ''.size() inv B: 1'
+[0]
+[1]
+result of 'context library::Library inv: ''.size()'
+[0]
+result of 'context library::Library inv: 'a'.oclIsUndefined()'
+[false]
+result of 'context library::Library inv: 'a'.oclIsNew()'
+[false]
+result of 'context library::Library inv: 'a'.oclIsKindOf(OclAny)'
+[true]
+result of 'context library::Library inv: 'a'.oclIsKindOf(Boolean)'
+[false]
+result of 'context library::Library inv: 'a'.oclIsKindOf(Real)'
+[false]
+result of 'context library::Library inv: 'a'.oclIsKindOf(String)'
+[true]
+result of 'context library::Library inv: 'a'.oclIsKindOf(library::Library)'
+[false]
+result of 'context library::Library inv: 'a'.oclIsTypeOf(OclAny)'
+[false]
+result of 'context library::Library inv: 'a'.oclIsTypeOf(Boolean)'
+[false]
+result of 'context library::Library inv: 'a'.oclIsTypeOf(Real)'
+[false]
+result of 'context library::Library inv: 'a'.oclIsTypeOf(String)'
+[true]
+result of 'context library::Library inv: 'a'.oclIsTypeOf(library::Library)'
+[false]
+result of 'context library::Library inv: 'a'.oclAsType(OclAny)'
+['a']
+result of 'context library::Library inv: 'a'.oclAsType(Boolean)'
+[undefined]
+result of 'context library::Library inv: 'a'.oclAsType(Real)'
+[undefined]
+result of 'context library::Library inv: 'a'.oclAsType(String)'
+['a']
+result of 'context library::Library inv: 'a'.oclAsType(library::Library)'
+[undefined]
+result of 'context library::Library inv: 'a'.allInstances()'
+[Set {  }]
+result of 'context library::Library inv: 'aString''
+['aString']
+result of 'context library::Library inv: '''
+['']
+result of 'context library::Library inv: '\101''
+['\101']
+result of 'context library::Library inv: '\t' = '\u0009''
+[false]
+result of 'context library::Library inv: '\''
+['\']
+result of 'context library::Library inv: 'foo'.size()'
+[3]
+result of 'context library::Library inv: 'foo'.concat('bar')'
+['foobar']
+result of 'context library::Library inv: 'foobar'.substring(2, 4)'
+['oob']
+result of 'context library::Library inv: 'foobar'.substring(2,4)'
+['oob']
+result of 'context library::Library inv: '123'.toInteger()'
+[123]
+result of 'context library::Library inv: '123.45'.toReal()'
+[123.45]
+result of 'context library::Library inv: 'foobar' = 'foo''
+[false]
+result of 'context library::Library inv: 'foobar' = 'foobar''
+[true]
+result of 'context library::Library inv: 'foobar' <> 'foobar''
+[false]
+result of 'context library::Library inv: 'foobar' = (0/1 = 0)'
+[false]
+result of 'context library::Library inv: (0/1 = 0) = (0/1 = 0)'
+[true]

@@ -1,0 +1,74 @@
+context library::Library inv: Bag{}
+context library::Library inv: Bag{1,2,2,3}
+context library::Library inv: Bag{1,2..3,3,3..3}
+context library::Library inv: Bag{Set{1}, Set{2}, Set{2}, Set{3}}
+context library::Library inv: Bag{1,2,2,3}->iterate(e : Integer; acc : Integer = 0 | acc + e)
+context library::Library inv: Bag{1,1,2,3}->size()
+context library::Library inv: Bag{1,2,2,3}->includes(2)
+context library::Library inv: Bag{1,2,3}->includes(5)
+context library::Library inv: Bag{1,2,2,3}->excludes(2)
+context library::Library inv: Bag{1,2,3}->excludes(5)
+context library::Library inv: Bag{1,1,2,3}->count(1)
+context library::Library inv: Bag{1,1,2,3}->includesAll(Bag{1,3})
+context library::Library inv: Bag{1,2,3}->includesAll(Bag{1,1,3})
+context library::Library inv: Bag{1,2,3}->includesAll(Bag{2,4})
+context library::Library inv: Bag{1,2,3}->includesAll(Set{2,3})
+context library::Library inv: Bag{1,2,3}->includesAll(Sequence{3,2})
+context library::Library inv: Bag{1,2,3}->excludesAll(Bag{2,3})
+context library::Library inv: Bag{1,2,3}->excludesAll(Bag{2,4})
+context library::Library inv: Bag{1,2,3}->excludesAll(Bag{4,5})
+context library::Library inv: Bag{1,2,3}->isEmpty()
+context library::Library inv: Bag{}->isEmpty()
+context library::Library inv: Bag{1,2,3}->notEmpty()
+context library::Library inv: Bag{}->notEmpty()
+context library::Library inv: Bag{1,1,2,3}->sum()
+context library::Library inv: Bag{1,2} = Bag{1,2}
+context library::Library inv: Bag{1,2} = Bag{2,1}
+context library::Library inv: Bag{1,2} <> Bag{1,2}
+context library::Library inv: Bag{1,2,2} = Bag{1,2}
+context library::Library inv: Bag{1,2,2} <> Bag{1,2}
+context library::Library inv: Bag{1.0,2.0} = Bag{1,2}
+context library::Library inv: Bag{1,2}->union(Bag{1,2,3})
+context library::Library inv: Bag{1,2}->union(Set{1,2,3})
+context library::Library inv: Bag{1,2}->intersection(Bag{1,2,3})
+context library::Library inv: Bag{1,2,2,2,3}->intersection(Bag{2,2,3})
+context library::Library inv: Bag{1,2,2,2,3}->intersection(Bag{2,2,2,2,3})
+context library::Library inv: Bag{1,2,2,2,3}->intersection(Set{2,3})
+context library::Library inv: Bag{1,2,2,3}->including(2)
+context library::Library inv: Bag{1,2,2,3}->including(5)
+context library::Library inv: Bag{1,2,2,3}->excluding(2)
+context library::Library inv: Bag{1,2,2,3}->select(e | e > 1)
+context library::Library inv: Bag{1,2,2,3}->reject(e | e > 1)
+context library::Library inv: Bag{1,2,2,3}->collect(e | e * 2)
+context library::Library inv: Bag{1,2,2,3}->count(2)
+context library::Library inv: Bag{1,2,2,3}->asSequence()->size() = 4
+context library::Library inv: Bag{1,2,2,3}->asSet()
+context library::Library inv: Bag{Set{1}, Set{2}, Set{2}, Set{3}}->asSet()
+context library::Library inv: Bag{Set{1}, Set{2}, Set{2}, Set{3}}->flatten()
+context library::Library inv: Bag{Bag{1,1}, Bag{2,1}, Bag{1,2,3}}->flatten()
+context library::Library inv: Bag{(1/0 = 0)}->flatten()
+context library::Library inv: Bag{Sequence{1,2}, Sequence{2,1}, Sequence{2,3}}->flatten()
+context library::Library inv: Bag{(1/0 = 0)}->flatten()
+context library::Library inv: Bag{1,2,3,4,5,6}->exists(e | e > 0)
+context library::Library inv: Bag{1,2,3,4,5,6}->exists(e | e = 7)
+context library::Library inv: Bag{1,2,3,4,5,6}->forAll(e | e > 0)
+context library::Library inv: Bag{1,2,3,4,5,6}->forAll(e | e > 1)
+context library::Library inv: Bag{1,1}->isUnique(e | e)
+context library::Library inv: Bag{1,2,3}->isUnique(e | e)
+context library::Library inv: Bag{1 div 0,1}->isUnique(e | e)
+context library::Library inv: Bag{1 div 0, 1 div 0}->isUnique(e | e)
+context library::Library inv: Bag{Set{1},Set{1}}->isUnique(e | e)
+context library::Library inv: Bag{1..7}->one(x|x>6)
+context library::Library inv: Bag{1..7}->any(x|x>6)
+context library::Library inv: Bag{4,4,2,3,1,4,6,1,5}->sortedBy(e | e)
+context library::Library inv: Bag{4,4,2,3,1,4,6,1,5}->sortedBy(1)
+context library::Library inv: Bag{4,4,2,3,1,4,6,1,5}->sortedBy(1)->includesAll(Bag{4,4,2,3,1,4,6,1,5})
+context library::Library inv: Bag{'c','aa','ca','cc','a','aa'}->sortedBy(e | e.size())
+context library::Library inv: Bag{Set{3,2},Set{1,2,4}}->
+    iterate( e1 : Set(Integer);
+             acc1 : Bag(Integer) = Bag{} |
+              e1->iterate(v : Integer;
+                          acc2 : Bag(Integer) = acc1 |
+                            acc2->including(v)
+                         )
+           )

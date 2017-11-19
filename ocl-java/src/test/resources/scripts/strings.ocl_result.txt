@@ -1,0 +1,30 @@
+result of 'context library::Library inv: 'aString''
+['aString']
+result of 'context library::Library inv: '''
+['']
+result of 'context library::Library inv: '\101''
+['\101']
+result of 'context library::Library inv: '\t' = '\u0009''
+[false]
+result of 'context library::Library inv: '\''
+['\']
+result of 'context library::Library inv: 'foo'.size()'
+[3]
+result of 'context library::Library inv: 'foo'.concat('bar')'
+['foobar']
+result of 'context library::Library inv: 'foobar'.substring(2, 4)'
+['oob']
+result of 'context library::Library inv: 'foobar'.substring(2,4)'
+['oob']
+result of 'context library::Library inv: '123'.toInteger()'
+[123]
+result of 'context library::Library inv: '123.45'.toReal()'
+[123.45]
+result of 'context library::Library inv: 'foobar' = 'foo''
+[false]
+result of 'context library::Library inv: 'foobar' = 'foobar''
+[true]
+result of 'context library::Library inv: 'foobar' <> 'foobar''
+[false]
+result of 'context library::Library inv: 'foobar' = (0/1 = 0)'
+[false]

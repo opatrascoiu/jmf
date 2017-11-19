@@ -1,0 +1,68 @@
+context library::Library inv: true.oclIsUndefined()
+context library::Library inv: true.oclIsNew()
+context library::Library inv: true.oclIsKindOf(OclAny)
+context library::Library inv: true.oclIsKindOf(Boolean)
+context library::Library inv: true.oclIsKindOf(Real)
+context library::Library inv: true.oclIsKindOf(library::Library)
+context library::Library inv: true.oclIsTypeOf(OclAny)
+context library::Library inv: true.oclIsTypeOf(Boolean)
+context library::Library inv: true.oclIsTypeOf(Real)
+context library::Library inv: true.oclIsTypeOf(library::Library)
+context library::Library inv: true.oclAsType(OclAny)
+context library::Library inv: true.oclAsType(Boolean)
+context library::Library inv: true.oclAsType(Real)
+context library::Library inv: true.oclAsType(library::Library)
+context library::Library inv: true.allInstances()
+context library::Library inv: 1 = 0
+context library::Library inv: true
+context library::Library inv: false
+context library::Library inv: not true
+context library::Library inv: not false
+context library::Library inv: not (1 / 0 = 0)
+context library::Library inv: not not true
+context library::Library inv: not not false
+context library::Library inv: not not (1/0 = 0)
+context library::Library inv: false or false
+context library::Library inv: false or true
+context library::Library inv: false or (1/0 = 0)
+context library::Library inv: true or false
+context library::Library inv: true or true
+context library::Library inv: true or (1/0 = 0)
+context library::Library inv: (1/0 = 0) or false
+context library::Library inv: (1/0 = 0) or true
+context library::Library inv: (1/0 = 0) or (1/0 = 0)
+context library::Library inv: true or false or true
+context library::Library inv: false and false
+context library::Library inv: false and true
+context library::Library inv: false and (1/0 = 0)
+context library::Library inv: true and false
+context library::Library inv: true and true
+context library::Library inv: true and (1/0 = 0)
+context library::Library inv: (1/0 = 0) and false
+context library::Library inv: (1/0 = 0) and true
+context library::Library inv: (1/0 = 0) and (1/0 = 0)
+context library::Library inv: true and false and true
+context library::Library inv: false xor false
+context library::Library inv: false xor true
+context library::Library inv: false xor (1/0 = 0)
+context library::Library inv: true xor false
+context library::Library inv: true xor true
+context library::Library inv: true xor (1/0 = 0)
+context library::Library inv: (1/0 = 0) xor false
+context library::Library inv: (1/0 = 0) xor true
+context library::Library inv: (1/0 = 0) xor (1/0 = 0)
+context library::Library inv: false implies false
+context library::Library inv: false implies true
+context library::Library inv: false implies (1/0 = 0)
+context library::Library inv: true implies false
+context library::Library inv: true implies true
+context library::Library inv: true implies (1/0 = 0)
+context library::Library inv: (1/0 = 0) implies false
+context library::Library inv: (1/0 = 0) implies true
+context library::Library inv: (1/0 = 0) implies (1/0 = 0)
+context library::Library inv: true = true
+context library::Library inv: true = false
+context library::Library inv: true = false = false
+context library::Library inv: true <> true
+context library::Library inv: true <> false
+context library::Library inv: false <> true

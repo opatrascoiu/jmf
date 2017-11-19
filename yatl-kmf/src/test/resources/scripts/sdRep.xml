@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMI version="1.0" verified="false">
+    <XMI.header>
+        <XMI.documentation>
+            <XMI.exporter>Kent Modeling Framework [XMI]</XMI.exporter>
+            <XMI.exporterVersion>1.0</XMI.exporterVersion>
+        </XMI.documentation>
+    </XMI.header>
+    <XMI.content>
+        <sd.as.Zone xmi.id="sd.as.Zone 'id-4'">
+            <sd.as.Zone.excludingContours>
+                <sd.as.Contour xmi.idref="sd.as.Contour 'b-2'"/>
+            </sd.as.Zone.excludingContours>
+            <sd.as.Zone.containingContours>
+                <sd.as.Contour xmi.idref="sd.as.Contour 'a-1'"/>
+            </sd.as.Zone.containingContours>
+            <sd.as.Zone.spider>
+            </sd.as.Zone.spider>
+            <sd.as.Zone.unitaryDiagrams>
+            </sd.as.Zone.unitaryDiagrams>
+            <sd.as.Zone.shadedDiagrams>
+            </sd.as.Zone.shadedDiagrams>
+            <sd.as.Zone.allContours>
+            </sd.as.Zone.allContours>
+        </sd.as.Zone>
+        <sd.as.Zone xmi.id="sd.as.Zone 'id-5'">
+            <sd.as.Zone.excludingContours>
+                <sd.as.Contour xmi.idref="sd.as.Contour 'a-1'"/>
+            </sd.as.Zone.excludingContours>
+            <sd.as.Zone.containingContours>
+                <sd.as.Contour xmi.idref="sd.as.Contour 'b-2'"/>
+            </sd.as.Zone.containingContours>
+            <sd.as.Zone.spider>
+            </sd.as.Zone.spider>
+            <sd.as.Zone.unitaryDiagrams>
+            </sd.as.Zone.unitaryDiagrams>
+            <sd.as.Zone.shadedDiagrams>
+            </sd.as.Zone.shadedDiagrams>
+            <sd.as.Zone.allContours>
+            </sd.as.Zone.allContours>
+        </sd.as.Zone>
+        <sd.as.Zone xmi.id="sd.as.Zone 'id-6'">
+            <sd.as.Zone.excludingContours>
+            </sd.as.Zone.excludingContours>
+            <sd.as.Zone.containingContours>
+                <sd.as.Contour xmi.idref="sd.as.Contour 'a-1'"/>
+                <sd.as.Contour xmi.idref="sd.as.Contour 'b-2'"/>
+            </sd.as.Zone.containingContours>
+            <sd.as.Zone.spider>
+            </sd.as.Zone.spider>
+            <sd.as.Zone.unitaryDiagrams>
+            </sd.as.Zone.unitaryDiagrams>
+            <sd.as.Zone.shadedDiagrams>
+            </sd.as.Zone.shadedDiagrams>
+            <sd.as.Zone.allContours>
+            </sd.as.Zone.allContours>
+        </sd.as.Zone>
+        <sd.as.Contour xmi.id="sd.as.Contour 'a-1'">
+            <sd.as.Contour.name xmi.value="a"/>
+            <sd.as.Contour.excludingContourZones>
+            </sd.as.Contour.excludingContourZones>
+            <sd.as.Contour.containingContourZones>
+            </sd.as.Contour.containingContourZones>
+            <sd.as.Contour.allContourZone>
+            </sd.as.Contour.allContourZone>
+            <sd.as.Contour.unitaryDiagrams>
+            </sd.as.Contour.unitaryDiagrams>
+        </sd.as.Contour>
+        <sd.as.Contour xmi.id="sd.as.Contour 'b-2'">
+            <sd.as.Contour.name xmi.value="b"/>
+            <sd.as.Contour.excludingContourZones>
+            </sd.as.Contour.excludingContourZones>
+            <sd.as.Contour.containingContourZones>
+            </sd.as.Contour.containingContourZones>
+            <sd.as.Contour.allContourZone>
+            </sd.as.Contour.allContourZone>
+            <sd.as.Contour.unitaryDiagrams>
+            </sd.as.Contour.unitaryDiagrams>
+        </sd.as.Contour>
+        <sd.as.Contour xmi.id="sd.as.Contour 'c-3'">
+            <sd.as.Contour.name xmi.value="c"/>
+            <sd.as.Contour.excludingContourZones>
+            </sd.as.Contour.excludingContourZones>
+            <sd.as.Contour.containingContourZones>
+            </sd.as.Contour.containingContourZones>
+            <sd.as.Contour.allContourZone>
+            </sd.as.Contour.allContourZone>
+            <sd.as.Contour.unitaryDiagrams>
+            </sd.as.Contour.unitaryDiagrams>
+        </sd.as.Contour>
+        <sd.as.UnitaryDiagram xmi.id="sd.as.UnitaryDiagram 'id-7'">
+            <sd.as.UnitaryDiagram.zones>
+                <sd.as.Zone xmi.idref="sd.as.Zone 'id-4'"/>
+                <sd.as.Zone xmi.idref="sd.as.Zone 'id-5'"/>
+                <sd.as.Zone xmi.idref="sd.as.Zone 'id-6'"/>
+            </sd.as.UnitaryDiagram.zones>
+            <sd.as.UnitaryDiagram.shadedZones>
+            </sd.as.UnitaryDiagram.shadedZones>
+            <sd.as.UnitaryDiagram.spiders>
+            </sd.as.UnitaryDiagram.spiders>
+            <sd.as.UnitaryDiagram.compoundDiagram>
+            </sd.as.UnitaryDiagram.compoundDiagram>
+            <sd.as.UnitaryDiagram.contours>
+            </sd.as.UnitaryDiagram.contours>
+            <sd.as.Diagram.name>
+            </sd.as.Diagram.name>
+        </sd.as.UnitaryDiagram>
+    </XMI.content>
+</XMI>

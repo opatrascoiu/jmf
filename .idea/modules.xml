@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jmf.iml" filepath="$PROJECT_DIR$/jmf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kmf-studio/kmf-studio.iml" filepath="$PROJECT_DIR$/kmf-studio/kmf-studio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ocl-core/ocl-core.iml" filepath="$PROJECT_DIR$/ocl-core/ocl-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ocl-emf/ocl-emf.iml" filepath="$PROJECT_DIR$/ocl-emf/ocl-emf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ocl-java/ocl-java.iml" filepath="$PROJECT_DIR$/ocl-java/ocl-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ocl-kmf/ocl-kmf.iml" filepath="$PROJECT_DIR$/ocl-kmf/ocl-kmf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yatl-core/yatl-core.iml" filepath="$PROJECT_DIR$/yatl-core/yatl-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yatl-kmf/yatl-kmf.iml" filepath="$PROJECT_DIR$/yatl-kmf/yatl-kmf.iml" />
+    </modules>
+  </component>
+</project>

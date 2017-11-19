@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<project>
+	<pathname>C:\D\Work\Java Projects\YATL4KMF\src\test\scripts\sd2ocl.ysp</pathname>
+	<transformation>C:/D/Work/Java Projects/YATL4KMF/src/test/scripts/sd2ocl.tl</transformation>
+	<source>
+		<model>C:/D/Work/Java Projects/YATL4KMF/src/test/scripts/sd.xmi</model>
+		<repositoryClass>sd.repository.SdRepository$Class</repositoryClass>
+		<repositoryContext>C:\D\Work\Java Projects\YATL4KMF\src\test\scripts\sdRep.xml</repositoryContext>
+	</source>
+	<target>
+		<model>C:/D/Work/Java Projects/YATL4KMF/src/test/scripts/ocl.xmi</model>
+		<repositoryClass>ocl.syntax.repository.SyntaxRepository$Class</repositoryClass>
+		<repositoryContext></repositoryContext>
+	</target>
+</project>

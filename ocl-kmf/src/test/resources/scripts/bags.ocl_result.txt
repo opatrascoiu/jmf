@@ -1,0 +1,198 @@
+result of 'context library::Library inv: Bag{}'
+[Bag {  }]
+[Bag {  }]
+result of 'context library::Library inv: Bag{1,2,2,3}'
+[Bag { 1, 2, 2, 3 }]
+[Bag { 1, 2, 2, 3 }]
+result of 'context library::Library inv: Bag{1,2..3,3,3..3}'
+[Bag { 1, 2, 3, 3, 3 }]
+[Bag { 1, 2, 3, 3, 3 }]
+result of 'context library::Library inv: Bag{Set{1}, Set{2}, Set{2}, Set{3}}'
+[Bag { Set { 1 }, Set { 2 }, Set { 2 }, Set { 3 } }]
+[Bag { Set { 1 }, Set { 2 }, Set { 2 }, Set { 3 } }]
+result of 'context library::Library inv: Bag{1,2,2,3}->iterate(e : Integer; acc : Integer = 0 | acc + e)'
+[8]
+[8]
+result of 'context library::Library inv: Bag{1,1,2,3}->size()'
+[4]
+[4]
+result of 'context library::Library inv: Bag{1,2,2,3}->includes(2)'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1,2,3}->includes(5)'
+[false]
+[false]
+result of 'context library::Library inv: Bag{1,2,2,3}->excludes(2)'
+[false]
+[false]
+result of 'context library::Library inv: Bag{1,2,3}->excludes(5)'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1,1,2,3}->count(1)'
+[2]
+[2]
+result of 'context library::Library inv: Bag{1,1,2,3}->includesAll(Bag{1,3})'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1,2,3}->includesAll(Bag{1,1,3})'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1,2,3}->includesAll(Bag{2,4})'
+[false]
+[false]
+result of 'context library::Library inv: Bag{1,2,3}->includesAll(Set{2,3})'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1,2,3}->includesAll(Sequence{3,2})'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1,2,3}->excludesAll(Bag{2,3})'
+[false]
+[false]
+result of 'context library::Library inv: Bag{1,2,3}->excludesAll(Bag{2,4})'
+[false]
+[false]
+result of 'context library::Library inv: Bag{1,2,3}->excludesAll(Bag{4,5})'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1,2,3}->isEmpty()'
+[false]
+[false]
+result of 'context library::Library inv: Bag{}->isEmpty()'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1,2,3}->notEmpty()'
+[true]
+[true]
+result of 'context library::Library inv: Bag{}->notEmpty()'
+[false]
+[false]
+result of 'context library::Library inv: Bag{1,1,2,3}->sum()'
+[7]
+[7]
+result of 'context library::Library inv: Bag{1,2} = Bag{1,2}'
+[false]
+[false]
+result of 'context library::Library inv: Bag{1,2} = Bag{2,1}'
+[false]
+[false]
+result of 'context library::Library inv: Bag{1,2} <> Bag{1,2}'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1,2,2} = Bag{1,2}'
+[false]
+[false]
+result of 'context library::Library inv: Bag{1,2,2} <> Bag{1,2}'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1.0,2.0} = Bag{1,2}'
+[false]
+[false]
+result of 'context library::Library inv: Bag{1,2}->union(Bag{1,2,3})'
+[Bag { 1, 2, 1, 2, 3 }]
+[Bag { 1, 2, 1, 2, 3 }]
+result of 'context library::Library inv: Bag{1,2}->union(Set{1,2,3})'
+[Bag { 1, 2, 1, 2, 3 }]
+[Bag { 1, 2, 1, 2, 3 }]
+result of 'context library::Library inv: Bag{1,2}->intersection(Bag{1,2,3})'
+[Bag { 1, 2 }]
+[Bag { 1, 2 }]
+result of 'context library::Library inv: Bag{1,2,2,2,3}->intersection(Bag{2,2,3})'
+[Bag { 2, 2, 2, 3 }]
+[Bag { 2, 2, 2, 3 }]
+result of 'context library::Library inv: Bag{1,2,2,2,3}->intersection(Bag{2,2,2,2,3})'
+[Bag { 2, 2, 2, 3, 2 }]
+[Bag { 2, 2, 2, 3, 2 }]
+result of 'context library::Library inv: Bag{1,2,2,2,3}->intersection(Set{2,3})'
+[Set { 2, 3 }]
+[Set { 2, 3 }]
+result of 'context library::Library inv: Bag{1,2,2,3}->including(2)'
+[Bag { 1, 2, 2, 3, 2 }]
+[Bag { 1, 2, 2, 3, 2 }]
+result of 'context library::Library inv: Bag{1,2,2,3}->including(5)'
+[Bag { 1, 2, 2, 3, 5 }]
+[Bag { 1, 2, 2, 3, 5 }]
+result of 'context library::Library inv: Bag{1,2,2,3}->excluding(2)'
+[Bag { 1, 3 }]
+[Bag { 1, 3 }]
+result of 'context library::Library inv: Bag{1,2,2,3}->select(e | e > 1)'
+[Bag { 2, 2, 3 }]
+[Bag { 2, 2, 3 }]
+result of 'context library::Library inv: Bag{1,2,2,3}->reject(e | e > 1)'
+[Bag { 1 }]
+[Bag { 1 }]
+result of 'context library::Library inv: Bag{1,2,2,3}->collect(e | e * 2)'
+[Bag { 2, 4, 4, 6 }]
+[Bag { 2, 4, 4, 6 }]
+result of 'context library::Library inv: Bag{1,2,2,3}->count(2)'
+[2]
+[2]
+result of 'context library::Library inv: Bag{1,2,2,3}->asSequence()->size() = 4'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1,2,2,3}->asSet()'
+[Set { 1, 2, 3 }]
+[Set { 1, 2, 3 }]
+result of 'context library::Library inv: Bag{Set{1}, Set{2}, Set{2}, Set{3}}->asSet()'
+[Set { Set { 1 }, Set { 2 }, Set { 2 }, Set { 3 } }]
+[Set { Set { 1 }, Set { 2 }, Set { 2 }, Set { 3 } }]
+result of 'context library::Library inv: Bag{Set{1}, Set{2}, Set{2}, Set{3}}->flatten()'
+[Bag { 1, 2, 2, 3 }]
+[Bag { 1, 2, 2, 3 }]
+result of 'context library::Library inv: Bag{Bag{1,1}, Bag{2,1}, Bag{1,2,3}}->flatten()'
+[Bag { 1, 1, 2, 1, 1, 2, 3 }]
+[Bag { 1, 1, 2, 1, 1, 2, 3 }]
+result of 'context library::Library inv: Bag{(1/0 = 0)}->flatten()'
+[Bag { undefined }]
+[Bag { undefined }]
+result of 'context library::Library inv: Bag{Sequence{1,2}, Sequence{2,1}, Sequence{2,3}}->flatten()'
+[Bag { 1, 2, 2, 1, 2, 3 }]
+[Bag { 1, 2, 2, 1, 2, 3 }]
+result of 'context library::Library inv: Bag{(1/0 = 0)}->flatten()'
+[Bag { undefined }]
+[Bag { undefined }]
+result of 'context library::Library inv: Bag{1,2,3,4,5,6}->exists(e | e > 0)'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1,2,3,4,5,6}->exists(e | e = 7)'
+[false]
+[false]
+result of 'context library::Library inv: Bag{1,2,3,4,5,6}->forAll(e | e > 0)'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1,2,3,4,5,6}->forAll(e | e > 1)'
+[false]
+[false]
+result of 'context library::Library inv: Bag{1,1}->isUnique(e | e)'
+[false]
+[false]
+result of 'context library::Library inv: Bag{1,2,3}->isUnique(e | e)'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1 div 0, 1}->isUnique(e | e)'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1 div 0, 1 div 0}->isUnique(e | e)'
+[false]
+[false]
+result of 'context library::Library inv: Bag{Set{1},Set{1}}->isUnique(e | e)'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1..7}->one(x|x>6)'
+[true]
+[true]
+result of 'context library::Library inv: Bag{1..7}->any(x|x>6)'
+[7]
+[7]
+result of 'context library::Library inv: Bag{4,4,2,3,1,4,6,1,5}->sortedBy(e | e)'
+[Sequence { 1, 1, 2, 3, 4, 4, 4, 5, 6 }]
+[Sequence { 1, 1, 2, 3, 4, 4, 4, 5, 6 }]
+result of 'context library::Library inv: Bag{4,4,2,3,1,4,6,1,5}->sortedBy(1)'
+[Sequence { 4, 4, 2, 3, 1, 4, 6, 1, 5 }]
+[Sequence { 4, 4, 2, 3, 1, 4, 6, 1, 5 }]
+result of 'context library::Library inv: Bag{4,4,2,3,1,4,6,1,5}->sortedBy(1)->includesAll(Bag{4,4,2,3,1,4,6,1,5})'
+[true]
+[true]
+result of 'context library::Library inv: Bag{'c','aa','ca','cc','a','aa'}->sortedBy(e | e.size())'
+[Sequence { 'c', 'a', 'aa', 'ca', 'cc', 'aa' }]
+[Sequence { 'c', 'a', 'aa', 'ca', 'cc', 'aa' }]

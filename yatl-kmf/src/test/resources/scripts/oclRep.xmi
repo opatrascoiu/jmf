@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMI version="1.0" verified="false">
+    <XMI.header>
+        <XMI.documentation>
+            <XMI.exporter>Kent Modeling Framework [XMI]</XMI.exporter>
+            <XMI.exporterVersion>1.0</XMI.exporterVersion>
+        </XMI.documentation>
+    </XMI.header>
+    <XMI.content>
+        <syntax.ast.expressions.ArrowSelectionExpAS xmi.id="syntax.ast.expressions.ArrowSelectionExpAS 'select-7'">
+            <syntax.ast.expressions.name xmi.value="select"/>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-6'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.ArrowSelectionExpAS>
+        <syntax.ast.expressions.ArrowSelectionExpAS xmi.id="syntax.ast.expressions.ArrowSelectionExpAS 'select-26'">
+            <syntax.ast.expressions.name xmi.value="select"/>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-25'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.ArrowSelectionExpAS>
+        <syntax.ast.expressions.ArrowSelectionExpAS xmi.id="syntax.ast.expressions.ArrowSelectionExpAS 'select-45'">
+            <syntax.ast.expressions.name xmi.value="select"/>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-44'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.ArrowSelectionExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-6'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'allInstances-5'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-11'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'isKindOf-10'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+                <syntax.ast.expressions.PathNameExpAS xmi.idref="syntax.ast.expressions.PathNameExpAS 'id-9'"/>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-14'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'isKindOf-13'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+                <syntax.ast.expressions.PathNameExpAS xmi.idref="syntax.ast.expressions.PathNameExpAS 'id-12'"/>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-16'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'not-15'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-18'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'and-17'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-16'"/>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-25'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'allInstances-24'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-30'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'isKindOf-29'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+                <syntax.ast.expressions.PathNameExpAS xmi.idref="syntax.ast.expressions.PathNameExpAS 'id-28'"/>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-33'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'isKindOf-32'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+                <syntax.ast.expressions.PathNameExpAS xmi.idref="syntax.ast.expressions.PathNameExpAS 'id-31'"/>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-35'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'not-34'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-37'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'and-36'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-35'"/>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-44'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'allInstances-43'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-49'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'isKindOf-48'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+                <syntax.ast.expressions.PathNameExpAS xmi.idref="syntax.ast.expressions.PathNameExpAS 'id-47'"/>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-52'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'isKindOf-51'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+                <syntax.ast.expressions.PathNameExpAS xmi.idref="syntax.ast.expressions.PathNameExpAS 'id-50'"/>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.expressions.OperationCallExpAS xmi.id="syntax.ast.expressions.OperationCallExpAS 'id-54'">
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.DotSelectionExpAS xmi.idref="syntax.ast.expressions.DotSelectionExpAS 'and-53'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.arguments>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-52'"/>
+            </syntax.ast.expressions.arguments>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.OperationCallExpAS>
+        <syntax.ast.types.SetTypeAS xmi.id="syntax.ast.types.SetTypeAS 'id-3'">
+            <syntax.ast.types.elementType>
+                <syntax.ast.types.ClassifierAS xmi.idref="syntax.ast.types.ClassifierAS 'id-2'"/>
+            </syntax.ast.types.elementType>
+        </syntax.ast.types.SetTypeAS>
+        <syntax.ast.types.SetTypeAS xmi.id="syntax.ast.types.SetTypeAS 'id-22'">
+            <syntax.ast.types.elementType>
+                <syntax.ast.types.ClassifierAS xmi.idref="syntax.ast.types.ClassifierAS 'id-21'"/>
+            </syntax.ast.types.elementType>
+        </syntax.ast.types.SetTypeAS>
+        <syntax.ast.types.SetTypeAS xmi.id="syntax.ast.types.SetTypeAS 'id-41'">
+            <syntax.ast.types.elementType>
+                <syntax.ast.types.ClassifierAS xmi.idref="syntax.ast.types.ClassifierAS 'id-40'"/>
+            </syntax.ast.types.elementType>
+        </syntax.ast.types.SetTypeAS>
+        <syntax.ast.expressions.LetExpAS xmi.id="syntax.ast.expressions.LetExpAS 'id-1'">
+            <syntax.ast.expressions.variables>
+            </syntax.ast.expressions.variables>
+            <syntax.ast.expressions.in>
+            </syntax.ast.expressions.in>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.LetExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'allInstances-5'">
+            <syntax.ast.expressions.name xmi.value="allInstances"/>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.PathNameExpAS xmi.idref="syntax.ast.expressions.PathNameExpAS 'id-4'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'isKindOf-10'">
+            <syntax.ast.expressions.name xmi.value="isKindOf"/>
+            <syntax.ast.expressions.source>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'isKindOf-13'">
+            <syntax.ast.expressions.name xmi.value="isKindOf"/>
+            <syntax.ast.expressions.source>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'not-15'">
+            <syntax.ast.expressions.name xmi.value="not"/>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-14'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'and-17'">
+            <syntax.ast.expressions.name xmi.value="and"/>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-11'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'allInstances-24'">
+            <syntax.ast.expressions.name xmi.value="allInstances"/>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.PathNameExpAS xmi.idref="syntax.ast.expressions.PathNameExpAS 'id-23'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'isKindOf-29'">
+            <syntax.ast.expressions.name xmi.value="isKindOf"/>
+            <syntax.ast.expressions.source>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'isKindOf-32'">
+            <syntax.ast.expressions.name xmi.value="isKindOf"/>
+            <syntax.ast.expressions.source>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'not-34'">
+            <syntax.ast.expressions.name xmi.value="not"/>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-33'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'and-36'">
+            <syntax.ast.expressions.name xmi.value="and"/>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-30'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'allInstances-43'">
+            <syntax.ast.expressions.name xmi.value="allInstances"/>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.PathNameExpAS xmi.idref="syntax.ast.expressions.PathNameExpAS 'id-42'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'isKindOf-48'">
+            <syntax.ast.expressions.name xmi.value="isKindOf"/>
+            <syntax.ast.expressions.source>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'isKindOf-51'">
+            <syntax.ast.expressions.name xmi.value="isKindOf"/>
+            <syntax.ast.expressions.source>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.expressions.DotSelectionExpAS xmi.id="syntax.ast.expressions.DotSelectionExpAS 'and-53'">
+            <syntax.ast.expressions.name xmi.value="and"/>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-49'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.DotSelectionExpAS>
+        <syntax.ast.types.ClassifierAS xmi.id="syntax.ast.types.ClassifierAS 'id-2'">
+            <syntax.ast.types.pathName>
+                <String xmi.id="1"  xmi.label="OclAny"/>
+            </syntax.ast.types.pathName>
+        </syntax.ast.types.ClassifierAS>
+        <syntax.ast.types.ClassifierAS xmi.id="syntax.ast.types.ClassifierAS 'id-21'">
+            <syntax.ast.types.pathName>
+                <String xmi.id="1"  xmi.label="OclAny"/>
+            </syntax.ast.types.pathName>
+        </syntax.ast.types.ClassifierAS>
+        <syntax.ast.types.ClassifierAS xmi.id="syntax.ast.types.ClassifierAS 'id-40'">
+            <syntax.ast.types.pathName>
+                <String xmi.id="1"  xmi.label="OclAny"/>
+            </syntax.ast.types.pathName>
+        </syntax.ast.types.ClassifierAS>
+        <syntax.ast.expressions.PathNameExpAS xmi.id="syntax.ast.expressions.PathNameExpAS 'id-4'">
+            <syntax.ast.expressions.pathName>
+                <String xmi.id="1"  xmi.label="OclAny"/>
+            </syntax.ast.expressions.pathName>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.PathNameExpAS>
+        <syntax.ast.expressions.PathNameExpAS xmi.id="syntax.ast.expressions.PathNameExpAS 'id-9'">
+            <syntax.ast.expressions.pathName>
+                <String xmi.id="1"  xmi.label="a"/>
+            </syntax.ast.expressions.pathName>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.PathNameExpAS>
+        <syntax.ast.expressions.PathNameExpAS xmi.id="syntax.ast.expressions.PathNameExpAS 'id-12'">
+            <syntax.ast.expressions.pathName>
+                <String xmi.id="1"  xmi.label="b"/>
+            </syntax.ast.expressions.pathName>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.PathNameExpAS>
+        <syntax.ast.expressions.PathNameExpAS xmi.id="syntax.ast.expressions.PathNameExpAS 'id-23'">
+            <syntax.ast.expressions.pathName>
+                <String xmi.id="1"  xmi.label="OclAny"/>
+            </syntax.ast.expressions.pathName>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.PathNameExpAS>
+        <syntax.ast.expressions.PathNameExpAS xmi.id="syntax.ast.expressions.PathNameExpAS 'id-28'">
+            <syntax.ast.expressions.pathName>
+                <String xmi.id="1"  xmi.label="b"/>
+            </syntax.ast.expressions.pathName>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.PathNameExpAS>
+        <syntax.ast.expressions.PathNameExpAS xmi.id="syntax.ast.expressions.PathNameExpAS 'id-31'">
+            <syntax.ast.expressions.pathName>
+                <String xmi.id="1"  xmi.label="a"/>
+            </syntax.ast.expressions.pathName>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.PathNameExpAS>
+        <syntax.ast.expressions.PathNameExpAS xmi.id="syntax.ast.expressions.PathNameExpAS 'id-42'">
+            <syntax.ast.expressions.pathName>
+                <String xmi.id="1"  xmi.label="OclAny"/>
+            </syntax.ast.expressions.pathName>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.PathNameExpAS>
+        <syntax.ast.expressions.PathNameExpAS xmi.id="syntax.ast.expressions.PathNameExpAS 'id-47'">
+            <syntax.ast.expressions.pathName>
+                <String xmi.id="1"  xmi.label="a"/>
+            </syntax.ast.expressions.pathName>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.PathNameExpAS>
+        <syntax.ast.expressions.PathNameExpAS xmi.id="syntax.ast.expressions.PathNameExpAS 'id-50'">
+            <syntax.ast.expressions.pathName>
+                <String xmi.id="1"  xmi.label="b"/>
+            </syntax.ast.expressions.pathName>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.PathNameExpAS>
+        <syntax.ast.expressions.IteratorExpAS xmi.id="syntax.ast.expressions.IteratorExpAS 'id-19'">
+            <syntax.ast.expressions.name xmi.value=""/>
+            <syntax.ast.expressions.loopBody>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-18'"/>
+            </syntax.ast.expressions.loopBody>
+            <syntax.ast.expressions.iterator>
+                <syntax.ast.contexts.VariableDeclarationAS xmi.idref="syntax.ast.contexts.VariableDeclarationAS 'x-8'"/>
+            </syntax.ast.expressions.iterator>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.ArrowSelectionExpAS xmi.idref="syntax.ast.expressions.ArrowSelectionExpAS 'select-7'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.result>
+            </syntax.ast.expressions.result>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.IteratorExpAS>
+        <syntax.ast.expressions.IteratorExpAS xmi.id="syntax.ast.expressions.IteratorExpAS 'id-38'">
+            <syntax.ast.expressions.name xmi.value=""/>
+            <syntax.ast.expressions.loopBody>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-37'"/>
+            </syntax.ast.expressions.loopBody>
+            <syntax.ast.expressions.iterator>
+                <syntax.ast.contexts.VariableDeclarationAS xmi.idref="syntax.ast.contexts.VariableDeclarationAS 'x-27'"/>
+            </syntax.ast.expressions.iterator>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.ArrowSelectionExpAS xmi.idref="syntax.ast.expressions.ArrowSelectionExpAS 'select-26'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.result>
+            </syntax.ast.expressions.result>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.IteratorExpAS>
+        <syntax.ast.expressions.IteratorExpAS xmi.id="syntax.ast.expressions.IteratorExpAS 'id-55'">
+            <syntax.ast.expressions.name xmi.value=""/>
+            <syntax.ast.expressions.loopBody>
+                <syntax.ast.expressions.OperationCallExpAS xmi.idref="syntax.ast.expressions.OperationCallExpAS 'id-54'"/>
+            </syntax.ast.expressions.loopBody>
+            <syntax.ast.expressions.iterator>
+                <syntax.ast.contexts.VariableDeclarationAS xmi.idref="syntax.ast.contexts.VariableDeclarationAS 'x-46'"/>
+            </syntax.ast.expressions.iterator>
+            <syntax.ast.expressions.source>
+                <syntax.ast.expressions.ArrowSelectionExpAS xmi.idref="syntax.ast.expressions.ArrowSelectionExpAS 'select-45'"/>
+            </syntax.ast.expressions.source>
+            <syntax.ast.expressions.result>
+            </syntax.ast.expressions.result>
+            <syntax.ast.expressions.isMarkedPre xmi.value="false"/>
+            <syntax.ast.expressions.parent>
+            </syntax.ast.expressions.parent>
+            <syntax.ast.expressions.elseSource>
+            </syntax.ast.expressions.elseSource>
+        </syntax.ast.expressions.IteratorExpAS>
+        <syntax.ast.contexts.VariableDeclarationAS xmi.id="syntax.ast.contexts.VariableDeclarationAS 'x-8'">
+            <syntax.ast.contexts.name xmi.value="x"/>
+            <syntax.ast.contexts.initExp>
+            </syntax.ast.contexts.initExp>
+            <syntax.ast.contexts.type>
+                <syntax.ast.types.ClassifierAS xmi.idref="syntax.ast.types.ClassifierAS 'id-2'"/>
+            </syntax.ast.contexts.type>
+        </syntax.ast.contexts.VariableDeclarationAS>
+        <syntax.ast.contexts.VariableDeclarationAS xmi.id="syntax.ast.contexts.VariableDeclarationAS 'a_|_b-20'">
+            <syntax.ast.contexts.name xmi.value="a_|_b"/>
+            <syntax.ast.contexts.initExp>
+                <syntax.ast.expressions.IteratorExpAS xmi.idref="syntax.ast.expressions.IteratorExpAS 'id-19'"/>
+            </syntax.ast.contexts.initExp>
+            <syntax.ast.contexts.type>
+                <syntax.ast.types.SetTypeAS xmi.idref="syntax.ast.types.SetTypeAS 'id-3'"/>
+            </syntax.ast.contexts.type>
+        </syntax.ast.contexts.VariableDeclarationAS>
+        <syntax.ast.contexts.VariableDeclarationAS xmi.id="syntax.ast.contexts.VariableDeclarationAS 'x-27'">
+            <syntax.ast.contexts.name xmi.value="x"/>
+            <syntax.ast.contexts.initExp>
+            </syntax.ast.contexts.initExp>
+            <syntax.ast.contexts.type>
+                <syntax.ast.types.ClassifierAS xmi.idref="syntax.ast.types.ClassifierAS 'id-21'"/>
+            </syntax.ast.contexts.type>
+        </syntax.ast.contexts.VariableDeclarationAS>
+        <syntax.ast.contexts.VariableDeclarationAS xmi.id="syntax.ast.contexts.VariableDeclarationAS 'b_|_a-39'">
+            <syntax.ast.contexts.name xmi.value="b_|_a"/>
+            <syntax.ast.contexts.initExp>
+                <syntax.ast.expressions.IteratorExpAS xmi.idref="syntax.ast.expressions.IteratorExpAS 'id-38'"/>
+            </syntax.ast.contexts.initExp>
+            <syntax.ast.contexts.type>
+                <syntax.ast.types.SetTypeAS xmi.idref="syntax.ast.types.SetTypeAS 'id-22'"/>
+            </syntax.ast.contexts.type>
+        </syntax.ast.contexts.VariableDeclarationAS>
+        <syntax.ast.contexts.VariableDeclarationAS xmi.id="syntax.ast.contexts.VariableDeclarationAS 'x-46'">
+            <syntax.ast.contexts.name xmi.value="x"/>
+            <syntax.ast.contexts.initExp>
+            </syntax.ast.contexts.initExp>
+            <syntax.ast.contexts.type>
+                <syntax.ast.types.ClassifierAS xmi.idref="syntax.ast.types.ClassifierAS 'id-40'"/>
+            </syntax.ast.contexts.type>
+        </syntax.ast.contexts.VariableDeclarationAS>
+        <syntax.ast.contexts.VariableDeclarationAS xmi.id="syntax.ast.contexts.VariableDeclarationAS 'a_b_|-56'">
+            <syntax.ast.contexts.name xmi.value="a_b_|"/>
+            <syntax.ast.contexts.initExp>
+                <syntax.ast.expressions.IteratorExpAS xmi.idref="syntax.ast.expressions.IteratorExpAS 'id-55'"/>
+            </syntax.ast.contexts.initExp>
+            <syntax.ast.contexts.type>
+                <syntax.ast.types.SetTypeAS xmi.idref="syntax.ast.types.SetTypeAS 'id-41'"/>
+            </syntax.ast.contexts.type>
+        </syntax.ast.contexts.VariableDeclarationAS>
+    </XMI.content>
+</XMI>

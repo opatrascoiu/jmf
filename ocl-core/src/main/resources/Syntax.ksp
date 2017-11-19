@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<project type ="">
+	<path>C:/D/Work/Java Projects/OCL2_0</path>
+	<name>Syntax.ksp</name>
+	<meta>C:/D/Work/Java Projects/OCL2_0/src/Syntax.xmi</meta>
+	<xmi>C:/D/Work/Java Projects/OCL2_0/src/Syntax.xmi</xmi>
+	<license></license>
+	<offset>uk.ac.ukc.cs.kmf.ocl20</offset>
+	<modelName></modelName>
+	<visitor>true</visitor>
+	<HUTNvisitor>false</HUTNvisitor>
+	<JTreevisitor>false</JTreevisitor>
+	<ViewEditvisitor>false</ViewEditvisitor>
+	<XMIvisitor>false</XMIvisitor>
+	<observer>false</observer>
+	<invariant>false</invariant>
+	<id>false</id>
+	<factory>false</factory>
+	<repository>false</repository>
+	<browser>false</browser>
+	<startup>false</startup>
+	<bidirectional>false</bidirectional>
+	<interfacePrefix></interfacePrefix>
+	<interfaceSuffix></interfaceSuffix>
+	<classPrefix></classPrefix>
+	<classSuffix>$Class</classSuffix>
+	<collectionInterface>java.util.List</collectionInterface>
+	<collectionClass>java.util.Vector</collectionClass>
+	<listInterface>java.util.List</listInterface>
+	<listClass>java.util.Vector</listClass>
+	<setInterface>java.util.Set</setInterface>
+	<setClass>java.util.LinkedHashSet</setClass>
+	<setClass>java.util.LinkedHashSet</setClass>
+	<metrics>
+		<metric namespace='KMF' key='model-main' name='Model Maintainability' type='system' min='0.0' max='400.0' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='model-chan' name='Model Changeability' type='system' min='0.0' max='100.0' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='model-test' name='Model Testability' type='system' min='0.0' max='100.0' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-main' name='Class Maintainability' type='system' min='0.0' max='400.0' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-anal' name='Class Analysability' type='system' min='0.0' max='100.0' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-chan' name='Class Changeability' type='system' min='0.0' max='100.0' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-stab' name='Class Stability' type='system' min='0.0' max='100.0' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-test' name='Class Testability' type='system' min='0.0' max='100.0' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-usab' name='Class Useability' type='system' min='0.0' max='10.0' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-spec' name='Class Specilizability' type='system' min='0.0' max='25.0' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='model-hnt' name='Height of Nesting Tree' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='model-hig' name='Height of Inheritance Graph' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='model-ncn' name='Number of Contained Namespaces' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='model-ancpn' name='Average Number of Classes Per Namespace' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='model-adig' name='Average Depth of Inheritance Graph' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='model-acc' name='Average Class Complexity' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='model-amc' name='Average Method Complexity' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='model-aocc' name='Average OCL Constraint Complexity' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='ns-ndcn' name='Number of Directly Contained Namespaces' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='ns-ncn' name='Number of Contained Namespaces' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='ns-ndcc' name='Number of Directly Contained Classes' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='ns-ncc' name='Number of Contained Classes' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='ns-dnt' name='Depth of Nesting Tree' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-nlp' name='Number of Local Properties' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-np' name='Number of Properties' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-nlo' name='Number of Local Operations' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-no' name='Number of Operations' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-aclo' name='Average Complexity of Local Operations' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-aco' name='Average Complexity of Operations' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-nda' name='Number of Direct Ancestors' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-na' name='Number of Ancestors' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-ndd' name='Number of Direct Descendants' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-nd' name='Number of Descendants' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-nmi' name='Number of Multiple Inheritances' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-nrdc' name='Number of Referred Classes' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-nre' name='Number of Referees' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-lc' name='Local Complexity' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-c' name='Complexity' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='cls-dig' name='Depth of Inheritance Graph' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='oper-mcc' name='McCabe Complexity' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='oper-np' name='Number of Parameters' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='ocl-ndp' name='Number of Decision Points' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='ocl-hnt' name='Height of Nesting Tree' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='ocl-mcc' name='McCabe Complexity' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='ocl-halc' name='Halstead Complexity' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+		<metric namespace='KMF' key='ocl-nv' name='Number of Variables' type='system' min='0.0' max='Infinity' >
+			<body></body>
+			<diagnostic></diagnostic>
+		</metric>
+	</metrics>
+</project>

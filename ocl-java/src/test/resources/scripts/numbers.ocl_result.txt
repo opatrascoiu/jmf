@@ -1,0 +1,86 @@
+result of 'context library::Library inv: 42'
+[42]
+result of 'context library::Library inv: 3.1'
+[3.1]
+result of 'context library::Library inv: 13.14'
+[13.14]
+result of 'context library::Library inv: 13.0e14'
+[1.3E15]
+result of 'context library::Library inv: -42'
+[-42]
+result of 'context library::Library inv: -3.1'
+[-3.1]
+result of 'context library::Library inv: -3.14'
+[-3.14]
+result of 'context library::Library inv: - -42'
+[42]
+result of 'context library::Library inv: -(-42)'
+[42]
+result of 'context library::Library inv: 1+1'
+[2]
+result of 'context library::Library inv: 7-4'
+[3]
+result of 'context library::Library inv: 1+-2'
+[-1]
+result of 'context library::Library inv: 10.0e15 + 12.34E+15'
+[2.234E16]
+result of 'context library::Library inv: 3-(8+4)*(4+5)'
+[-105]
+result of 'context library::Library inv: -(3-(8+4)*(4+5))'
+[105]
+result of 'context library::Library inv: - - -(3-(8+4)*(4+5))'
+[105]
+result of 'context library::Library inv: -( -( -(3-(8+4)*(4+5))))'
+[105]
+result of 'context library::Library inv: 3 / 0'
+[undefined]
+result of 'context library::Library inv: 3 div 0'
+[undefined]
+result of 'context library::Library inv: 10 mod 3'
+[1]
+result of 'context library::Library inv: 3 / 1.5'
+[2.0]
+result of 'context library::Library inv: 3.0 / 2'
+[1.5]
+result of 'context library::Library inv: 3.min(4)'
+[3]
+result of 'context library::Library inv: 3.max(4)'
+[4]
+result of 'context library::Library inv: 3.abs()'
+[3]
+result of 'context library::Library inv: (-3).abs()'
+[3]
+result of 'context library::Library inv: -3.abs()'
+[-3]
+result of 'context library::Library inv: 3.abs() + 4'
+[7]
+result of 'context library::Library inv: 3.9.floor()'
+[3]
+result of 'context library::Library inv: 3.floor()'
+[3]
+result of 'context library::Library inv: 3.9.round()'
+[4]
+result of 'context library::Library inv: 3.round()'
+[3]
+result of 'context library::Library inv: 3 < 4'
+[true]
+result of 'context library::Library inv: 3 > 4'
+[false]
+result of 'context library::Library inv: 4 >= 4'
+[true]
+result of 'context library::Library inv: 4 <= 4'
+[true]
+result of 'context library::Library inv: 3.0 < 4'
+[true]
+result of 'context library::Library inv: 3 < 4.0'
+[true]
+result of 'context library::Library inv: 3.0 = 3'
+[true]
+result of 'context library::Library inv: 3 = 3.0'
+[true]
+result of 'context library::Library inv: 3.oclIsUndefined()'
+[false]
+result of 'context library::Library inv: (3/0).oclIsUndefined()'
+[true]
+result of 'context library::Library inv: 3.oclIsUndefined()'
+[false]

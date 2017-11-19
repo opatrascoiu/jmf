@@ -1,0 +1,16 @@
+context library::Library inv: 'aString'
+context library::Library inv: ''
+context library::Library inv: '\101'
+context library::Library inv: '\t' = '\u0009'
+context library::Library inv: '\'
+context library::Library inv: 'foo'.size()
+context library::Library inv: 'foo'.concat('bar')
+context library::Library inv: 'foobar'.substring(2, 4)
+context library::Library inv: 'foobar'.substring(2,4)
+context library::Library inv: '123'.toInteger()
+context library::Library inv: '123.45'.toReal()
+context library::Library inv: 'foobar' = 'foo'
+context library::Library inv: 'foobar' = 'foobar'
+context library::Library inv: 'foobar' <> 'foobar'
+context library::Library inv: 'foobar' = (0/1 = 0)
+context library::Library inv: (0/1 = 0) = (0/1 = 0)

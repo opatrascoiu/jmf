@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kmf-studio" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ocl-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ocl-emf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ocl-java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ocl-kmf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yatl-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yatl-kmf" charset="UTF-8" />
+  </component>
+</project>

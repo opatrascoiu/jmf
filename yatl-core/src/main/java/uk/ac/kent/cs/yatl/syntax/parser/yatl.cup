@@ -1,0 +1,1597 @@
+// Preliminary Declarations Section
+package uk.ac.kent.cs.ktl.syntax.parser;
+
+import java.util.*;
+
+import java_cup.runtime.*;
+
+import uk.ac.kent.cs.kmf.util.*;
+
+import uk.ac.kent.cs.ocl20.syntax.ast.contexts.*;
+import uk.ac.kent.cs.ocl20.syntax.ast.expressions.*;
+import uk.ac.kent.cs.ocl20.syntax.ast.types.*;
+
+import uk.ac.kent.cs.ktl.syntax.*;
+import uk.ac.kent.cs.ktl.syntax.transformations.*;
+import uk.ac.kent.cs.ktl.syntax.statements.*;
+
+/**
+ * 
+ * @author Octavian Patrascoiu
+ *
+ */
+
+// Code to be put inside the parser class
+parser code {:
+	// Log file
+	protected ILog log;
+	public void setLog(ILog log) {
+		this.log = log;
+	}
+	public ILog getLog() {
+		return log;
+	}
+
+	// Ocl Factory
+	protected ASTFactory oclFactory;
+	public void setOclFactory(ASTFactory oclFactory) {
+		this.oclFactory = oclFactory;
+	}
+	public ASTFactory getOclFactory() {
+		return oclFactory;
+	}
+
+	// QT Factory
+	protected QTFactory qtFactory;
+	public void setQTFactory(QTFactory qtFactory) {
+		this.qtFactory = qtFactory;
+	}
+	public QTFactory getQTFactory() {
+		return qtFactory;
+	}
+
+	// Change the method report_error to display location and the reason
+	public void report_error(String message, Object info) {
+		ErrorManager.reportError(log, info, message);
+	}
+	
+	// Change the method report_error to display location and the reason
+	public void report_fatal_error(String message, Object info) {
+		report_error(message, info);
+	}
+
+:};
+
+// Initialization code - before scanning
+init with {:
+	// Init the log
+	CUP$Yyparse$actions.setLog(log);
+	// Init the factory
+	CUP$Yyparse$actions.setQTFactory(qtFactory);
+	CUP$Yyparse$actions.setOclFactory(oclFactory);
+:};
+
+// Particular code for actions   
+action code {:
+	// Log file
+	protected static ILog log;
+	public static void setLog(ILog log) {
+		CUP$Yyparse$actions.log = log;
+	}
+	public static ILog getLog() {
+		return CUP$Yyparse$actions.log;
+	}
+
+	// OCL Factory
+	protected static ASTFactory oclFactory;
+	public static void setOclFactory(ASTFactory oclFactory) {
+		CUP$Yyparse$actions.oclFactory = oclFactory;
+	}
+	public static ASTFactory getOclFactory() {
+		return CUP$Yyparse$actions.oclFactory;
+	}
+
+	// QT Factory
+	protected static QTFactory qtFactory;
+	public static void setQTFactory(QTFactory qtFactory) {
+		CUP$Yyparse$actions.qtFactory = qtFactory;
+	}
+	public static QTFactory getQTFactory() {
+		return CUP$Yyparse$actions.qtFactory;
+	}
+
+	// Check and make a variableDeclaration
+	public static VariableDeclarationAS makeVariableDeclaration(OclExpressionAS nameExp, TypeAS type, OclExpressionAS init, int left, int right) {
+		if (nameExp instanceof PathNameExpAS) {
+			List pathName = ((PathNameExpAS)nameExp).getPathName();
+			if (pathName.size() == 1) {
+				String name = (String)pathName.get(0);
+				return oclFactory.buildVariableDeclaration(name, type, init);
+			}
+		}
+		Symbol info = new Symbol(0, left, right);
+		report_error("Variable declaration expected", info);
+		return null;
+	}
+	
+	// Report errors
+	public static void report_error(String message, Object info) {
+		ErrorManager.reportError(log, info, message);
+	}
+
+:};
+
+// Terminals and Non Terminals Section
+ 
+// Terminals
+terminal	BAD;
+
+terminal	NAMESPACE, START, IMPORT;
+terminal	QUERY, TRANSFORMATION, RULE, MATCH;
+terminal	WHILE, DO, FOREACH;
+terminal	BREAK, CONTINUE, APPLY, TRACK, NULL;
+terminal	NEW, DELETE, ASSIGN;
+
+// OCL
+terminal	PACKAGE, ENDPACKAGE;
+terminal	CONTEXT, INIT, DERIVE, INV, DEF, PRE, POST, BODY;
+
+terminal	SET, BAG, SEQUENCE, COLLECTION, ORDERED_SET;
+terminal	TUPLE, TUPLE_TYPE;
+terminal	ITERATE;
+
+terminal	IMPLIES;
+terminal	AND, OR, XOR;
+terminal	EQ, NE;
+terminal	LT, GT, LE, GE;
+terminal	PLUS, MINUS, UMINUS;
+terminal	TIMES, DIVIDE;
+terminal	INT_DIVIDE, INT_MOD;
+terminal	NOT;
+terminal	LET, IN;
+terminal	IFSTM, IF, THEN, ELSE, ENDIF;
+
+terminal	COMMA, DOT, COLON, SEMICOLON, BAR, UP, AT, QUESTION;
+terminal	DOT_DOT, COLON_COLON, UP_UP;
+terminal	LEFT_PAR, LEFT_BRK, LEFT_BRA, RIGHT_PAR, RIGHT_BRK, RIGHT_BRA;
+terminal	MINUS_GT;
+
+terminal	String	INTEGER, REAL, STRING, TRUE, FALSE;
+terminal	String	SIMPLE_NAME;
+   
+// Non Terminals
+non terminal	Unit						unit;
+non terminal	List						namespaceDeclList;
+non terminal	Namespace					namespaceDecl;
+non terminal	List						models;
+non terminal	List						importList;
+non terminal	Import						importDecl;
+non terminal	List						startingRule;
+non terminal	List						qtList;
+non terminal	Query						query;
+non terminal	Transformation				transformation;
+non terminal	List						ruleList;
+non terminal	Rule						rule;
+non terminal	Filter						filter;
+
+non terminal	List						statementList;
+non terminal	Statement					statement;
+non terminal	Statement					declarationStm;
+non terminal	Statement					expressionStm;
+non terminal	Statement					compoundStm;
+non terminal	Statement					ifStm;
+non terminal	Statement					loopStm;
+non terminal	Statement					breakStm;
+non terminal	Statement					continueStm;
+non terminal	Statement					applyStm;
+non terminal	Statement					deleteStm;
+
+non terminal	List						expressionList;
+non terminal	Expression					expression;
+non terminal	TrackExp					trackExp;
+non terminal	NewExp						newExp;
+
+// OCL
+non terminal	PackageDeclarationAS		packageDeclaration;
+non terminal	List						contextDeclList;
+non terminal	ContextDeclarationAS		contextDeclaration;
+non terminal	ClassifierContextDeclAS		classifierContextDecl;
+non terminal	List						invOrDef;
+non terminal	Object[]					defExpression;			
+non terminal	PropertyContextDeclAS		propertyContextDecl;
+non terminal	List						initOrDerValue;
+non terminal	OperationContextDeclAS		operationContextDecl;
+non terminal	OperationAS					operation;
+non terminal	List						prePostOrBodyDecl;
+
+non terminal	List						variableDeclarationList;
+non terminal	VariableDeclarationAS		variableDeclaration;
+
+non terminal	TypeAS						type;
+non terminal	CollectionTypeAS			collectionType;
+non terminal	CollectionKindAS			collectionKind;
+non terminal	TupleTypeAS					tupleType;
+
+non terminal	OclExpressionAS				oclExpression;
+non terminal	List						argumentList;
+non terminal	List						oclMessageArgumentList;
+non terminal	OclMessageArgAS				oclMessageArgument;
+non terminal	Boolean						isMarkedPre;
+
+non terminal	LiteralExpAS				literalExp;
+non terminal	CollectionLiteralExpAS		collectionLiteralExp;
+non terminal	List						collectionLiteralParts;
+non terminal	CollectionLiteralPartAS		collectionLiteralPart;
+non terminal	CollectionRangeAS			collectionRange;
+non terminal	TupleLiteralExpAS			tupleLiteralExp;
+non terminal	PrimitiveLiteralExpAS		primitiveLiteralExp;
+
+non	terminal	List						pathName;
+non	terminal	String						simpleName;
+
+// Precedence and Associativity of Terminals Section
+precedence left COMMA;
+precedence left QUESTION;
+precedence left UP, UP_UP;
+precedence left IMPLIES;
+precedence left AND, OR, XOR;
+precedence left EQ, NE;
+precedence left LT, GT, LE, GE;
+precedence left IF, THEN, ELSE, ENDIF;
+precedence left PLUS, MINUS;
+precedence left TIMES, DIVIDE, INT_DIVIDE, INT_MOD;
+precedence left NOT, UMINUS;
+precedence left DOT, MINUS_GT;
+precedence left AT;
+precedence left LEFT_PAR, RIGHT_PAR, LEFT_BRK, RIGHT_BRK;
+precedence left COLON;
+
+// Start symbol
+start with unit;
+
+//
+// Transformation Unit
+//
+// transformationUnit ::= import* namespaceDecl*
+//
+unit					::= importList:imports startingRule:pathName namespaceDeclList:list
+							{:
+								RESULT = qtFactory.buildUnit(imports, pathName, list);
+							:}
+							;
+
+//
+// Import declaration
+//
+//	import -> 'IMPORT' name '.*;'
+//
+importList				::=	{:
+								// Create empty list
+								RESULT = new Vector();
+							:}
+							|
+							importList:list importDecl:import_
+							{:
+								// Add element
+								RESULT = list;
+								RESULT.add(import_);
+							:}
+							;
+importDecl				::=	IMPORT simpleName:name DOT TIMES SEMICOLON
+							{:
+								RESULT = qtFactory.buildImport(name);
+							:}
+							;
+//
+// Start declaration
+//
+//	start -> 'START' name ';'
+//
+startingRule			::=	START pathName:pathName SEMICOLON
+							{:
+								RESULT = pathName;
+							:}
+							;
+
+//
+// Namespace declaration
+//
+// namespaceDecl ::= 'NAMESPACE' simpleName '(' sourceModel [',' targetModel] ')' '{' (query|transformation)* '}'
+//
+namespaceDeclList		::=	{:
+								// Create empty list
+								RESULT = new Vector();
+							:}
+							|
+							namespaceDeclList:list namespaceDecl:namespace
+							{:
+								// Add namespace
+								RESULT = list;
+								RESULT.add(namespace);
+							:}
+							;
+namespaceDecl			::=	NAMESPACE:loc simpleName:name LEFT_PAR models:models RIGHT_PAR LEFT_BRA qtList:list RIGHT_BRA
+							{:
+								RESULT = qtFactory.buildNamespace(name, models, list, new Symbol(0, locleft, locright));
+							:}
+							;
+models					::= simpleName:source
+							{:
+								RESULT = new Vector();
+								RESULT.add(source);
+							:}
+							|
+							simpleName:source COMMA simpleName:target
+							{:
+								RESULT = new Vector();
+								RESULT.add(source);
+								RESULT.add(target);
+							:}
+							;
+qtList					::=	{:
+								// Create empty list
+								RESULT = new Vector();
+							:}
+							|
+							qtList:list query:element
+							{:
+								// Add element
+								RESULT = list;
+								RESULT.add(element);
+							:}
+							|
+							qtList:list transformation:element
+							{:
+								// Add element
+								RESULT = list;
+								RESULT.add(element);
+							:}
+							;
+
+//
+// Transformation declaration
+//
+//	transformation -> 'TRANSFORMATION' simpleName '{' rule* '}'
+//
+transformation			::=	TRANSFORMATION:loc simpleName:name LEFT_BRA ruleList:rules RIGHT_BRA
+							{:
+								RESULT = qtFactory.buildTransformation(name, rules, new Symbol(0, locleft, locright));
+							:}
+							;
+ruleList				::=	{:
+								RESULT = new Vector();
+							:}
+							|
+							ruleList:list rule:rule
+							{:
+								RESULT = list;
+								list.add(rule);
+							:}
+							;							
+
+//
+//	Rule
+//
+//	rule -> 'RULE' simpleName filter '(' [param (',' param)*] ')' compoundStm 
+//	filter -> 'MATCH' filterPath
+//	filterPath -> filterStep | filterPath '::' filterStep
+//	filterStep -> simpleName ['[' expression ']']
+//
+rule					::=	RULE:loc simpleName:ruleName filter:filter LEFT_PAR variableDeclarationList:params RIGHT_PAR compoundStm:body
+							{:
+								RESULT = qtFactory.buildRule(ruleName, filter, params, body, new Symbol(0, locleft, locright));
+							:}
+							|
+							RULE:loc simpleName:ruleName filter:filter LEFT_PAR RIGHT_PAR compoundStm:body
+							{:
+								RESULT = qtFactory.buildRule(ruleName, filter, new Vector(), body, new Symbol(0, locleft, locright));
+							:}
+							|
+							RULE:loc simpleName:ruleName LEFT_PAR variableDeclarationList:params RIGHT_PAR compoundStm:body
+							{:
+								RESULT = qtFactory.buildRule(ruleName, null, params, body, new Symbol(0, locleft, locright));
+							:}
+							|
+							RULE:loc simpleName:ruleName LEFT_PAR RIGHT_PAR compoundStm:body
+							{:
+								RESULT = qtFactory.buildRule(ruleName, null, new Vector(), body, new Symbol(0, locleft, locright));
+							:}
+							;
+filter					::=	MATCH pathName:pathName LEFT_BRK oclExpression:exp RIGHT_BRK
+							{:
+								RESULT = qtFactory.buildFilter(pathName, exp);
+							:}
+							|
+							MATCH pathName:pathName
+							{:
+								RESULT = qtFactory.buildFilter(pathName, null);
+							:}
+							;
+statementList			::=	{:
+								RESULT = new Vector();
+							:}
+							|
+							statementList:list statement:stm
+							{:
+								RESULT = list;
+								RESULT.add(stm);
+							:}
+							;
+
+//
+//	Statement
+//
+//	statement -> declarationStm | expressionStm | compoundStm | ifStm | loopStm | breakStm | continueStm | applyStm
+//
+statement				::=	declarationStm:stm
+							{:
+								RESULT = stm;
+							:}
+							|
+							expressionStm:stm
+							{:
+								RESULT = stm;
+							:}
+							|
+							compoundStm:stm
+							{:
+								RESULT = stm;
+							:}
+							|
+							ifStm:stm
+							{:
+								RESULT = stm;
+							:}
+							|
+							loopStm:stm
+							{:
+								RESULT = stm;
+							:}
+							|
+							breakStm:stm
+							{:
+								RESULT = stm;
+							:}
+							|
+							continueStm:stm
+							{:
+								RESULT = stm;
+							:}
+							|
+							applyStm:stm
+							{:
+								RESULT = stm;
+							:}
+							|
+							deleteStm:stm
+							{:
+								RESULT = stm;
+							:}
+							;
+declarationStm			::=	LET:loc variableDeclarationList:list SEMICOLON
+							{:
+								RESULT = qtFactory.buildDeclarationStm(list, new Symbol(0, locleft, locright));
+							:}
+							;
+expressionStm			::=	SEMICOLON:loc
+							{:
+								RESULT = qtFactory.buildExpressionStm(null, new Symbol(0, locleft, locright));
+							:}
+							|
+							expression:exp SEMICOLON
+							{:
+								RESULT = qtFactory.buildExpressionStm(exp, new Symbol(0, expleft, expright));
+							:}
+							;
+compoundStm				::= LEFT_BRA:loc statementList:list RIGHT_BRA
+							{:
+								RESULT = qtFactory.buildCompoundStm(list, new Symbol(0, locleft, locright));
+							:}
+							;
+ifStm					::=	IFSTM:loc oclExpression:cond THEN statement:thenStm ELSE statement:elseStm ENDIF
+							{:
+								RESULT = qtFactory.buildIfStm(cond, thenStm, elseStm, new Symbol(0, locleft, locright));
+							:}
+							|
+							IFSTM:loc oclExpression:cond THEN statement:thenStm ENDIF
+							{:
+								RESULT = qtFactory.buildIfStm(cond, thenStm, null, new Symbol(0, locleft, locright));
+							:}
+							;
+loopStm					::=	WHILE:loc oclExpression:cond DO statement:body
+							{:
+								RESULT = qtFactory.buildWhileStm(cond, body, new Symbol(0, locleft, locright));
+							:}
+							|
+							DO:loc statement:body WHILE LEFT_PAR oclExpression:cond RIGHT_PAR SEMICOLON
+							{:
+								RESULT = qtFactory.buildDoStm(cond, body, new Symbol(0, locleft, locright));
+							:}
+							|
+							FOREACH:loc variableDeclaration:varDecl IN oclExpression:col DO statement:body
+							{:
+								RESULT = qtFactory.buildForeachStm(varDecl, col, body, new Symbol(0, locleft, locright));
+							:}
+							;
+breakStm				::=	BREAK:loc SEMICOLON
+							{:
+								RESULT = qtFactory.buildBreakStm(new Symbol(0, locleft, locright));
+							:}
+							;
+continueStm				::=	CONTINUE:loc SEMICOLON
+							{:
+								RESULT = qtFactory.buildContinueStm(new Symbol(0, locleft, locright));
+							:}
+							;
+applyStm				::=	APPLY:loc simpleName:name LEFT_PAR expressionList:args RIGHT_PAR SEMICOLON
+							{:
+								RESULT = qtFactory.buildApplyStm(name, args, new Symbol(0, locleft, locright));
+							:}
+							;
+deleteStm				::=	DELETE:loc oclExpression:exp SEMICOLON
+							{:
+								RESULT = qtFactory.buildDeleteStm(exp, new Symbol(0, locleft, locright));
+							:}
+							;
+expressionList			::=	{:
+								RESULT = new Vector();
+							:}
+							|
+							expressionList:list COMMA oclExpression:elem
+							{:
+								RESULT = list;
+								RESULT.add(elem);
+							:}
+							;
+expression				::= oclExpression:left ASSIGN oclExpression:right
+							{:
+								RESULT = qtFactory.buildExpression(left, right);
+							:}
+							|
+							oclExpression:left ASSIGN trackExp:right
+							{:
+								RESULT = qtFactory.buildExpression(left, right);
+							:}
+							|
+							oclExpression:left ASSIGN newExp:right
+							{:
+								RESULT = qtFactory.buildExpression(left, right);
+							:}
+							|
+							oclExpression:left
+							{:
+								RESULT = qtFactory.buildExpression(left, null);
+							:}
+							|							
+							trackExp:exp
+							{:
+								RESULT = qtFactory.buildExpression(null, exp);
+							:}
+							;
+trackExp				::=	TRACK LEFT_PAR oclExpression:exp1 COMMA simpleName:name COMMA oclExpression:exp2 RIGHT_PAR
+							{:
+								RESULT = qtFactory.buildTrackExp(name, exp1, exp2);
+							:}
+							|
+							TRACK LEFT_PAR NULL COMMA simpleName:name COMMA oclExpression:exp2 RIGHT_PAR
+							{:
+								RESULT = qtFactory.buildTrackExp(name, null, exp2);
+							:}
+							|
+							TRACK LEFT_PAR oclExpression:exp1 COMMA simpleName:name COMMA NULL RIGHT_PAR
+							{:
+								RESULT = qtFactory.buildTrackExp(name, exp1, null);
+							:}
+							;
+newExp					::=	NEW pathName:pathName
+							{:
+								RESULT = qtFactory.buildNewExp(pathName);
+							:}
+							;
+//
+// Query declaration
+//
+//	query -> 'QUERY' simpleName '{' contextDeclList '}'
+//
+query					::=	QUERY:loc simpleName:name LEFT_BRA contextDeclList:contextDecls RIGHT_BRA
+							{:
+								RESULT = qtFactory.buildQuery(name, contextDecls, new Symbol(0, locleft, locright));
+							:}
+							;
+
+//
+// Attaching OCL constraints at 'Model' level
+//
+// packageDeclaration ::= PACKAGE pathName contextDeclaration* ENDPACKAGE
+//
+packageDeclaration		::= PACKAGE pathName:path contextDeclList:contextDecls ENDPACKAGE
+							{:
+								// Create a PackageDeclaration
+								RESULT = oclFactory.buildPackageDeclaration(path, contextDecls);
+							:}
+							|
+							contextDeclList:contextDecls
+							{:
+								// Create a PackageDeclaration
+								RESULT = oclFactory.buildPackageDeclaration(new Vector(), contextDecls);
+							:}
+							;
+							
+contextDeclList			::= {:
+								// Create a LIST
+								RESULT = new Vector();
+							:}
+							|
+							contextDeclList:list contextDeclaration:contextDecl
+							{:
+								// Add element to list
+								RESULT = list;
+								RESULT.add(contextDecl);
+							:}
+							;
+//
+// Attaching OCL constraints at 'ModelElement' level
+//
+// contextDeclaration ::= propertyContextDecl | classifierContextDecl | operationContextDecl
+//
+contextDeclaration		::=	propertyContextDecl:contextDecl
+							{:
+								// Copy rule
+								RESULT = contextDecl;
+							:}
+							|
+							classifierContextDecl:contextDecl
+							{:
+								// Copy rule
+								RESULT = contextDecl;
+							:}
+							|
+							operationContextDecl:contextDecl
+							{:
+								// Copy rule
+								RESULT = contextDecl;
+							:}
+							;
+//
+// 'Property' Level
+//
+// propertyContextDecl ::= CONTEXT pathName simpleName COLON type initOrDerValue+ 
+// initOrDerValue ::= INIT COLON oclExpression | DERIVE COLON oclExpression
+//
+propertyContextDecl		::=	CONTEXT pathName:path simpleName:name COLON type:type initOrDerValue:constraints
+							{:
+								// Create PropertyContextDecl
+								RESULT = oclFactory.buildPropertyContextDeclaration(path, name, type, constraints);
+							:}
+							;						
+initOrDerValue			::=	INIT COLON oclExpression:exp
+							{:
+								// Create a LIST and add constraint
+								RESULT = new Vector();
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.INIT, "", exp, null));
+							:}
+							|
+							DERIVE COLON oclExpression:exp
+							{:
+								// Create a LIST and add constraint
+								RESULT = new Vector();
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.DERIVE, "", exp, null));
+							:}
+							|
+							initOrDerValue:list INIT COLON oclExpression:exp
+							{:
+								// Add constraint to list
+								RESULT = list;
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.INIT, "", exp, null));
+							:}
+							|
+							initOrDerValue:list DERIVE COLON oclExpression:exp
+							{:
+								// Add constraint to list
+								RESULT = list;
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.DERIVE, "", exp, null));
+							:}
+							;
+//
+// 'Classifier' level
+//
+// classifierContextDecl ::= CONTEXT pathName invOrDef+
+// invOrDef ::= INV [simpleName] COLON oclExpression 
+// invOrDef ::= DEF [simpleName] COLON defExpression 
+// defExpression ::= variableDeclaration EQ oclExpression 
+// defExpression ::= operation EQ oclExpression 
+//
+classifierContextDecl	::=	CONTEXT:loc pathName:path invOrDef:constraints
+							{:
+								// Create a ClassifierContext
+								RESULT = oclFactory.buildClassifierContextDeclaration(path, constraints, new Symbol(0, locleft, locright));
+							:}
+							;
+invOrDef				::=	INV simpleName:name COLON oclExpression:exp
+							{:
+								// Create a LIST and add constraint
+								RESULT = new Vector();
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.INV, name, exp, null));
+							:}
+							|
+							INV COLON oclExpression:exp
+							{:
+								// Create a LIST and add constraint
+								RESULT = new Vector();
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.INV, "", exp, null));
+							:}
+							|
+							DEF simpleName:name COLON defExpression:exp
+							{:
+								// Create a LIST and add constraint
+								RESULT = new Vector();
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.DEF, name, (OclExpressionAS)exp[1], exp[0]));
+							:}
+							|
+							DEF COLON defExpression:exp
+							{:
+								// Create a LIST and add constraint
+								RESULT = new Vector();
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.DEF, "", (OclExpressionAS)exp[1], exp[0]));
+							:}
+							|							
+							invOrDef:list INV simpleName:name COLON oclExpression:exp
+							{:
+								// Add constraint to list
+								RESULT = list;
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.INV, name, exp, null));
+							:}
+							|
+							invOrDef:list INV COLON oclExpression:exp
+							{:
+								// Add constraint to list
+								RESULT = list;
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.INV, "", exp, null));
+							:}
+							|
+							invOrDef:list DEF simpleName:name COLON defExpression:exp
+							{:
+								// Add constraint to list
+								RESULT = list;
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.DEF, name, (OclExpressionAS)exp[1], exp[0]));
+							:}
+							|
+							invOrDef:list COLON defExpression:exp
+							{:
+								// Add constraint to list
+								RESULT = list;
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.DEF, "", (OclExpressionAS)exp[1], exp[0]));
+							:}
+							;					
+defExpression			::=	simpleName:name COLON type:type EQ oclExpression:exp
+							{:
+								// Create a container
+								VariableDeclarationAS var = new VariableDeclarationAS$Class();
+								var.setName(name);
+								var.setType(type);
+								var.setInitExp(exp);
+								RESULT = new Object[] {var, exp};
+							:}
+							|
+							operation:oper EQ oclExpression:exp
+							{:
+								// Create a container
+								RESULT = new Object[] {oper, exp};
+							:}
+							;
+
+//
+// 'Operation' level
+//
+// operationContextDecl ::= CONTEXT operation prePostOrBodyDecl+
+// prePostOrBodyDecl ::= PRE [simpleName] COLON oclExpression 
+// prePostOrBodyDecl ::= POST [simpleName] COLON oclExpression 
+// prePostOrBodyDecl ::= BODY [simpleName] COLON oclExpression 
+// operation ::= pathName LEFT_PAR [variableDeclarationList] RIGHT_PAR [COLON type] |
+//               simpleName LEFT_PAR [variableDeclarationList] RIGHT_PAR [COLON type]
+//
+operationContextDecl	::=	CONTEXT operation:oper prePostOrBodyDecl:list
+							{:
+								// Create OperationContextDecl
+								RESULT = oclFactory.buildOperationContextDeclaration(oper, list);
+							:}
+							;							
+prePostOrBodyDecl		::=	PRE simpleName:name COLON oclExpression:exp
+							{:
+								// Create a LIST and add constraint
+								// Create a constraint
+								ConstraintAS cons = oclFactory.buildConstraint(ConstraintKindAS$Class.PRE, name, exp, null);
+								// Create a list
+								RESULT = new Vector();
+								RESULT.add(cons);
+							:}
+							|
+							PRE COLON oclExpression:exp
+							{:
+								// Create a LIST and add constraint
+								RESULT = new Vector();
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.PRE, "", exp, null));
+							:}
+							|
+							POST simpleName:name COLON oclExpression:exp
+							{:
+								// Create a LIST and add constraint
+								RESULT = new Vector();
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.POST, name, exp, null));
+							:}
+							|
+							POST COLON oclExpression:exp
+							{:
+								// Create a LIST and add constraint
+								RESULT = new Vector();
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.POST, "", exp, null));
+							:}
+							|
+							BODY simpleName:name COLON oclExpression:exp
+							{:
+								// Create a LIST and add constraint
+								RESULT = new Vector();
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.BODY, name, exp, null));
+							:}
+							|
+							BODY COLON oclExpression:exp
+							{:
+								// Create a LIST and add constraint
+								RESULT = new Vector();
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.BODY, "", exp, null));
+							:}
+							|
+							prePostOrBodyDecl:list PRE simpleName:name COLON oclExpression:exp
+							{:
+								// Add constraint to list
+								RESULT = list;
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.PRE, name, exp, null));
+							:}
+							|
+							prePostOrBodyDecl:list PRE COLON oclExpression:exp
+							{:
+								// Create a constraint
+								RESULT = list;
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.PRE, "", exp, null));
+							:}
+							|
+							prePostOrBodyDecl:list POST simpleName:name COLON oclExpression:exp
+							{:
+								// Create a constraint
+								RESULT = list;
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.POST, name, exp, null));
+							:}
+							|
+							prePostOrBodyDecl:list POST COLON oclExpression:exp
+							{:
+								// Create a constraint
+								RESULT = list;
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.POST, "", exp, null));
+							:}
+							|
+							prePostOrBodyDecl:list BODY simpleName:name COLON oclExpression:exp
+							{:
+								// Create a constraint
+								RESULT = list;
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.BODY, name, exp, null));
+							:}
+							|
+							prePostOrBodyDecl:list BODY COLON oclExpression:exp
+							{:
+								// Create a constraint
+								RESULT = list;
+								RESULT.add(oclFactory.buildConstraint(ConstraintKindAS$Class.BODY, "", exp, null));
+							:}
+							;
+operation				::=	pathName:path COLON_COLON simpleName:name LEFT_PAR variableDeclarationList:params RIGHT_PAR COLON type:type
+							{:
+								// Create an Operationn
+								RESULT = oclFactory.buildOperation(path, name, params, type);
+							:}
+							|
+							pathName:path COLON_COLON simpleName:name LEFT_PAR variableDeclarationList:params RIGHT_PAR
+							{:
+								// Create an Operationn
+								RESULT = oclFactory.buildOperation(path, name, params, null);
+							:}
+							|
+							pathName:path COLON_COLON simpleName:name LEFT_PAR RIGHT_PAR COLON type:type
+							{:
+								// Create an Operation
+								RESULT = oclFactory.buildOperation(path, name, new Vector(), type);
+							:}
+							|
+							pathName:path COLON_COLON simpleName:name LEFT_PAR RIGHT_PAR
+							{:
+								// Create an Operationn
+								RESULT = oclFactory.buildOperation(path, name, new Vector(), null);
+							:}
+							|
+							simpleName:name LEFT_PAR variableDeclarationList:params RIGHT_PAR COLON type:type
+							{:
+								// Create an Operationn
+								RESULT = oclFactory.buildOperation(new Vector(), name, params, type);
+							:}
+							|
+							simpleName:name LEFT_PAR variableDeclarationList:params RIGHT_PAR
+							{:
+								// Create an Operationn
+								RESULT = oclFactory.buildOperation(new Vector(), name, params, null);
+							:}
+							|
+							simpleName:name LEFT_PAR RIGHT_PAR COLON type:type
+							{:
+								// Create an Operationn
+								RESULT = oclFactory.buildOperation(new Vector(), name, new Vector(), type);
+							:}
+							|
+							simpleName:name LEFT_PAR RIGHT_PAR
+							{:
+								// Create an Operationn
+								RESULT = oclFactory.buildOperation(new Vector(), name, new Vector(), null);
+							:}
+							;
+//
+// Variable declaration
+//
+// variableDeclarationList variableDeclaration (COMMA variableDeclaration)*
+// variableDeclaration ::= simpleName [COLON type] [EQ oclExpression] 
+//
+variableDeclarationList ::=	variableDeclaration:var
+							{:
+								// Create a List
+								RESULT = new Vector();
+								RESULT.add(var);
+							:}
+							|
+ 							variableDeclarationList:varList COMMA variableDeclaration:var
+			  				{:
+			  					// Append 'var' to 'varList' 
+			  					RESULT = varList;
+			  					RESULT.add(var);
+			  				:}
+							;						
+variableDeclaration	 	::= simpleName:name COLON type:type EQ oclExpression:init
+							{:
+								// Create a VariableDeclaration
+								RESULT = oclFactory.buildVariableDeclaration(name, type, init);
+							:}
+							|
+							simpleName:name COLON type:type
+							{:
+								// Create a VariableDeclaration
+								RESULT = oclFactory.buildVariableDeclaration(name, type, null);
+							:}
+							|
+							simpleName:name EQ oclExpression:init
+							{:
+								// Create a VariableDeclaration
+								RESULT = oclFactory.buildVariableDeclaration(name, null, init);
+							:}
+							|
+							simpleName:name
+							{:
+								// Create a VariableDeclaration
+								RESULT = oclFactory.buildVariableDeclaration(name, null, null);
+							:}
+							;
+//
+// Type declaration
+//
+// type ::= pathName | collectionType | tupleType 
+// collectionType ::= collectionKind LEFT_PAR type RIGHT_PAR 
+// tupleType ::= TUPLE_TYPE LEFT_PAR [variableDeclaration] RIGHT_PAR
+//
+type					::=	pathName:path
+							{:
+								// Create PathNameType
+								RESULT = oclFactory.buildPathNameType(path);
+							:}
+							|
+							collectionType:type
+							{:
+								// Copy rule
+								RESULT = type;
+							:}
+							|
+							tupleType:type
+							{:
+								// Copy rule
+								RESULT = type;
+							:}
+							;
+collectionType			::=	collectionKind:kind LEFT_PAR type:elementType RIGHT_PAR
+							{:
+								// Create CollectionType
+								RESULT = oclFactory.buildCollectionType(kind, elementType);
+							:}
+							;
+tupleType 				::= TUPLE_TYPE LEFT_PAR variableDeclarationList:varList RIGHT_PAR
+							{:
+								// Create TupleType
+								RESULT = oclFactory.buildTupleType(varList);
+							:}
+							;
+							
+//
+// Expressions
+//
+oclExpression			::= 
+// literalExp ::= literal
+//
+ 							literalExp:exp
+							{:
+								// Literal expression without enumLiteralExp
+								// Copy rule
+								RESULT = exp;
+							:}
+							|
+// oclExpression ::= '(' oclExpression ')'
+							LEFT_PAR oclExpression:exp RIGHT_PAR
+							{:
+								// Copy rule
+								RESULT = exp;
+							:}
+							|
+// variableExpression ::= simpleName
+// attributeCallExp ::= simpleName ['@']
+// attributeCallExp ::= pathName
+// associationCallExp ::= simpleName ['@']
+// enumLiteralExp ::= pathName '::' simpleName
+//
+							pathName:path isMarkedPre:isMarkedPre
+							{:
+								// Create PathNameExp
+								RESULT = oclFactory.buildPathNameExp(path, isMarkedPre);
+							:}
+							|
+// attributeCallExpression ::= oclExpression '.' simpleName ['@'] 
+// associationCallExpression ::= oclExpression '.' simpleName ['@']
+// iteratorExp ::= oclExpression '.' simpleName 
+//
+// iteratorExp ::= oclExpression '.' simpleName '(' [arguments] ')'
+// operationCallExp ::= oclExpression '.' simpleName ['@'] '(' [arguments] ')'
+//
+							oclExpression:exp DOT simpleName:simpleName isMarkedPre:isMarkedPre
+							{:
+								// Create DotSelectionExp
+								RESULT = oclFactory.buildDotSelectionExp(exp, simpleName, isMarkedPre);
+							:}
+							|
+// operationCallExp ::= oclExpression '->' simpleName '(' [arguments] ')'
+// iteratorExp ::= oclExpression '->' simpleName '(' oclExpression ')' 
+//
+// iteratorExp ::= oclExpression '->' simpleName '(' [varDecl ','] varDecl '|' oclExpression ')'
+//
+							oclExpression:exp MINUS_GT simpleName:simpleName
+							{:
+								// Create ArrowSelectionExp
+								RESULT = oclFactory.buildArrowSelectionExp(exp, simpleName);
+							:}
+							|
+// operationCallExp ::= simpleName ['@'] '(' [arguments] ')' 
+// operationCallExp ::= pathName '(' [arguments] ')' 
+//
+// iteratorExp ::= oclExpression '.' simpleName '(' [arguments] ')'
+// operationCallExp ::= oclExpression '.' simpleName ['@'] '(' [arguments] ')'
+//
+// operationCallExp ::= oclExpression '->' simpleName '(' [arguments] ')'
+// iteratorExp ::= oclExpression '->' simpleName '(' oclExpression ')' 
+//
+// iteratorExp ::= oclExpression '->' simpleName '(' [varDecl ','] varDecl '|' oclExpression ')'
+//
+							oclExpression:exp LEFT_PAR RIGHT_PAR
+							{:
+								// Create OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp(exp, new Vector());
+							:}
+							|
+							oclExpression:exp LEFT_PAR oclExpression:arg RIGHT_PAR
+							{:
+								// Create OperationCallExp
+								List args = new Vector();
+								args.add(arg);
+								RESULT = oclFactory.buildOperationCallExp(exp, args);
+							:}
+							|
+							oclExpression:exp LEFT_PAR oclExpression:arg1 COMMA argumentList:list RIGHT_PAR
+							{:
+								// Create OperationCallExp
+								List args = new Vector();
+								args.add(arg1);
+								args.addAll(list);
+								RESULT = oclFactory.buildOperationCallExp(exp, args);
+							:}
+							|
+							oclExpression:exp1 LEFT_PAR oclExpression:nameExp COMMA variableDeclaration:var2 BAR oclExpression:exp2 RIGHT_PAR
+							{:
+								// Create first variable - check the name
+								VariableDeclarationAS var1 = makeVariableDeclaration(nameExp, null, null, nameExpleft, nameExpright);
+								// Create IteratorCallExp
+								RESULT = oclFactory.buildIteratorCallExp(exp1, var1, var2, exp2);
+							:}
+							|
+							oclExpression:exp1 LEFT_PAR oclExpression:nameExp COLON type:type COMMA variableDeclaration:var2 BAR oclExpression:exp2 RIGHT_PAR
+							{:
+								// Create first variable - check the name
+								VariableDeclarationAS var1 = makeVariableDeclaration(nameExp, type, null, nameExpleft, nameExpright);
+								// Create IteratorCallExp
+								RESULT = oclFactory.buildIteratorCallExp(exp1, var1, var2, exp2);
+							:}
+							|
+							oclExpression:exp1 LEFT_PAR oclExpression:nameExp EQ oclExpression:init COMMA variableDeclaration:var2 BAR oclExpression:exp2 RIGHT_PAR
+							{:
+								// Create first variable - check the name
+								VariableDeclarationAS var1 = makeVariableDeclaration(nameExp, null, init, nameExpleft, nameExpright);
+								// Create IteratorCallExp
+								RESULT = oclFactory.buildIteratorCallExp(exp1, var1, var2, exp2);
+							:}
+							|
+							oclExpression:exp1 LEFT_PAR oclExpression:nameExp COLON type:type EQ oclExpression:init COMMA variableDeclaration:var2 BAR oclExpression:exp2 RIGHT_PAR
+							{:
+								// Create first variable - check the name
+								VariableDeclarationAS var1 = makeVariableDeclaration(nameExp, type, init, nameExpleft, nameExpright);
+								// Create IteratorCallExp
+								RESULT = oclFactory.buildIteratorCallExp(exp1, var1, var2, exp2);
+							:}
+							|
+							oclExpression:exp1 LEFT_PAR variableDeclaration:var1 BAR oclExpression:exp2 RIGHT_PAR
+							{:
+								// Create IteratorCallExp
+								RESULT = oclFactory.buildIteratorCallExp(exp1, var1, null, exp2);
+							:}
+					 		|
+// associationCallExp ::= simpleName '[' arguments ']' ['@']
+//
+// iteratorExp ::= oclExpression '.' simpleName '[' arguments ']'
+// associationCallExp ::= oclExpression '.' simpleName '[' arguments ']' ['@']
+//
+							oclExpression:exp LEFT_BRK argumentList:arguments RIGHT_BRK isMarkedPre:isMarkedPre
+							{:
+								// Create AssociationCallExp
+								RESULT = oclFactory.buildAssociationCallExp(exp, arguments, isMarkedPre);
+							:}
+							|
+// iterateExp ::= oclExpression '->' 'iterate' '(' [varDecl ';' varDecl] '|' oclExpression ')'
+//
+							oclExpression:exp1 MINUS_GT ITERATE LEFT_PAR variableDeclaration:var1 SEMICOLON variableDeclaration:var2 BAR oclExpression:exp2 RIGHT_PAR
+							{:
+								// Create IterateExp
+								RESULT = oclFactory.buildIterateExp(exp1, var1, var2, exp2);
+							:}
+							|
+							oclExpression:exp1 MINUS_GT ITERATE LEFT_PAR variableDeclaration:var2 BAR oclExpression:exp2 RIGHT_PAR
+							{:
+								// Create IterateExp
+								RESULT = oclFactory.buildIterateExp(exp1, null, var2, exp2);
+							:}
+							|
+// Unary expression
+// oclExpression ::= NOT postfixExp | MINUS postfixExp
+//
+							NOT oclExpression:opd
+							{:
+								// Create NotExp
+								RESULT = oclFactory.buildLogicalExp(sym.NOT, opd, null);
+							:}
+							|
+							MINUS oclExpression:opd
+							{:
+								// Create an OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp("-", opd, null);
+							:}
+							%prec UMINUS
+							|
+// 
+// Binary expressions
+// multiplicativeExp ::= unaryExp ((TIMES | DIVIDE) unaryExp)*
+// additiveExp :: multiplicativeExp ((PLUS | MINUS) additiveExp)*
+// ifExp ::= additiveExp | IF oclExpression THEN oclExpression ELSE oclExpression ENDIF 
+// relationalExp ::= ifExp ((GT | GE | LT | LE) ifExp)*
+// equalityExp ::= relationalExp ((EQ | NE))* relationalExp)*
+// logicalExp :: equalityExp ((AND | OR | XOR) equalityExp)*       
+// impliesExp :: logicalExp (IMPLIES logicalExp)*
+//
+							oclExpression:left TIMES oclExpression:right
+							{:
+								// Create an OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp("*", left, right);
+							:}
+							|
+							oclExpression:left DIVIDE oclExpression:right
+							{:
+								// Create an OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp("/", left, right);
+							:}
+							|
+							oclExpression:left INT_DIVIDE oclExpression:right
+							{:
+								// Create an OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp("div", left, right);
+							:}
+							|
+							oclExpression:left INT_MOD oclExpression:right
+							{:
+								// Create an OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp("mod", left, right);
+							:}
+							|
+					
+							/* Additive expression */
+							oclExpression:left PLUS oclExpression:right
+							{:
+								// Create an OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp("+", left, right);
+							:}
+							|
+							oclExpression:left MINUS oclExpression:right
+							{:
+								// Create an OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp("-", left, right);
+							:}
+							|
+
+							/* If expression */
+							IF oclExpression:condition THEN oclExpression:thenExp ELSE oclExpression:elseExp ENDIF
+							{:
+								// Create IfExp
+								RESULT = oclFactory.buildIfExp(condition, thenExp, elseExp);
+							:}
+							|
+							
+							/* Relation expression */
+							oclExpression:left LT oclExpression:right
+							{:
+								// Create an OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp("<", left, right);
+							:}
+							|
+							oclExpression:left GT oclExpression:right
+							{:
+								// Create an OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp(">", left, right);
+							:}
+							|
+							oclExpression:left LE oclExpression:right
+							{:
+								// Create an OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp("<=", left, right);
+							:}
+							|
+							oclExpression:left GE oclExpression:right
+							{:
+								// Create an OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp(">=", left, right);
+							:}
+							|
+					
+							/* Equality expression */
+							oclExpression:left EQ oclExpression:right
+							{:
+								// Create an OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp("=", left, right);
+							:}
+							|
+							oclExpression:left NE oclExpression:right
+							{:
+								// Create an OperationCallExp
+								RESULT = oclFactory.buildOperationCallExp("<>", left, right);
+							:}
+							|
+					
+							/* Logical expression */
+							oclExpression:left AND oclExpression:right
+							{:
+								// Create AndExp
+								RESULT = oclFactory.buildLogicalExp(sym.AND, left, right);
+							:}
+							|
+							oclExpression:left OR oclExpression:right
+							{:
+								// Create OrExp
+								RESULT = oclFactory.buildLogicalExp(sym.OR, left, right);
+							:}
+							|
+							oclExpression:left XOR oclExpression:right
+							{:
+								// Create OrExp
+								RESULT = oclFactory.buildLogicalExp(sym.XOR, left, right);
+							:}
+							|
+										
+							/* Implication expression */
+							oclExpression:left IMPLIES oclExpression:right
+							{:
+								// Create ImpliesExp
+								RESULT = oclFactory.buildLogicalExp(sym.IMPLIES, left, right);
+							:}
+							|
+// 
+// Special expressions
+// 
+// letExp ::= impliesExp | LET variableDeclaration+ IN oclExpression
+// oclMessageExp ::= oclExpression UP_UP simpleName LEFT_PAR [oclMessageArgumentList] RIGHT_PAR 
+// oclMessageExp ::= oclExpression UP simpleName LEFT_PAR [oclMessageArgumentList] RIGHT_PAR
+//
+							/* Let expression */
+							LET variableDeclarationList:variables IN oclExpression:exp
+							{:
+								// Create LetExp
+								RESULT = oclFactory.buildLetExp(variables, exp);
+							:}
+							|
+
+							/* OCL message expression */
+							oclExpression:target UP_UP simpleName:name LEFT_PAR oclMessageArgumentList:arguments RIGHT_PAR
+							{:
+								// Create OclMessageExpAS
+								RESULT = oclFactory.buildOclMessageExp(OclMessageKindAS$Class.UP_UP, target, name, arguments);
+							:}
+				  			|
+				  			oclExpression:target UP_UP simpleName:name LEFT_PAR RIGHT_PAR
+							{:
+								// Create OclMessageExpAS
+								RESULT = oclFactory.buildOclMessageExp(OclMessageKindAS$Class.UP_UP, target, name, new Vector());
+							:}
+				  			|
+				  			oclExpression:target UP simpleName:name LEFT_PAR oclMessageArgumentList:arguments RIGHT_PAR
+							{:
+								// Create OclMessageExp
+								RESULT = oclFactory.buildOclMessageExp(OclMessageKindAS$Class.UP, target, name, arguments);
+							:}
+				  			|
+				  			oclExpression:target UP simpleName:name LEFT_PAR RIGHT_PAR
+							{:
+								// Create OclMessageExp
+								RESULT = oclFactory.buildOclMessageExp(OclMessageKindAS$Class.UP, target, name, new Vector());
+							:}
+               				;
+
+// Argments
+// argumentList ::= oclExpression (COMMA oclExpression)*
+// oclMessageArgumentList ::= oclMessageArgument (COMMA oclMessageArgument)*
+// oclMessageArgument ::= QUESTION [COLON types] | oclExpression 				
+argumentList 			::= oclExpression:arg
+							{:
+								// Create a List
+								List seq = new Vector();
+								seq.add(arg);
+								RESULT = seq;
+							:}
+			  				|
+			  				argumentList:argList COMMA oclExpression:arg
+			  				{:
+			  					// Append 'arg' to 'argList' 
+			  					RESULT = argList;
+			  					argList.add(arg);
+			  				:}
+							;
+oclMessageArgumentList	::=	oclMessageArgument:arg
+							{:
+								// Create List
+								List seq = new Vector();
+								seq.add(arg);
+								RESULT = seq;
+							:}							
+						  	|
+							oclMessageArgumentList:argList COMMA oclMessageArgument:arg
+							{:								
+			  					// Append 'arg' to 'argList' 
+			  					RESULT = argList;
+			  					argList.add(arg);
+							:}
+							;
+oclMessageArgument 		::=	QUESTION
+							{:
+								// Create OclMessageArg
+								OclMessageArgAS arg = new OclMessageArgAS$Class();
+								RESULT = arg;
+							:}
+				  			|
+				  			QUESTION COLON type:type
+							{:
+								// Create OclMessageArg
+								OclMessageArgAS arg = new OclMessageArgAS$Class();
+								arg.setType(type);
+								RESULT = arg;
+							:}
+				  			|
+				  			oclExpression:exp
+							{:
+								// Create OclMessageArg
+								RESULT = oclFactory.buildOclMessageArg(exp);
+							:}
+				  			;
+
+isMarkedPre				::= 
+							{:
+								RESULT = new Boolean(false);
+							:}
+							|
+							AT PRE
+							{:
+								RESULT = new Boolean(true);
+							:}
+							;
+					
+
+//
+// Literal expressions
+//
+// literalExp ::= enumLiteralExp 
+// literalExp ::= collectionLiteralExp 
+// literalExp ::= tupleLiteralExp 
+// literalExp ::= primitiveLiteralExp 
+// enumLiteralExp ::= pathName - or an identifier
+// collectionLiteralExp ::= collectionKind LEFT_BRA collectionLiteralParts RIGHT_BRA 
+// collectionLiteralExp ::= collectionKind LEFT_BRA RIGHT_BRA 
+// collectionKind ::= SET 
+// collectionKind ::= BAG 
+// collectionKind ::= SEQUENCE 
+// collectionKind ::= COLLECTION 
+// collectionLiteralParts ::= collectionLiteralPart 
+// collectionLiteralParts ::= collectionLiteralParts COMMA collectionLiteralPart 
+// collectionLiteralPart ::= oclExpression 
+// collectionLiteralPart ::= collectionRange 
+// collectionRange ::= oclExpression DOT_DOT oclExpression 
+// tupleLiteralExp ::= TUPLE LEFT_BRA variableDeclarationList RIGHT_BRA 
+// primitiveLiteralExp ::= INTEGER 
+// primitiveLiteralExp ::= REAL 
+// primitiveLiteralExp ::= STRING 
+// primitiveLiteralExp ::= TRUE 
+// primitiveLiteralExp ::= FALSE
+//
+literalExp				::=	collectionLiteralExp:exp
+							{:
+								RESULT = exp;
+							:}
+							|
+							tupleLiteralExp:exp
+							{:
+								RESULT = exp;
+							:}
+							|
+							primitiveLiteralExp:exp
+							{:
+								RESULT = exp;
+							:}
+							;						
+collectionLiteralExp	::= collectionKind:kind LEFT_BRA collectionLiteralParts:parts RIGHT_BRA
+							{:
+								// Create CollectionLiteralExp
+								RESULT = oclFactory.buildCollectionLiteralExp(kind, parts);
+							:}
+							|
+							collectionKind:kind LEFT_BRA RIGHT_BRA
+							{:
+								// Create CollectionLiteralExp
+								RESULT = oclFactory.buildCollectionLiteralExp(kind, new Vector());
+							:}
+							;
+collectionKind			::=	SET
+							{:
+								// Set kind to SET
+								RESULT = CollectionKindAS$Class.SET;
+							:}
+							|
+							BAG
+							{:
+								// Set kind to BAG
+								RESULT = CollectionKindAS$Class.BAG;
+							:}
+							|
+							SEQUENCE
+							{:
+								// Set kind to SEQUENCE
+								RESULT = CollectionKindAS$Class.SEQUENCE;
+							:}
+							|
+							COLLECTION
+							{:
+								// Set kind to COLLECTION
+								RESULT = CollectionKindAS$Class.COLLECTION;
+							:}
+							|
+							ORDERED_SET
+							{:
+								// Set kind to ORDERED_SET
+								RESULT = CollectionKindAS$Class.ORDERED_SET;
+							:}
+							;
+collectionLiteralParts	::=	collectionLiteralPart:colPart
+							{:
+								// Create a List
+								List seq = new Vector();
+								seq.add(colPart);
+								RESULT = seq;
+							:}
+							|
+							collectionLiteralParts:seq COMMA collectionLiteralPart:colPart
+							{:
+								// Add collPart to seq
+								RESULT = seq;
+								seq.add(colPart);
+							:}
+							;
+collectionLiteralPart	::=	oclExpression:exp
+							{:
+								// Create CollectionItem
+								RESULT = oclFactory.buildCollectionItem(exp);
+							:}
+							|
+							collectionRange:range
+							{:
+								// Copy rule
+								RESULT = range;
+							:}
+							;
+collectionRange			::= oclExpression:first DOT_DOT oclExpression:last
+							{:
+								// Create CollectionRange
+								RESULT = oclFactory.buildCollectionRange(first, last);
+							:}
+							;
+tupleLiteralExp 		::= TUPLE LEFT_BRA variableDeclarationList:seq RIGHT_BRA
+							{:
+								// Create TupleLiteralExp
+								RESULT = oclFactory.buildTupleLiteralExp(seq);
+							:}
+ 							;
+primitiveLiteralExp		::=	INTEGER:value
+							{:
+								// Create IntegerLiteralExp
+								RESULT = oclFactory.buildIntegerLiteralExp(value);
+							:}
+							|
+							REAL:value
+							{:
+								// Create RealLiteralExp
+								RESULT = oclFactory.buildRealLiteralExp(value);
+							:}
+							|
+							STRING:value
+							{:
+								// Create StringLiteralExp
+								RESULT = oclFactory.buildStringLiteralExp(value);
+							:}
+							|
+							TRUE:value
+							{:
+								// Create BooleanLiteralExp
+								RESULT = oclFactory.buildBooleanLiteralExp(value);
+							:}
+							|
+							FALSE:value
+							{:
+								// Create BooleanLiteralExp
+								RESULT = oclFactory.buildBooleanLiteralExp(value);
+							:}
+							;
+
+//
+// Names
+//
+// pathName ::= simpleName (COLON_COLON simpleName)*
+// simpleName ::= SIMPLE_NAME
+//
+pathName				::=	simpleName:name
+							{:
+								// Create a
+								List seq = new Vector();
+								seq.add(name);
+								RESULT = seq;
+							:}
+							|
+							pathName:path COLON_COLON simpleName:name
+							{:
+								// Add name to path
+								RESULT = path;
+								path.add(name);
+							:}
+							;
+simpleName				::=	SIMPLE_NAME:value
+							{:
+								RESULT = value;
+							:}
+							;
+						

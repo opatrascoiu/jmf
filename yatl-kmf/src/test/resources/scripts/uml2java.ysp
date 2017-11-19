@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<project>
+	<pathname>C:\D\Work\Java Projects\YATL4KMF\src\test\scripts\uml2java.ysp</pathname>
+	<transformation>C:\D\Work\Java Projects\YATL4KMF\src\test\scripts\uml2java.tl</transformation>
+	<source>
+		<model>C:\D\Work\Java Projects\YATL4KMF\src\test\scripts\UMLModel.xmi</model>
+		<repositoryClass>uk.ac.ukc.cs.kmf.kmfstudio.uml.repository.UmlRepository$Class</repositoryClass>
+		<repositoryContext>C:\D\Work\Java Projects\YATL4KMF\src\test\scripts\UmlRep.xml</repositoryContext>
+	</source>
+	<target>
+		<model>C:\D\Work\Java Projects\YATL4KMF\src\test\scripts\java.xmi</model>
+		<repositoryClass>javaModel.repository.JavaModelRepository$Class</repositoryClass>
+		<repositoryContext></repositoryContext>
+	</target>
+</project>

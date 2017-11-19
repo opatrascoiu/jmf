@@ -1,0 +1,315 @@
+result of 'context library::Library inv: Set{1, 2}'
+[Set { 1, 2 }]
+[Set { 1, 2 }]
+result of 'context library::Library inv: Set{1..3}'
+[Set { 1, 2, 3 }]
+[Set { 1, 2, 3 }]
+result of 'context library::Library inv: Set{1..3,5..9}'
+[Set { 1, 2, 3, 5, 6, 7, 8, 9 }]
+[Set { 1, 2, 3, 5, 6, 7, 8, 9 }]
+result of 'context library::Library inv: Set{1..3,5..6,7}'
+[Set { 1, 2, 3, 5, 6, 7 }]
+[Set { 1, 2, 3, 5, 6, 7 }]
+result of 'context library::Library inv: Set{1..2*2}'
+[Set { 1, 2, 3, 4 }]
+[Set { 1, 2, 3, 4 }]
+result of 'context library::Library inv: Set{1.3, 2.5}'
+[Set { 1.3, 2.5 }]
+[Set { 1.3, 2.5 }]
+result of 'context library::Library inv: Set{1.0}->including(1)'
+[Set { 1.0 }]
+[Set { 1.0 }]
+result of 'context library::Library inv: Set{1.3,1.2,1/5,1/8}'
+[Set { 1.3, 1.2, 0.2, 0.125 }]
+[Set { 1.3, 1.2, 0.2, 0.125 }]
+result of 'context library::Library inv: Set{'b','a'}'
+[Set { 'b', 'a' }]
+[Set { 'b', 'a' }]
+result of 'context library::Library inv: Set{1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9}'
+[Set { 1, 2, 3, 4, 5, 6, 7, 8, 9 }]
+[Set { 1, 2, 3, 4, 5, 6, 7, 8, 9 }]
+result of 'context library::Library inv: Set{1/0}'
+[Set { undefined }]
+[Set { undefined }]
+result of 'context library::Library inv: Set{1,1 div 0}'
+[Set { 1, undefined }]
+[Set { 1, undefined }]
+result of 'context library::Library inv: Set{1/0,1}'
+[Set { undefined, 1 }]
+[Set { undefined, 1 }]
+result of 'context library::Library inv: Set{1/0,1.0}'
+[Set { undefined, 1.0 }]
+[Set { undefined, 1.0 }]
+result of 'context library::Library inv: Set{1,1/0}'
+[Set { 1, undefined }]
+[Set { 1, undefined }]
+result of 'context library::Library inv: Set{Set{1}, Set{2}}'
+[Set { Set { 1 }, Set { 2 } }]
+[Set { Set { 1 }, Set { 2 } }]
+result of 'context library::Library inv: Set{Set{1}, Set{2}, Set{2}, Set{3}}'
+[Set { Set { 1 }, Set { 2 }, Set { 2 }, Set { 3 } }]
+[Set { Set { 1 }, Set { 2 }, Set { 2 }, Set { 3 } }]
+result of 'context library::Library inv: Set{}'
+[Set {  }]
+[Set {  }]
+result of 'context library::Library inv: Set{1,2,3}->select(true)'
+[Set { 1, 2, 3 }]
+[Set { 1, 2, 3 }]
+result of 'context library::Library inv: Set{1,2,3}->select(e :  Integer | e > 1)'
+[Set { 2, 3 }]
+[Set { 2, 3 }]
+result of 'context library::Library inv: Set{1,2,3}->select(e | e > 1)'
+[Set { 2, 3 }]
+[Set { 2, 3 }]
+result of 'context library::Library inv: Set{1,2,3,4,5,6}->iterate(e : Integer; acc : Integer = 0 | acc + e)'
+[21]
+[21]
+result of 'context library::Library inv: Set{Set{1,2},Set{2,3,4}}->iterate(e : Set(Integer); acc : Set(String) = Set{'a'} | Set{'b'})'
+[Set { 'b' }]
+[Set { 'b' }]
+result of 'context library::Library inv: Set{Set{1,2},Set{3},Set{2,3,4}}->iterate(e : Set(Integer); acc : Set(Integer) = Set{0} | acc->union(e))'
+[Set { 0, 1, 2, 3, 4 }]
+[Set { 0, 1, 2, 3, 4 }]
+result of 'context library::Library inv: Set{1,2,3}->size()'
+[3]
+[3]
+result of 'context library::Library inv: Set{1,2,3}->includes(2)'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3}->includes(5)'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2,3}->excludes(2)'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2,3}->excludes(5)'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3}->count(1)'
+[1]
+[1]
+result of 'context library::Library inv: Set{1}->includesAll(Bag{1})'
+[true]
+[true]
+result of 'context library::Library inv: Set{1.0}->includesAll(Bag{1})'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3}->includesAll(Set{2,3})'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3}->includesAll(Set{2,4})'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2,3}->includesAll(Bag{2,2,3})'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3}->includesAll(Sequence{3,2})'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3}->excludesAll(Set{2,3})'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2,3}->excludesAll(Set{2,4})'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2,3}->excludesAll(Set{4,5})'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3}->excludesAll(Bag{2,2,3})'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2,3}->excludesAll(Sequence{3,2})'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2,3}->isEmpty()'
+[false]
+[false]
+result of 'context library::Library inv: Set{}->isEmpty()'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3}->notEmpty()'
+[true]
+[true]
+result of 'context library::Library inv: Set{}->notEmpty()'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2,3}->sum()'
+[6]
+[6]
+result of 'context library::Library inv: Set{1} = Set{1}'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2} = Set{2,1}'
+[false]
+[false]
+result of 'context library::Library inv: Set{1.0,2.0} = Set{1,2}'
+[false]
+[false]
+result of 'context library::Library inv: Set{1.0,2.2} = Set{1,2}'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2} <> Set{2,1}'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3}->union(Set{0,2,4})'
+[Set { 1, 2, 3, 0, 4 }]
+[Set { 1, 2, 3, 0, 4 }]
+result of 'context library::Library inv: Set{1,2}->union(Set{1,2})'
+[Set { 1, 2 }]
+[Set { 1, 2 }]
+result of 'context library::Library inv: Set{1,2}->union(Bag{1,1,2,3})'
+[Bag { 1, 2, 1, 1, 2, 3 }]
+[Bag { 1, 2, 1, 1, 2, 3 }]
+result of 'context library::Library inv: Set{1,2,3}->intersection(Set{1,2})'
+[Set { 1, 2 }]
+[Set { 1, 2 }]
+result of 'context library::Library inv: Set{1,2,3}->intersection(Set{4})'
+[Set {  }]
+[Set {  }]
+result of 'context library::Library inv: Set{1,2,3}->intersection(Bag{1,2})'
+[Set { 1, 2 }]
+[Set { 1, 2 }]
+result of 'context library::Library inv: Set{1,2,3}->intersection(Bag{1,1})'
+[Set { 1 }]
+[Set { 1 }]
+result of 'context library::Library inv: Set{1,2,3} - Set{2}'
+[Set { 1, 3 }]
+[Set { 1, 3 }]
+result of 'context library::Library inv: Set{1,2,3}->symmetricDifference(Set{2,4})'
+[Set { 1, 3, 4 }]
+[Set { 1, 3, 4 }]
+result of 'context library::Library inv: Set{1,2,3}->including(5)'
+[Set { 1, 2, 3, 5 }]
+[Set { 1, 2, 3, 5 }]
+result of 'context library::Library inv: Set{1,2,3}->including(1)'
+[Set { 1, 2, 3 }]
+[Set { 1, 2, 3 }]
+result of 'context library::Library inv: Set{1,2,3}->excluding(5)'
+[Set { 1, 2, 3 }]
+[Set { 1, 2, 3 }]
+result of 'context library::Library inv: Set{1,2,3}->excluding(1)'
+[Set { 2, 3 }]
+[Set { 2, 3 }]
+result of 'context library::Library inv: Set{1,2,3}->select(e | e > 1)'
+[Set { 2, 3 }]
+[Set { 2, 3 }]
+result of 'context library::Library inv: Set{1,2,3}->select(e | e <> 2)'
+[Set { 1, 3 }]
+[Set { 1, 3 }]
+result of 'context library::Library inv: Set{Set{1,2},Set{2,3,4}}->select(s | s->size() > 2)'
+[Set { Set { 2, 3, 4 } }]
+[Set { Set { 2, 3, 4 } }]
+result of 'context library::Library inv: Set{Set{2},Set{1,2},Set{2,3,4}}->select(s | s->size() mod 2 = 1)'
+[Set { Set { 2 }, Set { 2, 3, 4 } }]
+[Set { Set { 2 }, Set { 2, 3, 4 } }]
+result of 'context library::Library inv: Set{Set{2},Set{1,2},Set{2,3,4}}->select(s | s->size() mod 2 = 1)->size()'
+[2]
+[2]
+result of 'context library::Library inv: Set{1,2,3}->reject(e | e > 1)'
+[Set { 1 }]
+[Set { 1 }]
+result of 'context library::Library inv: Set{1,2,3}->reject(e | e <> 2)'
+[Set { 2 }]
+[Set { 2 }]
+result of 'context library::Library inv: Set{Set{1..5}}->forAll(e|e->notEmpty())'
+[true]
+[true]
+result of 'context library::Library inv: Set{Set{1..5}}->forAll(e|e->forAll(e->size()=2))'
+[false]
+[false]
+result of 'context library::Library inv: Set{Set{1..5}}->forAll(e|e->forAll(e->select(not (e->size()=2))->isEmpty()))'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2,3}->collect(e | e * 2)'
+[Bag { 2, 4, 6 }]
+[Bag { 2, 4, 6 }]
+result of 'context library::Library inv: Set{1,2,3}->collect(1)'
+[Bag { 1, 1, 1 }]
+[Bag { 1, 1, 1 }]
+result of 'context library::Library inv: Set{1,2,3}->collect(e | 'abc'.substring(e,3))'
+[Bag { 'abc', 'bc', 'c' }]
+[Bag { 'abc', 'bc', 'c' }]
+result of 'context library::Library inv: Set{1,2,3}->asSequence()->size() = 3'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3}->asBag()'
+[Bag { 1, 2, 3 }]
+[Bag { 1, 2, 3 }]
+result of 'context library::Library inv: Set{Set{1}, Set{2}, Set{2}, Set{3}}->flatten()'
+[Set { 1, 2, 3 }]
+[Set { 1, 2, 3 }]
+result of 'context library::Library inv: Set{Bag{1,1}, Bag{2,1}, Bag{1,2,3}}->flatten()'
+[Set { 1, 2, 3 }]
+[Set { 1, 2, 3 }]
+result of 'context library::Library inv: Set{Sequence{1,2}, Sequence{2,1}, Sequence{2,3}}->flatten()'
+[Set { 1, 2, 3 }]
+[Set { 1, 2, 3 }]
+result of 'context library::Library inv: Set{1,2,3,4,5,6}->exists(e | e > 0)'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3,4,5,6}->exists(e | e = 7)'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2,3,4,5,6}->forAll(e | e > 0)'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3,4,5,6}->forAll(e | e > 1)'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2,3,4,5,6}->isUnique(e | e)'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3,4,5,6}->isUnique(e | Set{e})'
+[true]
+[true]
+result of 'context library::Library inv: Set{1,2,3,4,5,6}->isUnique(e | e mod 2)'
+[false]
+[false]
+result of 'context library::Library inv: Set{Set{1},Set{2}}->isUnique(e | e)'
+[true]
+[true]
+result of 'context library::Library inv: Set{4,2,3,1,6,5}->sortedBy(e | e)'
+[OrderedSet { 1, 2, 3, 4, 5, 6 }]
+[OrderedSet { 1, 2, 3, 4, 5, 6 }]
+result of 'context library::Library inv: Set{4,2,3,1,6,5}->sortedBy(1)->includesAll(Set{4,2,3,1,6,5})'
+[true]
+[true]
+result of 'context library::Library inv: Set{'c','ca','cc','a','aa'}->sortedBy(e | e.size())'
+[OrderedSet { 'c', 'a', 'ca', 'cc', 'aa' }]
+[OrderedSet { 'c', 'a', 'ca', 'cc', 'aa' }]
+result of 'context library::Library inv: Set{4,2,3,1,6,5}->one(e | e = 2)'
+[true]
+[true]
+result of 'context library::Library inv: Set{4,2,3,1,6,5}->one(e | e = 7)'
+[false]
+[false]
+result of 'context library::Library inv: Set{}->one(e | e = 2)'
+[false]
+[false]
+result of 'context library::Library inv: Set{1,2}->any(e | e < 2)'
+[1]
+[1]
+result of 'context library::Library inv: Set{1,2}->any(e | e < 1)'
+[undefined]
+[undefined]
+result of 'context library::Library inv: Set{1,2}->any(e | e < 3) < 3'
+[true]
+[true]
+result of 'context library::Library inv: Set{ Set{1}, Set{1,2} }->collect(x|x)->size()'
+[3]
+[3]
+result of 'context library::Library inv: Set{ Set{1}, Set{1,2} }->collectNested(x|x)->size()'
+[3]
+[3]
+result of 'context library::Library inv: Set{ Set{1}, Set{1,2} }->collectNested(x|x).size()'
+[3]
+[3]
+result of 'context library::Library inv: Set{ Set{1}, Set{1,2} }->collectNested(x:Set(Integer)|x).size()'
+[3]
+[3]
+result of 'context library::Library inv: Set{Set{1,2},Set{2,3,4}}->iterate(    e1 :  Set(Integer); acc1 : Integer = 0 |     e1->iterate(        e2 : Integer; acc2 : Integer = 0 |         acc2 + e2) + acc1)'
+[12]
+[12]
+result of 'context library::Library inv: Set{1,2,3}->iterate(    e3 : Integer;     s3 : Set(Sequence(Integer)) = Set{Sequence{1,2}, Sequence{2,3}} |     Set{1,2,3}->iterate(        e2 : Integer; s2 : Set(Sequence(Integer)) = s3 |         Set{1,2,3}->iterate(            e1 : Integer;             s1 : Set(Sequence(Integer)) = s2 |             if s1->exists(p1 : Sequence(Integer) |                 s1->exists(p2 : Sequence(Integer) |                     (p1->at(1) = e1 and p1->at(2) = e2) or                    (p1->at(1) = e1 and p1->at(2) = e3 and                     p2->at(1) = e3 and p2->at(2) = e2)                ))            then                s1->including(Sequence{e1,e2})            else                 s1            endif)))'
+[Set { Sequence { 1, 2 }, Sequence { 2, 3 }, Sequence { 1, 2 }, Sequence { 2, 3 }, Sequence { 1, 2 }, Sequence { 1, 3 }, Sequence { 2, 3 }, Sequence { 1, 2 }, Sequence { 1, 3 }, Sequence { 2, 3 } }]
+[Set { Sequence { 1, 2 }, Sequence { 2, 3 }, Sequence { 1, 2 }, Sequence { 2, 3 }, Sequence { 1, 2 }, Sequence { 1, 3 }, Sequence { 2, 3 }, Sequence { 1, 2 }, Sequence { 1, 3 }, Sequence { 2, 3 } }]

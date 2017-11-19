@@ -1,0 +1,104 @@
+result of 'context library::Library inv: 1 = 0'
+[false]
+result of 'context library::Library inv: true'
+[true]
+result of 'context library::Library inv: false'
+[false]
+result of 'context library::Library inv: not true'
+[false]
+result of 'context library::Library inv: not false'
+[true]
+result of 'context library::Library inv: not (1 / 0 = 0)'
+[undefined]
+result of 'context library::Library inv: not not true'
+[true]
+result of 'context library::Library inv: not not false'
+[false]
+result of 'context library::Library inv: not not (1/0 = 0)'
+[undefined]
+result of 'context library::Library inv: false or false'
+[false]
+result of 'context library::Library inv: false or true'
+[true]
+result of 'context library::Library inv: false or (1/0 = 0)'
+[undefined]
+result of 'context library::Library inv: true or false'
+[true]
+result of 'context library::Library inv: true or true'
+[true]
+result of 'context library::Library inv: true or (1/0 = 0)'
+[true]
+result of 'context library::Library inv: (1/0 = 0) or false'
+[undefined]
+result of 'context library::Library inv: (1/0 = 0) or true'
+[true]
+result of 'context library::Library inv: (1/0 = 0) or (1/0 = 0)'
+[undefined]
+result of 'context library::Library inv: true or false or true'
+[true]
+result of 'context library::Library inv: false and false'
+[false]
+result of 'context library::Library inv: false and true'
+[false]
+result of 'context library::Library inv: false and (1/0 = 0)'
+[false]
+result of 'context library::Library inv: true and false'
+[false]
+result of 'context library::Library inv: true and true'
+[true]
+result of 'context library::Library inv: true and (1/0 = 0)'
+[undefined]
+result of 'context library::Library inv: (1/0 = 0) and false'
+[false]
+result of 'context library::Library inv: (1/0 = 0) and true'
+[undefined]
+result of 'context library::Library inv: (1/0 = 0) and (1/0 = 0)'
+[undefined]
+result of 'context library::Library inv: true and false and true'
+[false]
+result of 'context library::Library inv: false xor false'
+[false]
+result of 'context library::Library inv: false xor true'
+[true]
+result of 'context library::Library inv: false xor (1/0 = 0)'
+[undefined]
+result of 'context library::Library inv: true xor false'
+[true]
+result of 'context library::Library inv: true xor true'
+[false]
+result of 'context library::Library inv: true xor (1/0 = 0)'
+[undefined]
+result of 'context library::Library inv: (1/0 = 0) xor false'
+[undefined]
+result of 'context library::Library inv: (1/0 = 0) xor true'
+[undefined]
+result of 'context library::Library inv: (1/0 = 0) xor (1/0 = 0)'
+[undefined]
+result of 'context library::Library inv: false implies false'
+[true]
+result of 'context library::Library inv: false implies true'
+[true]
+result of 'context library::Library inv: false implies (1/0 = 0)'
+[true]
+result of 'context library::Library inv: true implies false'
+[false]
+result of 'context library::Library inv: true implies true'
+[true]
+result of 'context library::Library inv: true implies (1/0 = 0)'
+[undefined]
+result of 'context library::Library inv: (1/0 = 0) implies false'
+[undefined]
+result of 'context library::Library inv: (1/0 = 0) implies true'
+[true]
+result of 'context library::Library inv: (1/0 = 0) implies (1/0 = 0)'
+[undefined]
+result of 'context library::Library inv: true = true'
+[true]
+result of 'context library::Library inv: true = false'
+[false]
+result of 'context library::Library inv: true = false = false'
+[true]
+result of 'context library::Library inv: true <> true'
+[false]
+result of 'context library::Library inv: true <> false'
+[true]

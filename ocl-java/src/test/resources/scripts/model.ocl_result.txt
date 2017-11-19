@@ -1,0 +1,148 @@
+result of 'context library::Library inv: self.oclIsNew()'
+is [false]
+
+result of 'context library::Library inv: self.oclIsUndefined()'
+is [false]
+
+result of 'context library::Library inv: self.oclAsType(library::Library)'
+is [Library 'My Library']
+
+result of 'context library::Library inv: self.oclIsTypeOf(library::Library)'
+is [true]
+
+result of 'context library::Library inv: self.oclIsKindOf(library::Library)'
+is [true]
+
+result of 'context library::Library inv: self.allInstances()'
+is [Set {  }]
+
+result of 'context library::Library inv: self.books->asSequence()->first().category'
+is [BookCategory::ScienceFiction]
+
+result of 'context library::Library inv: self.books->asSequence()->first().category->isEmpty()'
+is [false]
+
+result of 'context library::Library inv: self.books->asSequence()->first().category.oclIsUndefined()'
+is [false]
+
+result of 'context library::Library inv: self'
+is [Library 'My Library']
+
+result of 'context library::Library inv: self.books'
+is [Set { Book 'The Lord of the Rings', Book 'J.R.R. Tolkien: A Biography', Book 'No Author' }]
+
+result of 'context library::Library inv: self.books->size()'
+is [3]
+
+result of 'context library::Library inv: self.books->size() > 100'
+is [false]
+
+result of 'context library::Library inv: self.books->asSequence()->first()'
+is [Book 'The Lord of the Rings']
+
+result of 'context library::Library inv: self.books->asSequence()->first().title'
+is ['The Lord of the Rings']
+
+result of 'context library::Library inv: self.books->asSequence()->first().author'
+is [Author 'J.R.R.Tolkien']
+
+result of 'context library::Library inv: self.books->asSequence()->first().author.name'
+is ['J.R.R.Tolkien']
+
+result of 'context library::Library inv: self.books->asSequence()->first().category'
+is [BookCategory::ScienceFiction]
+
+result of 'context library::Library inv: self.books->asSequence()->first().calculatePrice()'
+is [undefined]
+
+result of 'context library::Library inv: self.books->size() > 100'
+is [false]
+
+result of 'context library::Library inv: BookCategory::ScienceFiction'
+is [EnumLiteral(ScienceFiction)]
+
+result of 'context library::Library inv: BookCategory::Biography'
+is [EnumLiteral(Biography)]
+
+result of 'context library::Library inv: BookCategory::ScienceFiction = BookCategory::ScienceFiction'
+is [true]
+
+result of 'context library::Library inv: BookCategory::ScienceFiction = BookCategory::Biography'
+is [false]
+
+result of 'context library::Library inv: BookCategory::ScienceFiction <> BookCategory::ScienceFiction'
+is [false]
+
+result of 'context library::Library inv: BookCategory::ScienceFiction <> BookCategory::Biography'
+is [true]
+
+result of 'context library::Library inv: let book:Book = self.books->asSequence()->first() in book'
+is [Book 'The Lord of the Rings']
+
+result of 'context library::Library inv:
+  let book:Book = self.books->asSequence()->first(),
+      title:String = book.title
+  in title'
+is ['The Lord of the Rings']
+
+result of 'context library::Library inv:
+  let book:Book = self.books->asSequence()->first(),
+      category:String = book.category
+  in category'
+is [undefined]
+
+result of 'context library::Library inv:
+  let book:Book = self.books->asSequence()->first(),
+      category:BookCategory = book.category
+  in Tuple{ category:BookCategory = category,
+            comparison:Boolean = (category = BookCategory::Biography)
+          }'
+is [Tuple { category = BookCategory::ScienceFiction, comparison = false }]
+
+result of 'context library::Library inv:
+  self.books->asSequence()->first() = self.books->asSequence()->last()'
+is [false]
+
+result of 'context library::Library inv:
+  let b1:Book = self.books->asSequence()->first(),
+      b2:Book = self.books->asSequence()->last()
+  in b1 = b2'
+is [false]
+
+result of 'context library::Library inv:
+  let b1:Book = self.books->asSequence()->first(),
+      b2:Book = self.books->asSequence()->first()
+  in b1 = b2'
+is [true]
+
+result of 'context library::Library
+ inv: self.books->size() > 100
+ inv: self.books->asSequence()->first().category = BookCategory::Biography'
+is [false, false]
+
+result of 'context library::Library inv:
+  let book = self.books->any(b|b.title='No Author')
+  in book->isEmpty()'
+is [false]
+
+result of 'context library::Library inv:
+  let book = self.books->any(b|b.title='No Author')
+  in book'
+is [Book 'No Author']
+
+result of 'context library::Library inv:
+  let book = self.books->any(b|b.title='No Author')
+  in book.author'
+is [undefined]
+
+result of 'context library::Library inv:
+  let book = self.books->any(b|b.title='No Author')
+  in book.author.name'
+is [undefined]
+
+result of 'context library::Library inv:
+  let b1 = self.books->any(b|b.title='No Author'),
+      b2 = self.books->asSequence()->last()
+  in b1.author.name = b2.author.name'
+is [undefined]
+

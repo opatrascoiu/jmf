@@ -1,0 +1,34 @@
+context library::Library inv: 'a'.oclIsUndefined()
+context library::Library inv: 'a'.oclIsNew()
+context library::Library inv: 'a'.oclIsKindOf(OclAny)
+context library::Library inv: 'a'.oclIsKindOf(Boolean)
+context library::Library inv: 'a'.oclIsKindOf(Real)
+context library::Library inv: 'a'.oclIsKindOf(String)
+context library::Library inv: 'a'.oclIsKindOf(library::Library)
+context library::Library inv: 'a'.oclIsTypeOf(OclAny)
+context library::Library inv: 'a'.oclIsTypeOf(Boolean)
+context library::Library inv: 'a'.oclIsTypeOf(Real)
+context library::Library inv: 'a'.oclIsTypeOf(String)
+context library::Library inv: 'a'.oclIsTypeOf(library::Library)
+context library::Library inv: 'a'.oclAsType(OclAny)
+context library::Library inv: 'a'.oclAsType(Boolean)
+context library::Library inv: 'a'.oclAsType(Real)
+context library::Library inv: 'a'.oclAsType(String)
+context library::Library inv: 'a'.oclAsType(library::Library)
+context library::Library inv: 'a'.allInstances()
+context library::Library inv: 'aString'
+context library::Library inv: ''
+context library::Library inv: '\101'
+context library::Library inv: '\t' = '\u0009'
+context library::Library inv: '\'
+context library::Library inv: 'foo'.size()
+context library::Library inv: 'foo'.concat('bar')
+context library::Library inv: 'foobar'.substring(2, 4)
+context library::Library inv: 'foobar'.substring(2,4)
+context library::Library inv: '123'.toInteger()
+context library::Library inv: '123.45'.toReal()
+context library::Library inv: 'foobar' = 'foo'
+context library::Library inv: 'foobar' = 'foobar'
+context library::Library inv: 'foobar' <> 'foobar'
+context library::Library inv: 'foobar' = (0/1 = 0)
+context library::Library inv: (0/1 = 0) = (0/1 = 0)
