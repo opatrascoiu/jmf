@@ -1,0 +1,72 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<!DOCTYPE argo SYSTEM "argo.dtd" >
+<argo>
+  <documentation>
+    <authorname></authorname>
+    <version></version>
+    <description>
+      
+    </description>
+  </documentation>
+  <searchpath href="PROJECT_DIR" />
+  <member
+    type="xmi"
+    name="UMLModel.xmi"
+  />
+  <member
+    type="pgml"
+    name="uml.pgml"
+  />
+  <member
+    type="pgml"
+    name="Relationships.pgml"
+  />
+  <member
+    type="pgml"
+    name="Dependencies.pgml"
+  />
+  <member
+    type="pgml"
+    name="Classifiers.pgml"
+  />
+  <member
+    type="pgml"
+    name="Auxiliary.pgml"
+  />
+  <member
+    type="pgml"
+    name="BackBone.pgml"
+  />
+  <member
+    type="pgml"
+    name="Foundation.pgml"
+  />
+  <member
+    type="pgml"
+    name="ModelManagement.pgml"
+  />
+  <member
+    type="pgml"
+    name="Main.pgml"
+  />
+  <member
+    type="pgml"
+    name="BehavioralElements.pgml"
+  />
+  <member
+    type="pgml"
+    name="Expressions.pgml"
+  />
+  <member
+    type="pgml"
+    name="ExtensionMechanisms.pgml"
+  />
+  <member
+    type="pgml"
+    name="StateMachines.pgml"
+  />
+  <historyfile name="" />
+  <stats>
+    {}
+  </stats>
+</argo>

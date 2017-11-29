@@ -15,6 +15,7 @@ import uk.ac.kent.cs.ocl20.syntax.ast.contexts.*;
 import uk.ac.kent.cs.ocl20.syntax.parser.*;
 import uk.ac.kent.cs.ocl20.synthesis.*;
 import uk.ac.kent.cs.kmf.util.*;
+import uk.ac.kent.cs.kmf.util.XMIToUMLLoader;
 
 /**
  * 
@@ -101,7 +102,7 @@ public class KmfOclProcessorImpl
 		Pair pair = null;
 		try {
 			//--- Load the model ---
-			pair = (new XMIToUMLLoader()).loadModel(xmiFileName, log); 
+			pair = (new XMIToUMLLoader()).loadModel(xmiFileName, log);
 			uk.ac.ukc.cs.kmf.kmfstudio.uml.Model_Management.Model model = (uk.ac.ukc.cs.kmf.kmfstudio.uml.Model_Management.Model)pair.getFirst();
 			getModels().add(model);
 			//--- Compute associations ---

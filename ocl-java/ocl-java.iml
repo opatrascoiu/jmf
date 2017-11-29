@@ -13,15 +13,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ocl-core" />
-    <orderEntry type="module-library">
-      <library name="Maven: org.jmf:util:1.0-SNAPSHOT">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/Util-1.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="module" module-name="util" />
     <orderEntry type="module-library">
       <library name="Maven: cup:cup:1.0-SNAPSHOT">
         <CLASSES>

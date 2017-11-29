@@ -32,33 +32,9 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="ocl-kmf" />
-    <orderEntry type="module-library">
-      <library name="Maven: org.jmf:uml:1.0-SNAPSHOT">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/UMLModel-2.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="Maven: org.jmf:xmi:1.0-SNAPSHOT">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/XMI-1.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="Maven: org.jmf:util:1.0-SNAPSHOT">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../lib/Util-1.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="module" module-name="uml" />
+    <orderEntry type="module" module-name="xmi" />
+    <orderEntry type="module" module-name="util" />
     <orderEntry type="module-library">
       <library name="Maven: xmlParser:xmlParser:1.0-SNAPSHOT">
         <CLASSES>

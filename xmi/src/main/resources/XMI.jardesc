@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="C:/Work/Java Projects/lib/XMI-1.2.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/XMI/XMI.jardesc" exportErrors="false" exportWarnings="true" overwrite="false" saveDescription="true" useSourceFolders="false"/>
+<manifest generateManifest="true" manifestLocation="/XMI/XMI.man" manifestVersion="1.0" reuseManifest="false" saveManifest="true" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<javaElement handleIdentifier="=XMI"/>
+</selectedElements>
+</jardesc>

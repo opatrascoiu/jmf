@@ -18,15 +18,13 @@
         <dependency>
             <groupId>org.jmf</groupId>
             <artifactId>yatl-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.parent.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.jmf</groupId>
             <artifactId>xmi</artifactId>
             <version>${project.parent.version}</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/../lib/XMI-1.2.jar</systemPath>
         </dependency>
 
     </dependencies>

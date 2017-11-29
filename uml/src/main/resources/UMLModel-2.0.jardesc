@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+    <jar path="C:/D/Work/Java Projects/lib/UMLModel-2.0.jar"/>
+    <options overwrite="false" compress="true" exportErrors="true"
+        exportWarnings="true" saveDescription="true"
+        descriptionLocation="/UMLModel-2.0/UMLModel-2.0.jardesc"
+        useSourceFolders="false" buildIfNeeded="true"/>
+    <manifest manifestVersion="1.0" usesManifest="true"
+        reuseManifest="false" saveManifest="false"
+        generateManifest="true" manifestLocation="">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false">
+        <javaElement handleIdentifier="=UMLModel-2.0/src"/>
+    </selectedElements>
+</jardesc>

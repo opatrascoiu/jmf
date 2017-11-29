@@ -56,16 +56,6 @@ public class PieApp
 			parser = new ParameterParser(chart, this);
 
 		//applet specific params...
-		if ((getCodeBase().getHost()).equals("www.ve.com"))
-			home = true;
-		else {
-			str = getParameter("CopyrightNotification");
-			if (str != null)
-				if (str.equals("JavaChart is a copyrighted work, and subject to full legal protection"))
-					home = true;
-				else if (str.equals("JavaChart is a copyrighted work, and subject to full legal protection"))
-					home = true;
-		}
 		str = getParameter("networkInterval");
 		if (str != null)
 			networkInterval = Integer.parseInt(str);

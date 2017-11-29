@@ -11,17 +11,23 @@
         <module name="ocl-emf" />
         <module name="ocl-java" />
         <module name="ocl-kmf" />
+        <module name="uml" />
+        <module name="util" />
+        <module name="xmi" />
         <module name="yatl-core" />
         <module name="yatl-kmf" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="jmf" target="1.5" />
+      <module name="jmf-parent" target="1.5" />
       <module name="kmf-studio" target="1.8" />
       <module name="ocl-core" target="1.8" />
       <module name="ocl-emf" target="1.8" />
       <module name="ocl-java" target="1.8" />
       <module name="ocl-kmf" target="1.8" />
+      <module name="uml" target="1.8" />
+      <module name="util" target="1.8" />
+      <module name="xmi" target="1.8" />
       <module name="yatl-core" target="1.8" />
       <module name="yatl-kmf" target="1.8" />
     </bytecodeTargetLevel>

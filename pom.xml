@@ -25,6 +25,10 @@
 
 		<module>yatl-core</module>
 		<module>yatl-kmf</module>
+
+        <module>uml</module>
+        <module>xmi</module>
+        <module>util</module>
 	</modules>
 	
 	<profiles>

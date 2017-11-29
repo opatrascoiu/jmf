@@ -14,6 +14,7 @@ import sd.repository.*;
 import edoc.ECA.CCA.*;
 import edoc.ECA.DocumentModel.*;
 import edoc.repository.*;
+import uk.ac.kent.cs.kmf.util.XMIToUMLLoader;
 
 /**
  * 
@@ -35,7 +36,7 @@ public class TestInterpreterFromFile {
 		Pair pair = null;
 		try {
 			//--- Load the model ---
-			pair = (new XMIToUMLLoader()).loadModel("src/test/scripts/java.xmi", new OutputStreamLog(System.out)); 
+			pair = (new XMIToUMLLoader()).loadModel("src/test/scripts/java.xmi", new OutputStreamLog(System.out));
 		} catch (Exception e) {
 		}
 		Repository rep = (Repository)pair.getSecond(); 

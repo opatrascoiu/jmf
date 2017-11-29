@@ -19,8 +19,6 @@
 			<groupId>org.jmf</groupId>
 			<artifactId>util</artifactId>
 			<version>${project.parent.version}</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/../lib/Util-1.2.jar</systemPath>
 		</dependency>
 
         <dependency>

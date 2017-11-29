@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<project type ="">
+	<path>C:/D/Work/Java Projects/UMLModel-2.0</path>
+	<name>UMLModel.ksp</name>
+	<meta>C:\D\Work\Java Projects\UMLModel-2.0\src\UMLModel.xmi</meta>
+	<xmi>C:\D\Work\Java Projects\UMLModel-2.0\src\UMLModel.xmi</xmi>
+	<license></license>
+	<offset>uk.ac.ukc.cs.kmf.kmfstudio</offset>
+	<modelName></modelName>
+	<visitor>true</visitor>
+	<HUTNvisitor>true</HUTNvisitor>
+	<JTreevisitor>true</JTreevisitor>
+	<ViewEditvisitor>true</ViewEditvisitor>
+	<XMIvisitor>true</XMIvisitor>
+	<observer>false</observer>
+	<invariant>true</invariant>
+	<id>true</id>
+	<factory>true</factory>
+	<repository>true</repository>
+	<browser>true</browser>
+	<startup>true</startup>
+	<bidirectional>true</bidirectional>
+	<interfacePrefix></interfacePrefix>
+	<interfaceSuffix></interfaceSuffix>
+	<classPrefix></classPrefix>
+	<classSuffix>$Class</classSuffix>
+	<collectionInterface>java.util.List</collectionInterface>
+	<collectionClass>java.util.Vector</collectionClass>
+	<listInterface>java.util.List</listInterface>
+	<listClass>java.util.Vector</listClass>
+	<setInterface>java.util.Set</setInterface>
+	<setClass>java.util.LinkedHashSet</setClass>
+	<setClass>java.util.LinkedHashSet</setClass>
+	<metrics>
+	</metrics>
+</project>
